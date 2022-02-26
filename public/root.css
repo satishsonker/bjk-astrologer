@@ -1,0 +1,6 @@
+:root {
+    --font-size: calc(10px + 2vmin);
+    --header-height:60px;
+    --header-color:#8cbbf1;
+    --header-font-color:rgb(245, 241, 241);
+  }

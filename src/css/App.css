@@ -1,0 +1,70 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.bjk-nav
+{
+  color: var(--header-font-color);;
+  background-color: var(--header-color);
+  width: 100%;
+  height: var(--header-height);
+  padding:0 0 0 0;
+  box-shadow: 1px 2px 4px grey;
+  z-index: 1000000000000000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.left-menu
+{
+  max-width: 300px;
+  width: 50vh;
+  position: fixed;
+  top:var(--header-height);
+  left: 0;
+  height: 100%;
+  background-color: aqua;
+}
+.logo-name{
+  max-width: 200px;
+  height: 38px;
+  width: 55vw;
+}
+.logo{
+  width: 40px;
+}
+
+.humberger-bar
+{
+  font-size: 18px;
+    padding: 11px 0 0 8px;
+    cursor: pointer;
+    color: var(--header-font-color);
+    transition: color .5s;
+}
+.humberger-bar:hover
+{
+  color:red;
+  transition: color .5s;
+}
+.bjk-footer
+{
+  width: 100%;
+    /* border: 1px solid; */
+    height: 400px;
+    position: fixed;
+    bottom: -360px;
+    /* border-radius: 4px; */
+    background-color: aliceblue;
+}
+.control-btn
+{
+  border: 1px solid;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+}
