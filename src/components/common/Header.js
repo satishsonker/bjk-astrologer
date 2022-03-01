@@ -1,0 +1,21 @@
+import React from 'react'
+import {common} from '../../common/common.js'
+
+export default function Header({setIsLeftMenuActive, isLeftMenuActive}) {
+    const handleLeftMenuActiveState = () => {
+        isLeftMenuActive=common.defaultIfEmpty(isLeftMenuActive,false);
+        setIsLeftMenuActive(!isLeftMenuActive);
+    }
+    return (
+        <>
+            <div className='bjk-nav'>
+                <div className="d-flex justify-content-between">
+                    <div className="p-2 bd-highlight"><i onClick={e => handleLeftMenuActiveState()} className="humberger-bar fa-solid fa-bars"></i>
+                    </div>
+                    <div className="p-2 bd-highlight"><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></div>
+                    <div className="p-2 bd-highlight"><img alt='' className='logo' src='../Images/logo/bjkLogo64.png' /></div>
+                </div>
+            </div>
+        </>
+    )
+}

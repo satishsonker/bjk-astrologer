@@ -16,16 +16,7 @@ body{
   left: 0;
   top: 0;
 }
-.left-menu
-{
-  max-width: 300px;
-  width: 50vh;
-  position: fixed;
-  top:var(--header-height);
-  left: 0;
-  height: 100%;
-  background-color: aqua;
-}
+
 .logo-name{
   max-width: 200px;
   height: 38px;
@@ -57,14 +48,24 @@ body{
     bottom: -360px;
     /* border-radius: 4px; */
     background-color: aliceblue;
+    transition: 1s;
+}
+.footer-expand
+{
+  bottom: 0;
+  transition: 1s;
 }
 .control-btn
 {
-  border: 1px solid;
     padding: 5px;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     text-align: center;
     align-items: center;
+    font-size: 22px;
+}
+.tc{
+  text-align: center;
+  padding:6px !important;
 }

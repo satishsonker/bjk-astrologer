@@ -1,0 +1,48 @@
+.left-menu
+{
+  max-width: var(--leftmenu-max-width);
+  width: 0vh;
+  position: fixed;
+  top:var(--header-height);
+  left: 0;
+  height: 100%;
+  display: block;
+  transition: width 1s;    
+  box-shadow: 5px 5px 11px 0px grey;
+  overflow-x: hidden;
+}
+.left-menu .menu,.sub-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    width: 50vw;
+    max-width: var(--leftmenu-max-width);
+}
+.left-menu .menu .menu-item
+{
+padding: 12px 6px;
+border-bottom: 1px solid;
+}
+.left-menu .menu .menu-item i
+{
+margin: 5px;
+}
+/* .left-menu .menu .menu-item span
+{
+    
+}
+
+.left-menu .menu .sub-menu{
+
+}
+
+.sub-menu
+{
+
+} */
+
+.left-menu-active
+{
+    width: 50vw;
+}
