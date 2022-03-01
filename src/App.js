@@ -8,12 +8,11 @@ function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   return (
     <>
-
       <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
-      <LeftMenu option={{}} isActive={isLeftMenuActive}></LeftMenu>
+      <LeftMenu option={{}} isActive={isLeftMenuActive} userDetails={{}} setting={{}}></LeftMenu>
     <Footer></Footer>
     </>
   );
 }
-
+// whatsapp://send?text=https://varta.astrosage.com/talk-to-astrologers?lang=en
 export default App;

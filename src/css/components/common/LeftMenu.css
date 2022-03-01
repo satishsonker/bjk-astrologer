@@ -10,6 +10,7 @@
   transition: width 1s;    
   box-shadow: 5px 5px 11px 0px grey;
   overflow-x: hidden;
+  z-index: 1000000001;
 }
 .left-menu .menu,.sub-menu{
     padding: 0;
@@ -45,4 +46,14 @@ margin: 5px;
 .left-menu-active
 {
     width: 50vw;
+}
+.left-menu-layover
+{
+  background-color: #0000008c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000000;
 }
