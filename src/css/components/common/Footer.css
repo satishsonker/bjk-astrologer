@@ -1,0 +1,29 @@
+
+.bjk-footer
+{
+  width: 100vw;
+    border: 1px solid #eaeaeb;
+    height: 400px;
+    position: fixed;
+    bottom: -360px;
+    /* border-radius: 4px; */
+    background-color: #eaeaeb;
+    transition: 1s;
+}
+.footer-expand
+{
+  bottom: 0;
+  transition: 1s;
+  border-radius: 21px 21px 0 0;
+}
+
+.control-btn
+{
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+}

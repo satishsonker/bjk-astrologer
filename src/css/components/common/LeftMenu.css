@@ -7,7 +7,7 @@
   left: 0;
   height: 100%;
   display: block;
-  transition: width 1s;    
+  transition: width var(--leftmenu-trans-time);    
   box-shadow: 5px 5px 11px 0px grey;
   overflow-x: hidden;
   z-index: 1000000001;
@@ -19,15 +19,24 @@
     text-align: left;
     width: 50vw;
     max-width: var(--leftmenu-max-width);
+    background: white;
+    height: 100%;
 }
 .left-menu .menu .menu-item
 {
 padding: 12px 6px;
 border-bottom: 1px solid;
+transition: .6s;
 }
 .left-menu .menu .menu-item i
 {
 margin: 5px;
+}
+.left-menu .menu .menu-item:hover
+{
+transition: .4s;
+border-right: 4px solid red;
+background-color: var(--hover-color);
 }
 /* .left-menu .menu .menu-item span
 {
@@ -43,9 +52,15 @@ margin: 5px;
 
 } */
 
+.left-menu-layover-active
+{
+    width: 100vw !important;
+    transition: width var(--leftmenu-trans-time);
+}
 .left-menu-active
 {
     width: 50vw;
+    transition: width var(--leftmenu-trans-time);
 }
 .left-menu-layover
 {
@@ -53,7 +68,16 @@ margin: 5px;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 0vw;
   height: 100vh;
   z-index: 1000000000;
+  transition: var(--leftmenu-trans-time); 
+}
+
+.left-menu-card-list
+{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
 }

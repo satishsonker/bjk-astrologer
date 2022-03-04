@@ -10,7 +10,7 @@ export default function Header({setIsLeftMenuActive, isLeftMenuActive}) {
         <>
             <div className='bjk-nav'>
                 <div className="d-flex justify-content-between">
-                    <div className="p-2 bd-highlight"><i onClick={e => handleLeftMenuActiveState()} className="humberger-bar fa-solid fa-bars"></i>
+                    <div className="p-2 bd-highlight"><i onClick={e => handleLeftMenuActiveState()} className={!isLeftMenuActive?"humberger-bar fa-solid fa-bars":"humberger-bar fa-solid fa-xmark"}></i>
                     </div>
                     <div className="p-2 bd-highlight"><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></div>
                     <div className="p-2 bd-highlight"><img alt='' className='logo' src='../Images/logo/bjkLogo64.png' /></div>

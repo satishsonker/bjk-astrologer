@@ -1,0 +1,34 @@
+.astro-list
+{
+    padding: 10px;
+}
+.astro-list-item
+{
+    border: 1px solid #00c4fff2;
+    border-radius: 4px;
+    box-shadow: 1px 1px 9px #00f2ff66;
+    font-size: 12px;
+    padding: 3px;
+    background-image: linear-gradient(to right, #00f2ff66 , #00c4fff2);
+    transition: 1s;
+}
+.astro-list-item:hover{
+    transition: 1s;
+    box-shadow: inset 13px 9px 20px 20px #00e7ff
+}
+.astro-container
+{
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+.astro-image
+{
+    width: 10vh;
+    height: 10vh;
+    border: 0px inset;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: inset 2px 2px 11px 3px orange;
+    margin: 6%;
+}

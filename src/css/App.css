@@ -39,33 +39,11 @@ body{
   color:red;
   transition: color .5s;
 }
-.bjk-footer
-{
-  width: 100%;
-    /* border: 1px solid; */
-    height: 400px;
-    position: fixed;
-    bottom: -360px;
-    /* border-radius: 4px; */
-    background-color: aliceblue;
-    transition: 1s;
-}
-.footer-expand
-{
-  bottom: 0;
-  transition: 1s;
-}
-.control-btn
-{
-    padding: 5px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    align-items: center;
-    font-size: 22px;
-}
 .tc{
   text-align: center;
   padding:6px !important;
+}
+.content-area
+{
+  margin-top: var(--header-height);
 }
