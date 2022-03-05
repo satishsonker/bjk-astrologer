@@ -3,9 +3,9 @@
 {
   width: 100vw;
     border: 1px solid #eaeaeb;
-    height: 400px;
+    height: 80vh;
     position: fixed;
-    bottom: -360px;
+    bottom: -74vh;
     /* border-radius: 4px; */
     background-color: #eaeaeb;
     transition: 1s;
@@ -26,4 +26,19 @@
     text-align: center;
     align-items: center;
     font-size: 22px;
+}
+.footer-bot-menu
+{
+padding: 20px;
+text-align: center;
+}
+
+.breadcrumb-item+.breadcrumb-item::before
+{
+    content: '||';
+}
+.breadcrumb-item a
+{
+text-decoration: none !important;
+color: black !important;
 }

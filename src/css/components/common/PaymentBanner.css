@@ -1,0 +1,27 @@
+
+.pay-banner-container{
+    padding: 15px;
+    border-bottom: 2px solid lightsalmon;
+    border-top: 2px solid lightsalmon;margin: 20px 0;
+}
+
+.pay-banner-list
+{
+    margin-bottom: 30px;
+}
+.pay-banner-list>.col{
+    padding: 6px;
+    }
+
+.pay-banner-list>.col >img{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid;
+    margin: 2px;
+}
+.banner-text
+{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 10px;
+}
