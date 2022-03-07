@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import AstroFilter from './components/common/AstroFilter';
 import AstroList from './components/common/AstroList';
+import FAQ from './components/common/FAQ';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import LeftMenu from './components/common/LeftMenu';
@@ -18,6 +19,7 @@ function App() {
       <div className='content-area'>
         <AstroFilter showFilter={true}></AstroFilter>
         <AstroList></AstroList>
+        <FAQ></FAQ>
       </div>
     </>
   );

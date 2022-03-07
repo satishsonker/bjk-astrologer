@@ -43,8 +43,7 @@ export default function AstroFilter({ showFilter }) {
         {
             filterName: "Price & Rating",
             data: ["Price Low To High", "Price High To Low", "Rating High To Low"]
-        },
-
+        }
     ])
     if (_showFilter)
         return (
