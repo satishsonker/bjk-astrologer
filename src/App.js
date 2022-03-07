@@ -6,6 +6,7 @@ import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import LeftMenu from './components/common/LeftMenu';
 import SharePage from './components/common/SharePage';
+import Signup from './components/Signup';
 import './css/App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <AstroFilter showFilter={true}></AstroFilter>
         <AstroList></AstroList>
         <FAQ></FAQ>
+        <Signup></Signup>
       </div>
     </>
   );

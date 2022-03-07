@@ -19,17 +19,17 @@ export default function FAQ() {
     ])
     return (
         <>
-            <div className='filter-container'>
+            <div className='faq-container'>
                 <div className="accordion" id="accordionFaq">
                     {
                         faqData?.map((ele, ind) => {
                             return <div key={common.getElementKey()} className="accordion-item">
-                                <h2 className="accordion-header" id={"heading_" + ind}>
-                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse_" + ind} aria-expanded="true" aria-controls={"collapse_" + ind}>
+                                <h2 className="accordion-header" id={"question_" + ind}>
+                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#faq_" + ind} aria-expanded="true" aria-controls={"faq_" + ind}>
                                         <strong>{(ind + 1) + ". "} {ele.question}</strong>
                                     </button>
                                 </h2>
-                                <div id={"collapse_" + ind} className={ind === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby={"heading_" + ind} data-bs-parent="#accordionFaq">
+                                <div id={"faq_" + ind} className={ind === 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby={"question_" + ind} data-bs-parent="#accordionFaq">
                                     <div className="accordion-body">
                                         {ele.answer}
                                     </div>
