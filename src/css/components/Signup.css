@@ -1,0 +1,33 @@
+.signup-banner
+{
+width: 383px;
+height: 100%;
+}
+
+.signup-modal-body
+{
+padding: 0;
+}
+.signup-header
+{
+    font-size: 20px;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+}
+
+.signup-btn{
+    text-align: center;
+}
+
+.signup-btn > button{
+    background-color: orange;
+    border: 2px solid rgba(255, 166, 0, 0.815);
+    color: white;
+    border-radius: 27px;
+    padding: 7px;
+    width: 200px;
+}
+.signup-btn > button:hover{
+    background-color: rgb(192, 150, 7);
+    transition: .6s;
+}

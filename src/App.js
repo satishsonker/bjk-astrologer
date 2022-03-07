@@ -6,7 +6,7 @@ import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import LeftMenu from './components/common/LeftMenu';
 import SharePage from './components/common/SharePage';
-import Signup from './components/Signup';
+import Signup from './components/Login/Signup';
 import './css/App.css';
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
       <Footer></Footer>
       <SharePage></SharePage>
       <div className='content-area'>
-        <AstroFilter showFilter={true}></AstroFilter>
+        {/* <AstroFilter showFilter={true}></AstroFilter> */}
         <AstroList></AstroList>
-        <FAQ></FAQ>
+        {/* <FAQ></FAQ> */}
         <Signup></Signup>
       </div>
     </>
