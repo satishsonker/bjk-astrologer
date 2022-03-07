@@ -61,7 +61,7 @@ export default function () {
     ])
     return (
        <div className='astro-container'>
-            <div className="row row-cols-md-3 row-cols-lg-3 row-cols-sm-1 row-cols-xs-1">
+            <div className="row row-cols-xl-4 row-cols-lg-3  row-cols-1">
           {
               astroData.map(ele=>{
                   return   <div key={common.getElementKey()} className="col astro-list">

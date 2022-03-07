@@ -2,7 +2,8 @@
 .pay-banner-container{
     padding: 15px;
     border-bottom: 2px solid lightsalmon;
-    border-top: 2px solid lightsalmon;margin: 20px 0;
+    border-top: 2px solid lightsalmon;
+    margin: 5px 0;
 }
 
 .pay-banner-list
