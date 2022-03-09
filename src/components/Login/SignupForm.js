@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function SignupForm() {
+export default function SignupForm({setHaveAccount}) {
+    const handleHaveAccount=()=>{
+        setHaveAccount(true);
+    }
     return (
         <>
             <div className="mb-3 text-center signup-header">
@@ -23,15 +26,15 @@ export default function SignupForm() {
             </div>
             <div className='mb-3'>
                 <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
                     <label className="form-check-label" style={{ fontSize: "10px" }} for="flexSwitchCheckChecked">I authorize AstroSage.com &amp; associated astrologers to contact me via email or phone or SMS.</label>
                 </div>
             </div>
-            <div className="mb-3 signup-btn">
-                <button type="button"  >Sign UP</button>
+            <div className="my-3 signup-btn">
+                <button type="button">Sign Up</button>
             </div>
-            <div className="mb-3 signup-btn">
-                Already have an account? Login
+            <div className="mb-3 signup-msg">
+                Already have an account? <strong onClick={e=>handleHaveAccount()} className='clickable'>Login</strong>
             </div>
         </>
     )

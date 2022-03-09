@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Astrologer from './components/Astrologer';
 import AstroFilter from './components/common/AstroFilter';
 import AstroList from './components/common/AstroList';
 import FAQ from './components/common/FAQ';
@@ -14,14 +15,16 @@ function App() {
   return (
     <>
       <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
-      <LeftMenu option={{}} isActive={isLeftMenuActive} userDetails={{}} setting={{}}></LeftMenu>
+      <LeftMenu option={{
+        setIsLeftMenuActive:setIsLeftMenuActive
+      }} isActive={isLeftMenuActive} userDetails={{}} setting={{}}></LeftMenu>
       <Footer></Footer>
       <SharePage></SharePage>
       <div className='content-area'>
         {/* <AstroFilter showFilter={true}></AstroFilter> */}
+        <Astrologer></Astrologer>
         <AstroList></AstroList>
         {/* <FAQ></FAQ> */}
-        <Signup></Signup>
       </div>
     </>
   );

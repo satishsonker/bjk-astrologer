@@ -1,0 +1,22 @@
+.astro-header
+{
+    background-image:linear-gradient(to right, #00000073,  #000000), url('../../../public/Images/astroProfile.jpg');
+    width: 100vw;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    max-height: 35vh;
+}
+.astro-header>.layover
+{
+    padding:40px 5vw;
+}
+
+.astro-header>.layover>.layover-content
+{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 90vw;
+    height: 220px;
+}

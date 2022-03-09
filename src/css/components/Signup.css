@@ -31,3 +31,16 @@ padding: 0;
     background-color: rgb(192, 150, 7);
     transition: .6s;
 }
+.signup-msg
+{
+    text-align: center;
+    font-size: 11px;
+}
+
+.btn-close
+{
+    float: right;
+    margin: 8px;
+    position: absolute;
+    right: 0;
+}

@@ -1,10 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { common } from '../../common/common';
 import '../../css/components/common/LeftMenu.css';
+import Signup from '../Login/Signup';
 export default function LeftMenu({ option, isActive, userDetails, setting }) {
-     return (
+    option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, false);
+    option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, ()=>{});
+    const [showLogin, setShowLogin] = useState(false);
+    const [showSignUp, setShowSignUp] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    useEffect(() => {
+        setIsMenuOpen(isActive);
+    }, [isActive])
+    
+    const handleShowLoginSignup = (type) => {
+        setIsMenuOpen(false);
+        option.setIsLeftMenuActive(false);
+        switch (type) {
+            case 'login':
+                setShowLogin(true);
+                setShowSignUp(false);
+                break;
+            case 'signup':
+                setShowLogin(false);
+                setShowSignUp(true);
+                break;
+        }
+    }
+    return (
         <>
-            <div className={isActive ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'}>
-                <div className={isActive ? 'left-menu left-menu-active' : 'left-menu'}>
+            <div className={isMenuOpen ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'}>
+                <div className={isMenuOpen ? 'left-menu left-menu-active' : 'left-menu'}>
                     {/* <div className='left-menu-card'>
                         <ul className='left-menu-card-list'>
                             <li className='left-menu-card-list-item'><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
@@ -17,37 +42,54 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                         <li className='menu-item'>
                             <ul className='left-menu-card-list'>
                                 <li className='left-menu-card-list-item'><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
-                                <li className='left-menu-card-list-item'><i className="fa-solid fa-user"></i> <span>User name</span></li>
+                                {option.isAuthenticated &&
+                                    <li className='left-menu-card-list-item'><i className="fa-solid fa-user"></i> <span>User name</span></li>
+                                }
                             </ul>
                         </li>
                         <li className='menu-item'>
                             <i className="fa-solid fa-house-user"></i> <span>Home</span>
                         </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-user"></i> <span>Profile</span>
-                        </li>
-                        <li className='menu-item' onClick={e => alert('hi')}>
-                            <i className="fa-solid fa-wallet"></i>  <span>Wallet</span>
-                        </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-bookmark"></i> <span>Bookmark</span>
-                        </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-headset"></i> <span>Call History</span>
-                        </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-comments"></i> <span>Chat History</span>
+                        {!option.isAuthenticated &&
+                            <>
+                                <li className='menu-item' onClick={e => handleShowLoginSignup('signup')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
+                                    <i className="fa-solid fa-user"></i> <span>Signup</span>
+                                </li>
+                                <li className='menu-item' onClick={e => handleShowLoginSignup('login')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
+                                    <i className="fa-solid fa-user"></i> <span>Login</span>
+                                </li>
+                            </>}
+                        {option.isAuthenticated &&
+                            <>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-user"></i> <span>Profile</span>
+                                </li>
+                                <li className='menu-item' onClick={e => alert('hi')}>
+                                    <i className="fa-solid fa-wallet"></i>  <span>Wallet</span>
+                                </li>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-bookmark"></i> <span>Bookmark</span>
+                                </li>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-headset"></i> <span>Call History</span>
+                                </li>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-comments"></i> <span>Chat History</span>
 
-                        </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-receipt"></i> <span>Recharge History</span>
-                        </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
-                        </li>
+                                </li>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-receipt"></i> <span>Recharge History</span>
+                                </li>
+                                <li className='menu-item'>
+                                    <i className="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+                                </li>
+                            </>
+                        }
+
                     </ul>
                 </div>
             </div>
+            <Signup showLogin={showLogin} showSignup={showSignUp}></Signup>
         </>
     )
 }

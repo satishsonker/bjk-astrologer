@@ -45,5 +45,19 @@ body{
 }
 .content-area
 {
-  margin-top: var(--header-height);
+  margin-top: 22px;
+}
+
+.clickable
+{
+  text-decoration: underline;
+    cursor: pointer;
+    color: orange;
+    transition: .6s;
+}
+
+.clickable:hover
+{
+  color: aqua;
+  transition: .6s;
 }
