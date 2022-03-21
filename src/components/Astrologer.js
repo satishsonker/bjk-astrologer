@@ -1,27 +1,142 @@
 import React from 'react'
 import '../css/components/Astrologer.css'
+import Rating from './common/Rating'
 export default function Astrologer() {
   return (
     <>
-    <div className='astro-header'>
-      <div className='layover'>
-      <div className="d-flex align-items-center layover-content">
-                          <div className="flex-shrink-0">
-                              <img className='astro-image' src="../Images/logo/bjkLogo64.png" alt="..." />
-                          </div>
-                          <div className="flex-grow-1 ms-1">
-                              <div className="d-flex flex-column bd-highlight mb-1 p-2">
-                                  <div className="px-2 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <div className="float-end"><i className="fa-solid fa-bookmark"></i></div></div>
-                                  <div className="px-2 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> </div>
-                                  <div className="px-2 bd-highlight"><i className="fa-solid fa-language"></i> <div className="float-end"><i className="fa-solid fa-graduation-cap"></i>  Exp.</div></div>
-                                  <div className="px-2 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> /Min</div>
-                                  <div className="px-2 bd-highlight"></div>
-                                  <div className="px-2 bd-highlight"><i className="fa-solid fa-users text-primary"></i>  Users</div>
-                              </div>
-                          </div>
-                      </div>
+      <div className='astro-header'>
+        <div className='layover'>
+          <div className="row row-cols layover-height layover-content">
+            <div className="col-md-4 col-lg-4 col-sm-12 col-xs-12 astro-profile-img-center">
+              <img className='astro-profile-image' src="../Images/logo/bjkLogo64.png" alt="..." />
+            </div>
+            <div className="col-md-9 col-lg-9 col-sm-12 col-xs-12 text-warning astro-profile-img-center ">
+              <div className="d-flex flex-column bd-highlight mb-1 p-2 w100">
+                <div className="px-2 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> Akshay Shukla<div className="float-end"><i className="fa-solid fa-bookmark"></i></div></div>
+                <div className="px-2 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> Vedic, Kp System, Lal Kitab</div>
+                <div className="px-2 bd-highlight"><i className="fa-solid fa-language"></i> Hindi, English<div className="float-end"><i className="fa-solid fa-graduation-cap"></i>6 Years Exp.</div></div>
+                <div className="px-2 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> 9/Min</div>
+                <div className="px-2 bd-highlight"></div>
+                <div className="px-2 bd-highlight"><i className="fa-solid fa-users text-primary"></i>10  Users</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className='row row-cols-1 ast-profile-container'>
+        <div className='col py-4 px-5'>
+          <h2>About Acharya Aditya Sharma</h2>
+          <p>Acharya Aditya Sharma has been associated with the field of Astrology for more than 5 years. He has completed his B.A. in Sanskrit from Rashtriya Sanskrit Sansthan.</p>
+          <hr></hr>
+        </div>
+        <div className='col py-4 px-5'>
+          <div className="ast-widg-content">
+            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-heading-left br-2"> <h4>Education</h4> </div>
+            <div className="clearfix"></div>
+            <div className="ast-paragraph clear">
+              <p>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
+            </div>
+          </div>
+        </div>
+        <div className='col py-4 px-5'>
+          <div className="ast-widg-content">
+            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-heading-left br-2"> <h4>Degree</h4> </div>
+            <div className="clearfix"></div>
+            <div className="ast-paragraph clear">
+              <p>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
+            </div>
+          </div>
+        </div>
+        <div className='col py-4 px-5'>
+          <div className="ast-widg-content">
+            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-heading-left br-2"> <h4>Certificates</h4> </div>
+            <div className="clearfix"></div>
+            <div className="ast-paragraph clear">
+              <p>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
+            </div>
+          </div>
+        </div>
+        <div className='col py-4 px-5'>
+          <div className="ast-widg-content">
+            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-heading-left br-2"> <h4>Astrology Knowledge</h4> </div>
+            <div className="clearfix"></div>
+            <div className="ast-paragraph clear">
+              <ul className='tags'>
+                <li className='tag'>MUHURTA</li>
+                <li className='tag'>PSYCHIC READING</li>
+                <li className='tag'>PRASHNA / HORARY</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className='col py-4 px-5'>
+          <div className="ast-widg-content">
+            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-heading-left br-2"> <h4>Rating &amp; Reviewa</h4> </div>
+            <div className="clearfix"></div>
+            <div className="ast-paragraph clear">
+              <ul className='ratings'>
+                <li className='rating'>
+                  <div className="brb pdtb12 full-width">
+                    <div className="reviews-lefts">
+                      <img src="/images/user.png" className="us-img" />
+                      <span>
+                      <Rating rating={2} showNumber={false}></Rating>
+                      </span>
+                    </div>
+                    <div className="reviews-right">
+                      <h5 className="mt-0">
+                        <span className="name-t"> 4477082***** </span>
+                        <span className="dt-t"> 19 Mar 2022</span>
+                      </h5>
+                      <p> </p>
+                    </div>
+                  </div>
+                </li>
+                <li className='rating'>
+                  <div className="brb pdtb12 full-width">
+                    <div className="reviews-lefts">
+                      <img src="/images/user.png" className="us-img" />
+                      <span>
+                      <Rating rating={3.5} showNumber={false}></Rating>
+                      </span>
+                    </div>
+                    <div className="reviews-right">
+                      <h5 className="mt-0">
+                        <span className="name-t"> 4477082***** </span>
+                        <span className="dt-t"> 19 Mar 2022</span>
+                      </h5>
+                      <p> </p>
+                    </div>
+                  </div>
+                </li> <li className='rating'>
+                  <div className="brb pdtb12 full-width">
+                    <div className="reviews-lefts">
+                      <img src="/images/user.png" className="us-img" />
+                      <span>
+                       <Rating rating={5} showNumber={false}></Rating>
+                      </span>
+                    </div>
+                    <div className="reviews-right">
+                      <h5 className="mt-0">
+                        <span className="name-t"> 4477082***** </span>
+                        <span className="dt-t"> 19 Mar 2022</span>
+                      </h5>
+                      <p> </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="clearfix"></div>
+      <hr></hr>
     </>
   )
 }

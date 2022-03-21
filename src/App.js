@@ -8,12 +8,15 @@ import Header from './components/common/Header';
 import LeftMenu from './components/common/LeftMenu';
 import SharePage from './components/common/SharePage';
 import Signup from './components/Login/Signup';
+import { AppConfigProvider } from './Context/ConfigContext';
 import './css/App.css';
 
 function App() {
-  const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
+  const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);  
+const config=require('./config.json');
   return (
     <>
+    <AppConfigProvider value={config}>
       <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
       <LeftMenu option={{
         setIsLeftMenuActive:setIsLeftMenuActive
@@ -26,6 +29,7 @@ function App() {
         <AstroList></AstroList>
         {/* <FAQ></FAQ> */}
       </div>
+      </AppConfigProvider>
     </>
   );
 }

@@ -1,0 +1,10 @@
+{
+    "socialButton":{
+        "google":{
+            "enable":true
+        },
+        "facebook":{
+            "enable":true
+        }
+    }
+}
