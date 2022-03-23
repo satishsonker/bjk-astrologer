@@ -1,71 +1,6 @@
-.astro-header
-{
-    background-image:linear-gradient(to right, #00000073,  #000000), url('../../../public/Images/astroProfile.jpg');
-    width: 100vw;
-    height: 35vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 20vh;
-    max-height: 35vh;
-}
-.astro-header>.layover
-{
-    padding:3vh 5vw;
-    width: 100vw;
-}
-.layover-height
-{
-    height: 30vh;
-}
 
-.tc{
-    text-align: center;
-}
-
-.astro-profile-image
-{
-    border-radius: 50%;
-    border:2px solid orange;
-    padding: 4px;
-}
-.astro-profile-img-center
-{
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-}
-.w100
-{
-    width: 100%;
-}
-
-.astro-header>.layover>.layover-content
-{
-    border: 1px solid;
-    border-radius: 10px;
-    width: 90vw;
-    height: 30vh;
-    box-shadow: 2px 4px 8px 1px #80808096;
-    margin: 0;
-}
 @media (orientation: landscape) {
-    .astro-header>.layover>.layover-content
-    {
-        height: 40vh;
-    }
-    .astro-header
-    {
-        height: 45vh;
-        max-height: 45vh;
-    }
-    .astro-header>.layover
-    {
-        padding:2.5vh 5vw;
-    }
-    .astro-profile-image {
-        width: 16vw;
-        height: 16vw;
-    }
+  
   }
 
 .ast-icons-section .ast-widg-content {
@@ -93,6 +28,11 @@
     border: 8px solid #fff;
     float: left;
 }
+
+.ast-ic_img img{
+    width: 32px;
+    height: 32px;
+}
 .ast-icons-section .ast-heading-left, .ast-icons-section .ast-heading-right {
     margin-top: 15px;
 }
@@ -118,17 +58,6 @@
     display: block;
     clear: both;
     content: "";
-}
-@media only screen and (max-width: 768px)
-{
-    .ast-paragraph {
-        padding-left: 0;
-        margin-top: 8px;
-    }
-    .ast-profile-container
-    {
-        text-align: justify !important;
-    }
 }
 
 .ast-paragraph {
@@ -160,7 +89,8 @@
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 11px;
-    background: #e7e7e7;
+    background: orange;
+    color: white;
 }
 .ratings .ratings{
 
@@ -179,6 +109,7 @@
 }
 .reviews-lefts {
     float: left;
+    min-width: 65px;
 }
 .reviews-right {
     width: 85%;
@@ -186,7 +117,8 @@
     padding-left: 16px;
 }
 .reviews-lefts .us-img {
-    width: 60px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -196,23 +128,107 @@
 }
 .reviews-lefts span i {
     width: 12px!important;
-    margin-right: 6px;
+    margin-right: 0px;
+    font-size: 10px;
 }
 @media only screen and (max-width: 600px)
 {
     .name-t {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 .name-t {
     vertical-align: top;
     color: #000;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 13px;
 }
 .dt-t {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 100;
     color: #777;
+}
+.reviews-right .review {
+    display: block;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.ast-paragraph-details
+{
+    font-size: 14px;
+}
+
+.ast-header{
+    width: 100vw;
+    border: 1px solid transparent;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-image: url('/public/Images/astroProfile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    color: #000000;
+}
+.ast-profile-image-ctr
+{
+
+}
+.ast-profile-image-ctr img
+{
+    width: 100px;
+    border: 4px solid orange;
+    border-radius: 100%;
+    margin: -38px 0px 0px 0px;
+    box-shadow: -4px 2px 9px 4px white;
+}
+.ast-brb{
+    background: #e7e7e7de;
+    border-radius: 18px 18px 0 0;
+    height: 202px;
+    margin-top: 46px;
+}
+.ast-name
+{
+    font-size: 27px;
+    font-weight: 900;
+}
+@media only screen and (max-width: 768px)
+{
+    .reviews-right
+    {
+        width: 100%;
+    }
+    .ast-paragraph {
+        padding-left: 0 !important;
+        margin-top: 8px !;
+    }
+
+    .ast-profile-container,.ast-paragraph-details,.reviews-right .review 
+    {
+        text-align: justify !important;
+    }
+    .ast-profile-image-ctr img
+    {
+        width: 100px;
+        border: 4px solid orange;
+        border-radius: 100%;
+        margin: -38px 0px 0px 0px;
+        box-shadow: -4px 2px 9px 4px white;
+    }
+    .ast-brb{
+        background: #e7e7e7de;
+        border-radius: 18px 18px 0 0;
+        height: 202px;
+        margin-top: 46px;
+    }
+    .ast-heading-left {
+        padding: 0 20px 0 0;
+    }
+}
+@media only screen and (max-width: 500px)
+{
+   
+    
 }
