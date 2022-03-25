@@ -1,0 +1,42 @@
+.horo-box
+{
+    font-size: 11px;
+    text-align : center;
+    border:1px solid rgb(13, 92, 238);
+    border-radius: 10px;
+    padding: 5px 0;
+}
+.row{
+    margin: 0;
+}
+.col
+{
+    padding: 5px 5px 0px 5px;
+}
+.horo-box img{
+        width: 55px;
+        height: 55px;
+        border: 2px solid;
+        border-radius: 100%;
+        padding: 2px;
+        box-shadow: 1px 1px 23px 3px #00d0ff7d;
+}
+.horo-box .horo-name{
+
+}
+.horo-box .horo-period{
+    
+}
+.horo-heading
+{
+    border-bottom: 1px solid orange;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: orange;
+}
+@media only screen and (max-width: 768px)
+{
+   
+}

@@ -19,7 +19,6 @@
 .astro-container
 {
     padding: 20px;
-    overflow-y: scroll;
     max-height: 100vh;
 }
 .astro-image
@@ -31,4 +30,17 @@
     padding: 2px;
     box-shadow: inset 2px 2px 11px 3px orange;
     margin: 6%;
+}
+
+.btn-load-more
+{
+    display: none !important;
+}
+
+@media only screen and (max-width: 768px)
+{
+    .btn-load-more
+    {
+        display: block !important;
+    }
 }

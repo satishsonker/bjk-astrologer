@@ -1,0 +1,22 @@
+.home-box-astro-list
+{
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+
+.home-box-horo
+{
+
+}
+.home-content
+{
+    height: 100vh;
+}
+@media only screen and (max-width: 768px)
+{
+    .home-box-astro-list
+    {
+        height: 629px;
+        overflow-y: hidden;
+    }
+}

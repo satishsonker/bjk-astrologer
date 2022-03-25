@@ -11,20 +11,18 @@ export default function Astrologer() {
             <div className='ast-brb px-3'>
               <img src='/images/ast1.jpg' />
               <div className="row row-cols-1">
-              <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>Akshay Shukla</span> <i className="fa-solid fa-bookmark"></i></div>
-              <div className="col-12 bd-highlight"></div>
-              <div className="col-12 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> Vedic, Kp System, Lal Kitab</div>
-              <div className="col-12 bd-highlight"><i className="fa-solid fa-language"></i> Hindi, English</div>
-              <div className="col-12 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> 9/Min</div>
-              <div className="col-12 bd-highlight"><i className="fa-solid fa-graduation-cap"></i> 6 Years Exp. <i className="fa-solid fa-users text-primary"></i> 10  Users</div>
-              <div className="col-12 bd-highlight"></div>
-              <div className="col-12 bd-highlight"></div>
-
-            </div>    
-            </div>  
-                
+                <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>Akshay Shukla</span> <i className="fa-solid fa-bookmark"></i></div>
+                <div className="col-12 bd-highlight"></div>
+                <div className="col-12 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> Vedic, Kp System, Lal Kitab</div>
+                <div className="col-12 bd-highlight"><i className="fa-solid fa-language"></i> Hindi, English</div>
+                <div className="col-12 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> 9/Min</div>
+                <div className="col-12 bd-highlight"><i className="fa-solid fa-graduation-cap"></i> 6 Years Exp. <i className="fa-solid fa-users text-primary"></i> 10  Users</div>
+                <div className="col-12 bd-highlight"></div>
+                <div className="col-12 bd-highlight"></div>
+              </div>
+            </div>
           </div>
-        </div>        
+        </div>
       </div>
       {/* <div className='astro-header'>
         <div className='layover'>

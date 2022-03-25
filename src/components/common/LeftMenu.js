@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { common } from '../../common/common';
 import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
+import { Link } from "react-router-dom";
 export default function LeftMenu({ option, isActive, userDetails, setting }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, false);
-    option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, ()=>{});
+    option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     useEffect(() => {
         setIsMenuOpen(isActive);
     }, [isActive])
-    
+
+ const handleMenuClose = (isOpen) => {
+     setIsMenuOpen(isOpen);
+     option.setIsLeftMenuActive(isOpen);
+ }
     const handleShowLoginSignup = (type) => {
         setIsMenuOpen(false);
         option.setIsLeftMenuActive(false);
@@ -47,9 +52,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 }
                             </ul>
                         </li>
-                        <li className='menu-item'>
-                            <i className="fa-solid fa-house-user"></i> <span>Home</span>
-                        </li>
+                        <Link to="/Home" onClick={e=>handleMenuClose(false)}>
+                            <li className='menu-item'>
+                                <i className="fa-solid fa-house-user"></i> <span>Home</span>
+                            </li>
+                        </Link>
                         {!option.isAuthenticated &&
                             <>
                                 <li className='menu-item' onClick={e => handleShowLoginSignup('signup')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
@@ -59,6 +66,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                     <i className="fa-solid fa-user"></i> <span>Login</span>
                                 </li>
                             </>}
+                        <Link to="/Astrologers" onClick={e=>handleMenuClose(false)}>
+                            <li className='menu-item'>
+                                <i className="fa-solid fa-house-user"></i> <span>Astrologers</span>
+                            </li>
+                        </Link>
                         {option.isAuthenticated &&
                             <>
                                 <li className='menu-item'>

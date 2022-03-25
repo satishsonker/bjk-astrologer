@@ -16,6 +16,7 @@ import NoPage from './components/common/NoPage'
 import Signup from './components/Login/Signup';
 import { AppConfigProvider } from './Context/ConfigContext';
 import './css/App.css';
+import Astrologers from './components/Astrologers';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -33,8 +34,9 @@ function App() {
           <div className='content-area'>
             <Routes>
               <Route exact path="/" element={<div><Home></Home> </div>}></Route>
+              <Route exact path="/Home" element={<div><Home></Home> </div>}></Route>
               <Route exact path="/Astrologers" element={
-                <div><AstroList></AstroList></div>
+                <div><Astrologers></Astrologers></div>
                 }></Route>
               <Route exact path="/Astrologer" element={<div><Astrologer></Astrologer> </div>}></Route>
               <Route exact path="*" render={() => {

@@ -27,7 +27,7 @@ export default function SignupForm({setHaveAccount}) {
             <div className='mb-3'>
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
-                    <label className="form-check-label" style={{ fontSize: "10px" }} for="flexSwitchCheckChecked">I authorize AstroSage.com &amp; associated astrologers to contact me via email or phone or SMS.</label>
+                    <label className="form-check-label" style={{ fontSize: "10px" }} htmlFor="flexSwitchCheckChecked">I authorize AstroSage.com &amp; associated astrologers to contact me via email or phone or SMS.</label>
                 </div>
             </div>
             <div className="my-3 signup-btn">

@@ -15,7 +15,7 @@ export default function Rating({ rating, showNumber }) {
   }, [rating])
 
   return (
-    <div className='text-center'>
+    <div>
       {
         ratingData.map(ele => {
           return <i title={ele + ' Star'} key={common.getElementKey()} className="fa-solid fa-star text-warning"></i>
