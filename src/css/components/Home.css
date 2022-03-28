@@ -8,15 +8,34 @@
 {
 
 }
-.home-content
+.home-box-kundali {
+    padding: 11px;
+}
+.ast-carousel .carousel-item img
 {
-    height: 100vh;
+ height: 200px;
 }
 @media only screen and (max-width: 768px)
 {
     .home-box-astro-list
     {
-        height: 629px;
+        height: 670px;
         overflow-y: hidden;
+    }
+    .home-box-horo {
+        height: 480px;
+    }
+    .ast-carousel .carousel-item img
+    {
+    height: 150px;
+    }
+    .home-box-kundali {
+        height: 335px;
+    }
+}
+@media only screen and (min-width: 852px)
+{
+    .home-box-kundali {
+        height: 335px;
     }
 }

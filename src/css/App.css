@@ -47,11 +47,24 @@ body{
 .content-area
 {
   margin-top: 22px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    padding-bottom: 100px;
+    max-height: 100vh;
 }
-
+@media screen and (orientation: landscape ) and (max-width: 852px) {
+  .content-area {
+      height: 100vh;
+      padding-bottom: 10px !important;
+  }
+}
+@media only screen and (max-width: 768px)
+{
+  .bjk-footer {
+    bottom: -75vh !important;
+  }
+}
 .clickable
 {
   text-decoration: underline;
@@ -64,4 +77,20 @@ body{
 {
   color: aqua;
   transition: .6s;
+}
+.ast-tag-line
+{
+    text-align: center;
+    color: orange;
+    padding: 10px 20px 10px 20px;
+    font-family: unset;
+    border-bottom: 1px solid;
+    font-weight: 900;
+}
+
+#root
+{
+  overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }

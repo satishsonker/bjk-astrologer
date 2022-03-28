@@ -25,8 +25,13 @@
 .left-menu .menu .menu-item
 {
 padding: 12px 6px;
-border-bottom: 1px solid;
+border-bottom: 1px solid #e7e7e7;
 transition: .6s;
+}
+.left-menu .menu a
+{
+text-decoration: none !important;
+color: black;
 }
 .left-menu .menu .menu-item i
 {
@@ -80,4 +85,21 @@ background-color: var(--hover-color);
   margin: 0;
   list-style: none;
   text-align: left;
+}
+.left-menu-card-list-item
+{
+display: flex;
+}
+.left-menu-card-list-item .user-logo img
+{
+  width: 32px;
+}
+.left-menu-card-list-item .user-logo
+{
+  width: 20%;
+}
+.left-menu-card-list-item span
+{
+  width: 80%;
+  padding: 4px 0 0 0;
 }

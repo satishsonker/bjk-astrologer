@@ -4,7 +4,7 @@ import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 export default function LeftMenu({ option, isActive, userDetails, setting }) {
-    option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, false);
+    option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);
@@ -48,7 +48,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                             <ul className='left-menu-card-list'>
                                 <li className='left-menu-card-list-item'><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
                                 {option.isAuthenticated &&
-                                    <li className='left-menu-card-list-item'><i className="fa-solid fa-user"></i> <span>User name</span></li>
+                                    <li className='left-menu-card-list-item'>
+                                        <div className='user-logo'>
+                                            <img  src='/images/top_header_user_profile.png'></img> 
+                                            </div>
+                                        <span>User name</span></li>
                                 }
                             </ul>
                         </li>

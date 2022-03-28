@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { common } from '../../common/common';
 import '../../css/components/common/AstroList.css';
 import useWindowDimensions from '../../Hooks/userWindowDimensions';
-import AstButton from '../buttons/AstButton';
+import AstButton from '../Controls/AstButton';
 import Rating from './Rating';
 
 export default function () {
@@ -14,6 +14,7 @@ export default function () {
             name: "Acharya Lokesh Gaur",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/logo/bjkLogo64.png',
             exp: 6,
             rating: 4.5,
             price: 17,
@@ -23,6 +24,7 @@ export default function () {
             name: "Acharya Akshay Shukla",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/astro/akshayshukla.jpg',
             exp: 6,
             rating: 5,
             price: 17,
@@ -32,6 +34,7 @@ export default function () {
             name: "Acharya Harihar Prasad Shukla",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/astro/HariharPrasad.jpg',
             exp: 16,
             rating: 2.5,
             price: 17,
@@ -40,6 +43,7 @@ export default function () {
             name: "Acharya Lokesh Gaur",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/logo/bjkLogo64.png',
             exp: 6,
             rating: 4.5,
             price: 17,
@@ -49,6 +53,7 @@ export default function () {
             name: "Acharya Akshay Shukla",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/logo/bjkLogo64.png',
             exp: 6,
             rating: 5,
             price: 17,
@@ -58,6 +63,7 @@ export default function () {
             name: "Acharya Harihar Prasad Shukla",
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
+            path:'../Images/logo/bjkLogo64.png',
             exp: 16,
             rating: 2.5,
             price: 17,
@@ -79,12 +85,12 @@ export default function () {
                 {
                     astroData.map((ele,ind) => {
                         if(ind>(astroLimit-1))
-                        return <></>
+                        return <div key={common.getElementKey()}></div>
                          return <div key={common.getElementKey()} className="col astro-list">
                             <div className='astro-list-item'>
                                 <div className="d-flex align-items-center">
                                     <div className="flex-shrink-0">
-                                        <img className='astro-image' src="../Images/logo/bjkLogo64.png" alt="..." />
+                                        <img className='astro-image' src={ele.path} alt="..." />
                                     </div>
                                     <div className="flex-grow-1 ms-1">
                                         <div className="d-flex flex-column bd-highlight mb-1 p-2">

@@ -1,18 +1,19 @@
 
 .bjk-footer
 {
-  width: 100vw;
+  width: 100vw !important;
     border: 1px solid #eaeaeb;
     height: 80vh;
     position: fixed;
-    bottom: -74vh;
+    bottom: -72vh;
     /* border-radius: 4px; */
     background-color: #eaeaeb;
     transition: 1s;
+    overflow-x: hidden;
 }
 .footer-expand
 {
-  bottom: 0;
+  bottom: 0 !important;
   transition: 1s;
   border-radius: 21px 21px 0 0;
 }
@@ -45,4 +46,26 @@ color: black !important;font-size: 11px;
 .breadcrumb
 {
   display: inline-flex;
+}
+
+.ul-buttons
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ul-buttons li{
+  width: 25vw;
+  text-align: center;
+}
+.fa-share-nodes
+{
+  font-size: 23px;
+  padding-top: 4px;
+}
+
+@media screen and (orientation: landscape ) and (max-width: 852px) {
+  .bjk-footer {
+    bottom: -69vh;
+  }
 }

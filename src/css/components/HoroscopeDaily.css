@@ -36,6 +36,35 @@
     text-transform: uppercase;
     color: orange;
 }
+.horo-yearly
+{
+height: 187px;
+overflow-x: hidden;
+overflow-y:scroll ;
+}
+.horo-yearly ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.horo-yearly ul li{
+    display: flex;
+    padding: 7px 10px 7px 10px;
+    border-bottom: 1px solid orange;
+}
+.horo-yearly ul li img{
+    width: 30px;
+    height: 30px;
+}
+.horo-yearly ul li div:first-child{
+    width: 20%;
+}
+.horo-yearly ul li div:last-child{
+    width: 80%;
+}
+.horo-yearly ul li:hover{
+    
+}
 @media only screen and (max-width: 768px)
 {
    
