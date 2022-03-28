@@ -21,6 +21,10 @@
     padding: 20px;
     max-height: 100vh;
 }
+.astro-container a{
+    text-decoration: none;
+    color: black;
+}
 .astro-image
 {
     width: 10vh;

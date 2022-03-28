@@ -69,3 +69,7 @@ overflow-y:scroll ;
 {
    
 }
+.horo-yearly ul li a{
+    text-decoration: none;
+    color: black;
+}

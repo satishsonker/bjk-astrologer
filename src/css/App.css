@@ -94,3 +94,22 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f7d698; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#ffb300; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange; 
+}

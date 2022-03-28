@@ -5,6 +5,9 @@ import '../css/components/Home.css';
 import JanmKundali from './common/JanmKundali';
 import KundaliMatch from './common/KundaliMatch';
 import HoroscopeYearly from './Horoscopes/HoroscopeYearly';
+import ZodiacList from './Horoscopes/ZodiacList';
+import VastuList from './VastuList';
+import LoveAstrology from './LoveAstrology';
 import Carousel from './common/Carousel';
 
 export default function Home() {
@@ -34,6 +37,21 @@ export default function Home() {
         <div className='col'>
           <div className='home-box-kundali'>
            <HoroscopeYearly></HoroscopeYearly>
+          </div>
+        </div>
+        <div className='col'>
+          <div className='home-box-kundali'>
+           <ZodiacList></ZodiacList>
+          </div>
+        </div>
+        <div className='col'>
+          <div className='home-box-kundali'>
+            <VastuList></VastuList>
+          </div>
+        </div>
+        <div className='col'>
+          <div className='home-box-kundali'>
+            <LoveAstrology></LoveAstrology>
           </div>
         </div>
       </div>

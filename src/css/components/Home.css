@@ -1,12 +1,7 @@
 .home-box-astro-list
 {
     margin-bottom: 10px;
-    overflow-y: scroll;
-}
-
-.home-box-horo
-{
-
+    overflow-y: hidden;
 }
 .home-box-kundali {
     padding: 11px;
@@ -19,7 +14,7 @@
 {
     .home-box-astro-list
     {
-        height: 670px;
+        height: 400px;
         overflow-y: hidden;
     }
     .home-box-horo {
