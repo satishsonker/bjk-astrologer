@@ -61,9 +61,6 @@ body{
 }
 @media only screen and (max-width: 768px)
 {
-  .bjk-footer {
-    bottom: -75vh !important;
-  }
 }
 .clickable
 {

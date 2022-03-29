@@ -2,13 +2,13 @@ import React from 'react'
 import AstroList from './common/AstroList'
 import HoroscopeDaily from './Horoscopes/HoroscopeDaily'
 import '../css/components/Home.css';
-import JanmKundali from './common/JanmKundali';
-import KundaliMatch from './common/KundaliMatch';
 import HoroscopeYearly from './Horoscopes/HoroscopeYearly';
 import ZodiacList from './Horoscopes/ZodiacList';
 import VastuList from './VastuList';
-import LoveAstrology from './LoveAstrology';
+import LoveAstrology from './Love/LoveAstrology';
 import Carousel from './common/Carousel';
+import Janamkundali from './Kundali/JanmKundali';
+import KundaliMatch from './Kundali/KundaliMatch';
 
 export default function Home() {
   return (
@@ -26,12 +26,12 @@ export default function Home() {
       <div className='row row-cols-1 row-cols-md-3'>
         <div className='col'>
           <div className='home-box-kundali'>
-            <JanmKundali></JanmKundali>
+            <Janamkundali></Janamkundali>
           </div>
         </div>
         <div className='col'>
           <div className='home-box-kundali'>
-           <KundaliMatch></KundaliMatch>
+            <KundaliMatch></KundaliMatch>
           </div>
         </div>
         <div className='col'>

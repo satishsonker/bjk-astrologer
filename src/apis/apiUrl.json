@@ -1,0 +1,139 @@
+{
+    "userLocation": "https://geoip-db.com/json/",
+    "userController": {
+        "addUser": "/user/addUser",
+        "getApiKey": "/user/getAPIKey",
+        "resetApiKey": "/user/resetAPIKey",
+        "getUser": "/user/getUser",
+        "updateUser": "/user/updateUser",
+        "searchUser": "/user/searchUser",
+        "searchPermissions": "/user/SearchPermissions",
+        "getUserPermission": "/user/getUserPermission",
+        "getAllUserPermissions": "/user/getAllUserPermissions"
+    },
+    "roomController": {
+        "addRoom": "/room/addRoom",
+        "getAllRoom": "/room/getAllRoom",
+        "getRoom": "/room/getRoom",
+        "searchRoom": "/room/searchRoom",
+        "deleteRoom": "/room/deleteRoom",
+        "updateRoom": "/room/updateRoom",
+        "getRoomDropdown": "/room/getRoomDropdown"
+    },
+    "deviceController": {
+        "addDevice": "/device/addDevice",
+        "updateDevice": "/device/updateDevice",
+        "updateDeviceHistory": "/device/updateDeviceHistory",
+        "getAllDevice": "/device/getAllDevice",
+        "searchDevice": "/device/searchDevice",
+        "deleteDevice": "/device/deleteDevice",
+        "getDeviceDropdown": "/device/getDeviceDropdown",
+        "getDeviceTypeDropdown": "/device/getDeviceTypeDropdown",
+        "getDeviceTypePaging": "/device/GetDeviceTypePaging",
+        "getDeviceTypeAction": "/device/getDeviceTypeAction",
+        "updatefavourite": "/device/UpdateFavourite/{deviceKey}/{isFavourite}",
+        "getFavourite": "/device/GetFavourite"
+    },
+    "sceneController": {
+        "addScene": "/scene/addScene",
+        "getScene": "/scene/getScene",
+        "updateScene": "/scene/updateScene",
+        "getAllScene": "/scene/getAllScene",
+        "searchScene": "/scene/searchScene",
+        "deleteScene": "/scene/deleteScene"
+    },
+    "dashboardController": {
+        "getDashboardData": "/dashboard/getDashboardData"
+    },
+    "activityLogController": {
+        "add": "/activityLog/add",
+        "getAll": "/activityLog/getAll",
+        "SearchLog": "/activityLog/SearchLog"
+    },
+    "adminController": {
+        "addDeviceType": "/admin/addDeviceType",
+        "updateDeviceType": "/admin/updateDeviceType",
+        "deleteDeviceType": "/admin/deleteDeviceType",
+        "getDeviceType": "/admin/getDeviceType",
+        "getDeviceAction": "/admin/getDeviceAction",
+        "searchDeviceType": "/admin/SearchDeviceType",
+        "getAllDeviceAction": "/admin/getAllDeviceAction",
+        "deleteDeviceAction": "/admin/deleteDeviceAction",
+        "searchDeviceAction": "/admin/SearchDeviceAction",
+        "addDeviceAction": "/admin/addDeviceAction",
+        "updateDeviceAction": "/admin/updateDeviceAction",
+        "updateAdminPermission": "/admin/updateAdminPermission",
+        "addDeviceCapability": "/admin/addDeviceCapability",
+        "updateDeviceCapability": "/admin/updateDeviceCapability",
+        "deleteDeviceCapability": "/admin/deleteDeviceCapability",
+        "searchDeviceCapability": "/admin/searchDeviceCapability",
+        "getDeviceCapability": "/admin/getDeviceCapability",
+        "getAllDeviceCapability": "/admin/getAllDeviceCapability"
+    },
+    "masterDataController": {
+        "addCapabilityType": "/masterData/addCapabilityType",
+        "updateCapabilityType": "/masterData/updateCapabilityType",
+        "deleteCapabilityType": "/masterData/deleteCapabilityType",
+        "getCapabilityTypeDropdownData": "/masterData/getCapabilityTypeDropdownData",
+        "getCapabilityType": "/masterData/getCapabilityType",
+        "addCapabilityVersion": "/masterData/addCapabilityVersion",
+        "updateCapabilityVersion": "/masterData/updateCapabilityVersion",
+        "deleteCapabilityVersion": "/masterData/deleteCapabilityVersion",
+        "getCapabilityVersionDropdownData": "/masterData/getCapabilityVersionDropdownData",
+        "getCapabilityVersion": "/masterData/getCapabilityVersion",
+        "addDisplayCategory": "/masterData/addDisplayCategory",
+        "updateDisplayCategory": "/masterData/updateDisplayCategory",
+        "deleteDisplayCategory": "/masterData/deleteDisplayCategory",
+        "getDisplayCategoryDropdownData": "/masterData/getDisplayCategoryDropdownData",
+        "getDisplayCategory": "/masterData/getDisplayCategory",
+        "addCapabilityInterface": "/masterData/addCapabilityInterface",
+        "updateCapabilityInterface": "/masterData/updateCapabilityInterface",
+        "deleteCapabilityInterface": "/masterData/deleteCapabilityInterface",
+        "getCapabilityInterfaceDropdownData": "/masterData/getCapabilityInterfaceDropdownData",
+        "getCapabilityInterface": "/masterData/getCapabilityInterface",
+        "addCapabilitySupportedProperty": "/masterData/addCapabilitySupportedProperty",
+        "updateCapabilitySupportedProperty": "/masterData/updateCapabilitySupportedProperty",
+        "deleteCapabilitySupportedProperty": "/masterData/deleteCapabilitySupportedProperty",
+        "getCapabilitySupportedPropertyDropdownData": "/masterData/getCapabilitySupportedPropertyDropdownData",
+        "getCapabilitySupportedProperty": "/masterData/getCapabilitySupportedProperty",
+        "getAllCapabilityDropdownData": "/masterData/getAllCapabilityDropdownData",
+        "searchCapabilityInterface": "/masterData/searchCapabilityInterface",
+        "searchDisplayCategory": "/masterData/searchDisplayCategory",
+        "searchCapabilityType": "/masterData/searchCapabilityType",
+        "searchCapabilityVersion": "/masterData/searchCapabilityVersion",
+        "searchCapabilitySupportedProperty": "/masterData/searchCapabilitySupportedProperty"
+    },
+    "deviceGroupController": {
+        "addDeviceGroup": "/DeviceGroup/add",
+        "addDeviceGroupDetail": "/DeviceGroup/AddGroupDetails/",
+        "getDeviceGroupDetail": "/DeviceGroup/getGroupDetails/",
+        "updateDeviceGroup": "/DeviceGroup/updateGroup",
+        "deleteDeviceGroup": "/DeviceGroup/deleteGroup/",
+        "getDeviceGroup": "/DeviceGroup/GetGroup/",
+        "getDeviceGroups": "/DeviceGroup/GetGroups",
+        "searchDeviceGroup": "/DeviceGroup/Search/"
+    },
+    "dropdownMasterController":{
+        "addDropdownMaster": "/dropdownMaster/addDropdownMaster",
+        "getDropdownMasters": "/dropdownMaster/getAllDropdownMaster/{pageNo}/{pageSize}",
+        "getDropdownMaster": "/dropdownMaster/getDropdownMaster",
+        "getDropdownDataType": "/dropdownMaster/getDropdownDataType",
+        "addDropdownDataType": "/dropdownMaster/addDropdownDataType",
+        "updateDropdownMaster": "/dropdownMaster/updateDropdownMaster",
+        "deleteDropdownMaster": "/dropdownMaster/deleteDropdownMaster/{dropdownDataId}",
+        "searchDropdownMaster": "/dropdownMaster/searchDropdownMaster/{searchTerm}/{pageNo}/{pageSize}"
+    },
+    "emailTemplate": {
+        "addEmailTemplate": "/emailTemplate/addEmailTemplate",
+        "getEmailTemplates": "/emailTemplate/getEmailTemplate/{pageNo}/{pageSize}",
+        "getEmailTemplate": "/emailTemplate/getEmailTemplate",
+        "updateEmailTemplate": "/emailTemplate/UpdateEmailTemplate",
+        "deleteEmailTemplate": "/emailTemplate/deleteEmailTemplate/{templateId}",
+        "searchEmailTemplate": "/emailTemplate/searchEmailTemplate/{searchTerm}/{pageNo}/{pageSize}"
+    },
+    "emailSetting": {
+        "getEmailSetting": "/emailSetting/getEmailSetting",
+        "updateEmailSetting": "/emailSetting/updateEmailSetting",
+        "deleteEmailSetting": "/emailSetting/deleteEmailSetting/{settingId}"
+    }
+}

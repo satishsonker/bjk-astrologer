@@ -1,0 +1,54 @@
+.love-banner
+{
+    width:100%;
+    height: 250px;
+}
+.love-container
+{
+    margin-bottom: 40px;
+}
+.love-page-header
+{
+    color: orange;
+    border-bottom: 2px solid slateblue;
+    padding: 10px 80px 10px 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.love-container-item
+{
+    
+    padding: 10px 20px;
+}
+.love-para
+{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.ast-tag-line2
+{
+    color: orange;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid;
+}
+.ast-tag-line2-para{
+    padding: 10px 20px;
+    text-align: justify;
+    color: gray;
+}
+.kun-box a{
+    text-decoration: none;
+}
+.kun-box
+{
+    height: 405px;
+    margin-bottom: 17px;
+}
+@media screen and(max-width:786) {
+    .love-banner
+    {
+        height: 20vh;
+    }
+}

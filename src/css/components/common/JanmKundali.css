@@ -5,7 +5,7 @@
     font-size: var(--list-font-size);
     height: 310px;
     margin-bottom: 86px;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .dflex{

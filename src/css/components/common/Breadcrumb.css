@@ -1,0 +1,11 @@
+.breadcrumb-item
+{
+    font-size: 12px;;
+}
+ol.breadcrumb
+{
+    margin: 0;
+    padding: 10px 15px;
+    width: 100%;
+    background: #e7e7e7;
+}

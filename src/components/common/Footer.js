@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../../css/components/common/Footer.css';
-import FooterBottomMenu from './FooterBottomMenu';
+import FooterBottomMenu from '../Menus/FooterBottomMenu';
 import PaymentBanner from './PaymentBanner';
 
 
