@@ -20,7 +20,7 @@ export default function LoveAstrology() {
                     <li><a href="/love/soulmate.aspx">Soulmate</a> </li>
                     <li><a href="/tarot/love-tarot-reading">Love Tarot</a> </li>
                     <li><a href="/horoscopes/love-horoscope.aspx">Love Horoscope</a> </li>
-                    <li class="borderNone"><a href="/astrology/love.aspx">Love Profile</a> </li>
+                    <li className="borderNone"><a href="/astrology/love.aspx">Love Profile</a> </li>
                 </ul>
             </div>
         </div>

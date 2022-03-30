@@ -95,8 +95,8 @@ export default function () {
                         if (ind > (astroLimit - 1))
                             return <div key={common.getElementKey()}></div>
                         return <>
-                        <Link to={"/astrologer?id="+ele.id}>
-                            <div key={common.getElementKey()} className="col astro-list">
+                        <Link  key={common.getElementKey()} to={"/astrologer?id="+ele.id}>
+                            <div className="col astro-list">
                                 <div className='astro-list-item'>
                                     <div className="d-flex align-items-center">
                                         <div className="flex-shrink-0">

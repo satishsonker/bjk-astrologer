@@ -92,7 +92,7 @@ export default function Janamkundali() {
             defaultText: 'Year',
             width: '100%',
             value: kundaliData.year,
-            data: common.getNumberArray(new Date().getFullYear() - 100, new Date().getFullYear()),
+            data: common.getNumberArray(new Date().getFullYear() - 70, new Date().getFullYear()),
             hasValidation: true,
             showLabel: false,
             showHelpText: false,

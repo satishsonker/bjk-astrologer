@@ -8,6 +8,11 @@
     overflow: hidden;
 }
 
+.kun-box ul li:hover
+{
+    background:var(--hover-color);
+}
+
 .dflex{
     display: flex;
     width: 100%;

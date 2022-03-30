@@ -17,7 +17,7 @@ export default function Home() {
         <Carousel></Carousel>
       </div>
       <div className='home-box-astro-list'>
-        <div class="ast-tag-line">We have Best and Certified Astrologers</div>
+        <div className="ast-tag-line">We have Best and Certified Astrologers</div>
         <AstroList></AstroList>
       </div>
       <div className='home-box-horo'>

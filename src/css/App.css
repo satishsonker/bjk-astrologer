@@ -110,3 +110,10 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: orange; 
 }
+
+select:focus{
+  background-color: var(--focus-color) !important;
+}
+input:focus{
+  background-color: var(--focus-color) !important;
+}
