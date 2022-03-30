@@ -9,6 +9,7 @@ import LoveAstrology from './Love/LoveAstrology';
 import Carousel from './common/Carousel';
 import Janamkundali from './Kundali/JanmKundali';
 import KundaliMatch from './Kundali/KundaliMatch';
+import GoogleReviews from './common/GoogleReviews';
 
 export default function Home() {
   return (
@@ -36,12 +37,12 @@ export default function Home() {
         </div>
         <div className='col'>
           <div className='home-box-kundali'>
-           <HoroscopeYearly></HoroscopeYearly>
+            <HoroscopeYearly></HoroscopeYearly>
           </div>
         </div>
         <div className='col'>
           <div className='home-box-kundali'>
-           <ZodiacList></ZodiacList>
+            <ZodiacList></ZodiacList>
           </div>
         </div>
         <div className='col'>
@@ -53,8 +54,11 @@ export default function Home() {
           <div className='home-box-kundali'>
             <LoveAstrology></LoveAstrology>
           </div>
-        </div>
+        </div>      
       </div>
+      <div className=''>
+          <GoogleReviews></GoogleReviews>
+        </div>
     </div>
   )
 }

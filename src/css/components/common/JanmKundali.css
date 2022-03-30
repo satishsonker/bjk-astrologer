@@ -4,7 +4,7 @@
     border: 1px solid #e7e7e7;
     font-size: var(--list-font-size);
     height: 310px;
-    margin-bottom: 86px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
@@ -34,5 +34,8 @@
     {
         margin-bottom: 0 !important;
     }
+    .kun-box-header .ast-tag-line{
+        font-size: 12px !important;
+       }
 
 }
