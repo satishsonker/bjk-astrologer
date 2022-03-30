@@ -16,7 +16,7 @@ export default function SharePage({ modelId }) {
                         </div>
                         <div className="modal-body">
                             <ul className='social-media-list'>
-                                <li className='social-media-list-item' data-bs-dismiss="modal"><i className="fa-brands fa-whatsapp"></i> Share on WhatsApp</li>
+                            <a href="https://api.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">  <li className='social-media-list-item' data-bs-dismiss="modal"><i className="fa-brands fa-whatsapp"></i> Share on WhatsApp</li>Share via Whatsapp web</a>
                                 <li className='social-media-list-item' data-bs-dismiss="modal"><i className="fa-brands fa-facebook"></i> Share on Facebook</li>
                                 <li className='social-media-list-item' data-bs-dismiss="modal"><i className="fa-brands fa-twitter"></i> Share on Twitter</li>
                             </ul>
