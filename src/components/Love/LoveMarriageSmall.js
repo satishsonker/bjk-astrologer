@@ -11,7 +11,7 @@ export default function LoveMarriageSmall() {
         <div className='kun-box'>
             <Link to="/love">
                 <div className='kun-box-header'>
-                    <img src='/images/love-banner-4.jpg'></img>
+                    <img alt='Banner' src='/images/love-banner-4.jpg'></img>
                     <div className='ast-tag-line2'>
                         Love Marriage
                     </div>

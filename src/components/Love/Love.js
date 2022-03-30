@@ -17,7 +17,7 @@ export default function Love() {
         <div className='love-container'>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='love-container-item'>
-                <img className='love-banner' src='/images/loveAndAstro.jpg' />
+                <img alt='Banner' className='love-banner' src='/images/loveAndAstro.jpg' />
                 <div className='love-page-header'>
                     Astrology in Love
                 </div>

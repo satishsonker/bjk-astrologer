@@ -161,7 +161,7 @@ export default function KundaliMatch() {
         return (
             <div className='kun-box'>
                 <div className='kun-box-header'>
-                    <img src='/images/MatchBoy.jpg'></img>
+                    <img alt='Banner' src='/images/MatchBoy.jpg'></img>
                     <div className='ast-tag-line'>
                         Enter Boy's Details
                     </div></div>
@@ -197,7 +197,7 @@ export default function KundaliMatch() {
             return (
                 <div className='kun-box'>
                     <div className='kun-box-header'>
-                        <img src='/images/matchGirl.jpg'></img>
+                        <img alt='Bannner' src='/images/matchGirl.jpg'></img>
                         <div className='ast-tag-line'>
                         Enter Girl's Details
                         </div></div>

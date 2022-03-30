@@ -145,7 +145,7 @@ export default function Janamkundali() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img src='/images/janamkundali.jpg'></img>
+                <img alt='Banner' src='/images/janamkundali.jpg'></img>
                 <div className='ast-tag-line'>
                     Get Your Janam kundali
                 </div></div>

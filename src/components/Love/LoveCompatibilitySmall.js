@@ -11,7 +11,7 @@ export default function LoveCompatibilitySmall() {
         <div className='kun-box'>
             <Link to="/love">
                 <div className='kun-box-header'>
-                    <img src='/images/love-banner-5.jpg'></img>
+                    <img alt='Banner' src='/images/love-banner-5.jpg'></img>
                     <div className='ast-tag-line2'>
                         Love Compatibility Report
                     </div>

@@ -5,7 +5,7 @@ export default function VastuList() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img src='/images/vastu-banner.jpg'></img>
+                <img alt='Vastu Banner' src='/images/vastu-banner.jpg'></img>
                 <div className='ast-tag-line'>
                     Know About Your Vastu
                 </div></div>

@@ -12,51 +12,51 @@ export default function ZodiacList() {
             <div className='horo-yearly'>
                 <ul>
                     <li>
-                        <div><img src='/images/ZodiacSign/aries.png' /></div>
+                        <div><img alt="Aries" src='/images/ZodiacSign/aries.png' /></div>
                         <div className='horo-name'>Aries</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/taurus.png' /></div>
+                        <div><img alt="Taurus" src='/images/ZodiacSign/taurus.png' /></div>
                         <div className='horo-name'>Taurus</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Gemini.png' /></div>
+                        <div><img alt="Gemini" src='/images/ZodiacSign/Gemini.png' /></div>
                         <div className='horo-name'>Gemini</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Cancer.png' /></div>
+                        <div><img alt="Cancer" src='/images/ZodiacSign/Cancer.png' /></div>
                         <div className='horo-name'>Cancer</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Leo.png' /></div>
+                        <div><img alt="Leo" src='/images/ZodiacSign/Leo.png' /></div>
                         <div className='horo-name'>Leo</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Virgo.png' /></div>
+                        <div><img alt="Virgo" src='/images/ZodiacSign/Virgo.png' /></div>
                         <div className='horo-name'>Virgo</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Libra.png' /></div>
+                        <div><img alt="Libra" src='/images/ZodiacSign/Libra.png' /></div>
                         <div className='horo-name'>Libra</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Scorpio.png' /></div>
+                        <div><img alt="Scorpio" src='/images/ZodiacSign/Scorpio.png' /></div>
                         <div className='horo-name'>Scorpio</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Sagittiarius.png' /></div>
+                        <div><img alt="Sagittiarius" src='/images/ZodiacSign/Sagittiarius.png' /></div>
                         <div className='horo-name'>Sagittiarius</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Capricorn.png' /></div>
+                        <div><img alt="Capricorn" src='/images/ZodiacSign/Capricorn.png' /></div>
                         <div className='horo-name'>Capricorn</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Aquarius.png' /></div>
+                        <div><img alt="Aquarius" src='/images/ZodiacSign/Aquarius.png' /></div>
                         <div className='horo-name'>Aquarius</div>
                     </li>
                     <li>
-                        <div><img src='/images/ZodiacSign/Pisces.png' /></div>
+                        <div><img alt="Pisces" src='/images/ZodiacSign/Pisces.png' /></div>
                         <div className='horo-name'>Pisces</div>
                     </li>
                 </ul>

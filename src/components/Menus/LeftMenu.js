@@ -46,11 +46,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                     <ul className='menu'>
                         <li className='menu-item'>
                             <ul className='left-menu-card-list'>
-                                <li className='left-menu-card-list-item'><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
+                                <li className='left-menu-card-list-item'><img alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
                                 {option.isAuthenticated &&
                                     <li className='left-menu-card-list-item'>
                                         <div className='user-logo'>
-                                            <img  src='/images/top_header_user_profile.png'></img> 
+                                            <img alt='User Profile'  src='/images/top_header_user_profile.png'></img> 
                                             </div>
                                         <span>User name</span></li>
                                 }

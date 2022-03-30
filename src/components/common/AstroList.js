@@ -100,7 +100,7 @@ export default function () {
                                 <div className='astro-list-item'>
                                     <div className="d-flex align-items-center">
                                         <div className="flex-shrink-0">
-                                            <img className='astro-image' src={ele.path} alt="..." />
+                                            <img alt="Astrologer Image" className='astro-image' src={ele.path} alt="..." />
                                         </div>
                                         <div className="flex-grow-1 ms-1">
                                             <div className="d-flex flex-column bd-highlight mb-1 p-2">

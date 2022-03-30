@@ -9,7 +9,7 @@ export default function Astrologer() {
         <div className='text-center'>
           <div className='ast-profile-image-ctr'>
             <div className='ast-brb px-3'>
-              <img src='/images/ast1.jpg' />
+              <img src='/images/ast1.jpg' alt='Astrologer Image' />
               <div className="row row-cols-1">
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>Akshay Shukla</span> <i className="fa-solid fa-bookmark"></i></div>
                 <div className="col-12 bd-highlight"></div>
@@ -52,7 +52,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img src="/images/education.png" /> </div>
+            <div className="ast-ic_img shw-2"> <img alt='education' src="/images/education.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>Education</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -62,7 +62,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img src="/images/degree.png" /> </div>
+            <div className="ast-ic_img shw-2"> <img alt='Degree' src="/images/degree.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>Degree</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -72,7 +72,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img src="/images/certificates.png" /> </div>
+            <div className="ast-ic_img shw-2"> <img alt='Certificate' src="/images/certificates.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>Certificates</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -82,7 +82,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img src="/images/astroKnow.png" /> </div>
+            <div className="ast-ic_img shw-2"> <img alt='Astrologer Knowledge' src="/images/astroKnow.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>Astrology Knowledge</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -96,7 +96,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img src="/images/rating.png" /> </div>
+            <div className="ast-ic_img shw-2"> <img alt='Rating' src="/images/rating.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>Rating &amp; Reviewa</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -104,7 +104,7 @@ export default function Astrologer() {
                 <li className='rating'>
                   <div className="brb pdtb12 full-width">
                     <div className="reviews-lefts">
-                      <img src="/images/user-black.png" className="us-img" />
+                      <img alt='User Logo' src="/images/user-black.png" className="us-img" />
                       <span>
                         <Rating rating={2} showNumber={showRatingNumber}></Rating>
                       </span>
@@ -121,7 +121,7 @@ export default function Astrologer() {
                 <li className='rating'>
                   <div className="brb pdtb12 full-width">
                     <div className="reviews-lefts">
-                      <img src="/images/user-black.png" className="us-img" />
+                      <img alt='User Logo' src="/images/user-black.png" className="us-img" />
                       <span>
                         <Rating rating={3.5} showNumber={showRatingNumber}></Rating>
                       </span>
@@ -137,7 +137,7 @@ export default function Astrologer() {
                 </li> <li className='rating'>
                   <div className="brb pdtb12 full-width">
                     <div className="reviews-lefts">
-                      <img src="/images/user-black.png" className="us-img" />
+                      <img alt='User Logo' src="/images/user-black.png" className="us-img" />
                       <span>
                         <Rating rating={5} showNumber={showRatingNumber}></Rating>
                       </span>
