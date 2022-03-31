@@ -41,11 +41,8 @@ function App() {
                 }></Route>
               <Route exact path="/Astrologer" element={<div><Astrologer></Astrologer> </div>}></Route>
               <Route exact path="/Love" element={<div><Love></Love> </div>}></Route>
-              <Route exact path="*" render={() => {
-                return (
-                  <div><NoPage></NoPage> </div>
-                );
-              }}></Route>
+              <Route exact path="/FAQ" element={<div><FAQ></FAQ> </div>}></Route>
+              <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
           </div>

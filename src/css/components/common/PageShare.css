@@ -8,7 +8,6 @@
 .social-media-list-item
 {
     padding: 5px 10px;
-    font-size: 16px;
 }
 .social-media-list-item i
 {
@@ -18,3 +17,33 @@
 {
 background-color: var(--hover-color);
 }
+.whatsapp:hover{
+background-color: var(--whatsapp-color);
+color: black;
+}
+.facebook:hover{
+    background-color:var(--facebook-color);
+    color: black;
+}
+.twitter:hover{
+    background-color: var(--twitter-color);
+    color: black;
+}
+.whatsapp{
+    color: var(--whatsapp-color);
+    }
+    .facebook{
+        color:var(--facebook-color);
+    }
+    .twitter{
+        color: var(--twitter-color);
+    }
+
+    .social-media-list a{
+        text-decoration: none;
+    }
+    .btn-close
+    {
+        display: block !important;
+        position: initial !important;
+    }

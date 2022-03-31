@@ -1,7 +1,13 @@
 import React,{useState} from 'react'
 import { common } from '../../common/common'
+import Breadcrumb from './Breadcrumb';
 
 export default function FAQ() {
+    
+    const breadcrumbOption = [
+        { name: 'Home', link: "/Home" },
+        { name: 'FAQs', isActive: false }
+    ];
     const [faqData, setFaqData] = useState([
         {
             question: "Can I talk to an astrologer for free?",
@@ -19,6 +25,7 @@ export default function FAQ() {
     ])
     return (
         <>
+        <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='faq-container'>
                 <div className="accordion" id="accordionFaq">
                     {

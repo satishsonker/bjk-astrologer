@@ -13,10 +13,10 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
         setIsMenuOpen(isActive);
     }, [isActive])
 
- const handleMenuClose = (isOpen) => {
-     setIsMenuOpen(isOpen);
-     option.setIsLeftMenuActive(isOpen);
- }
+    const handleMenuClose = (isOpen) => {
+        setIsMenuOpen(isOpen);
+        option.setIsLeftMenuActive(isOpen);
+    }
     const handleShowLoginSignup = (type) => {
         setIsMenuOpen(false);
         option.setIsLeftMenuActive(false);
@@ -50,13 +50,13 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 {option.isAuthenticated &&
                                     <li className='left-menu-card-list-item'>
                                         <div className='user-logo'>
-                                            <img alt='User Profile'  src='/images/top_header_user_profile.png'></img> 
-                                            </div>
+                                            <img alt='User Profile' src='/images/top_header_user_profile.png'></img>
+                                        </div>
                                         <span>User name</span></li>
                                 }
                             </ul>
                         </li>
-                        <Link to="/Home" onClick={e=>handleMenuClose(false)}>
+                        <Link to="/Home" onClick={e => handleMenuClose(false)}>
                             <li className='menu-item'>
                                 <i className="fa-solid fa-house-user"></i> <span>Home</span>
                             </li>
@@ -70,7 +70,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                     <i className="fa-solid fa-user"></i> <span>Login</span>
                                 </li>
                             </>}
-                        <Link to="/Astrologers" onClick={e=>handleMenuClose(false)}>
+                        <Link to="/Astrologers" onClick={e => handleMenuClose(false)}>
                             <li className='menu-item'>
                                 <i className="fa-solid fa-house-user"></i> <span>Astrologers</span>
                             </li>
@@ -96,6 +96,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 <li className='menu-item'>
                                     <i className="fa-solid fa-receipt"></i> <span>Recharge History</span>
                                 </li>
+                                <Link to="/FAQ" onClick={e => handleMenuClose(false)}>
+                                    <li className='menu-item'>
+                                        <i className="fa-solid fa-right-from-bracket"></i> <span>FAQs</span>
+                                    </li>
+                                </Link>
                                 <li className='menu-item'>
                                     <i className="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
                                 </li>

@@ -1,0 +1,45 @@
+.np-container{
+    background-image:  url('/public/Images/sky.jpg');
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+}
+.np-container img{
+    width: 180px;
+    height: 180px;
+    margin-top: -19vh;
+    animation: mymove 2s linear infinite;
+}
+.np-text{
+    position: fixed;
+    top: 100px;
+    color: white;
+    width: 90vw;
+    left: 5vw;
+    border: 1px solid orange;
+    border-radius: 20px;
+    padding: 20px;
+    background: orange;
+    text-transform: capitalize;
+    box-shadow: 0px 0px 14px 11px #7986cb;
+}
+.inner{
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes mymove {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+  }
