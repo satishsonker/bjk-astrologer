@@ -11,6 +11,7 @@
   box-shadow: 5px 5px 11px 0px grey;
   overflow-x: hidden;
   z-index: 1000000001;
+  background-color: white;
 }
 .left-menu .menu,.sub-menu{
     padding: 0;
@@ -20,7 +21,7 @@
     width: 50vw;
     max-width: var(--leftmenu-max-width);
     background: white;
-    height: 100%;
+    min-height: 723px;
 }
 .left-menu .menu .menu-item
 {
@@ -102,4 +103,26 @@ display: flex;
 {
   width: 80%;
   padding: 4px 0 0 0;
+}
+
+.menu-item i{
+  margin: 5px;
+  width: 22px;
+  color: orange;
+}
+
+.menu-item span{
+  color: black;
+}
+.menu-item i:hover{
+  color: black;
+}
+
+.menu-item span:hover{
+  color: orange;
+}
+.left-menu li:hover
+{
+  background-color: var(--hover-color);
+  color: orange;
 }

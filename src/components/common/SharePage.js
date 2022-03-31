@@ -20,7 +20,7 @@ export default function SharePage({ modelId }) {
                                 <div className="modal-body">
                                     <ul className='social-media-list'>
                                         <a href={`https://api.whatsapp.com/send?text=${config.app.appShareUrl}`} data-action="share/whatsapp/share">  <li className='social-media-list-item whatsapp' data-bs-dismiss="modal"><i className="fa-brands fa-whatsapp"></i> Share on WhatsApp</li></a>
-                                        <a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(config.app.appShareUrl)}&amp;src=sdkprepars`} class="fb-xfbml-parse-ignore"><li className='social-media-list-item facebook' data-bs-dismiss="modal">
+                                        <a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(config.app.appShareUrl)}&amp;src=sdkprepars`} className="fb-xfbml-parse-ignore"><li className='social-media-list-item facebook' data-bs-dismiss="modal">
                                             <i className="fa-brands fa-facebook"></i> Share on Facebook</li></a>
                                        <a href={`https://twitter.com/intent/tweet?text=${config.app.appShareUrl}`}> <li className='social-media-list-item twitter' data-bs-dismiss="modal"><i className="fa-brands fa-twitter"></i> Share on Twitter</li></a>
                                     </ul>

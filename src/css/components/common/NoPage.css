@@ -29,6 +29,7 @@
     background: orange;
     text-transform: capitalize;
     box-shadow: 0px 0px 14px 11px #7986cb;
+    z-index: 1;
 }
 .inner{
     padding: 20px;

@@ -283,6 +283,29 @@ export default function () {
                                      </div>
                                 </div>
                             </div>
+                            <div className='col'>
+                                <div className='review-item'>
+                                    <div className='review-item-inner'>
+                                        <div className='review-item-inner-1'>
+                                            <div className='reviewer-image'>
+                                                <img alt='User Image' src='/images/userreview/ashishyadav.png'></img>
+                                            </div>
+                                        </div>
+                                        <div className='review-item-inner-2'>
+                                            <div className='reviewer-name'>
+                                            Ashish Kumar Yadav
+                                            </div>
+                                            <div className='reviewer-date'>
+                                                31 Mar 2022
+                                            </div>
+                                            <Rating rating={5}></Rating>
+                                        </div>
+                                    </div>
+                                    <div className='review'>
+                                    A great experience with Bhaskar Jyotish Kendra running by Akshay Shukla Ji. He is the diamond in Astrology in Prayagraj. Great knowledge, very impresive communication and convincing skill. I got magnificent response or solution from there.
+                                     </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

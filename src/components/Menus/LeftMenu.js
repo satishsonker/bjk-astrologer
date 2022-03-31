@@ -33,17 +33,9 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
     }
     return (
         <>
-            <div className={isMenuOpen ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'}>
+            <div className={isMenuOpen ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'} onClick={e => handleMenuClose(false)}>
                 <div className={isMenuOpen ? 'left-menu left-menu-active' : 'left-menu'}>
-                    {/* <div className='left-menu-card'>
-                        <ul className='left-menu-card-list'>
-                            <li className='left-menu-card-list-item'><img alt='' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
-                            <li className='left-menu-card-list-item'><i className="fa-solid fa-user"></i> <span>User name</span></li>
-                        </ul>
-                        <div className="p-2 bd-highlight"></div>
-
-                    </div> */}
-                    <ul className='menu'>
+                   <ul className='menu'>
                         <li className='menu-item'>
                             <ul className='left-menu-card-list'>
                                 <li className='left-menu-card-list-item'><img alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
@@ -52,11 +44,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                         <div className='user-logo'>
                                             <img alt='User Profile' src='/images/top_header_user_profile.png'></img>
                                         </div>
-                                        <span>User name</span></li>
+                                        <span>Welcome Guest</span></li>
                                 }
                             </ul>
                         </li>
-                        <Link to="/Home" onClick={e => handleMenuClose(false)}>
+                        <Link to="/Home" >
                             <li className='menu-item'>
                                 <i className="fa-solid fa-house-user"></i> <span>Home</span>
                             </li>
@@ -70,7 +62,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                     <i className="fa-solid fa-user"></i> <span>Login</span>
                                 </li>
                             </>}
-                        <Link to="/Astrologers" onClick={e => handleMenuClose(false)}>
+                        <Link to="/Astrologers">
                             <li className='menu-item'>
                                 <i className="fa-solid fa-house-user"></i> <span>Astrologers</span>
                             </li>
@@ -96,7 +88,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 <li className='menu-item'>
                                     <i className="fa-solid fa-receipt"></i> <span>Recharge History</span>
                                 </li>
-                                <Link to="/FAQ" onClick={e => handleMenuClose(false)}>
+                                <Link to="/FAQ">
                                     <li className='menu-item'>
                                         <i className="fa-solid fa-right-from-bracket"></i> <span>FAQs</span>
                                     </li>
