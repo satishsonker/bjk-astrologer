@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>      
       </div>
-      <div className=''>
+      <div className='col-12'>
           <GoogleReviews></GoogleReviews>
         </div>
     </div>

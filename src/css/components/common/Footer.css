@@ -2,20 +2,22 @@
 .bjk-footer
 {
   width: 100vw !important;
-    border: 1px solid #eaeaeb;
-    height: 80vh;
-    position: fixed;
-    bottom: -72vh;
-    /* border-radius: 4px; */
-    background-color: #eaeaeb;
-    transition: 1s;
-    overflow-x: hidden;
+  border: 1px solid #eaeaeb;
+  height: 50px;
+  position: fixed;
+  /* border-radius: 4px; */
+  background-color: #eaeaeb;
+  transition: 1s;
+  overflow: hidden;
+  z-index: 1000000000;
+  bottom: 0;
 }
 .footer-expand
 {
   bottom: 0 !important;
-  transition: 1s;
-  border-radius: 21px 21px 0 0;
+    transition: 1s;
+    border-radius: 21px 21px 0 0;
+    height: 300px;
 }
 
 .control-btn
@@ -64,8 +66,28 @@ color: black !important;font-size: 11px;
   padding-top: 4px;
 }
 
-@media screen and (orientation: landscape ) and (max-width: 852px) {
-  .bjk-footer {
-    bottom: -69vh;
-  }
+.ul-buttons .whatsapp{
+  font-size: 27px;
+    color: var(--whatsapp-color);
+    font-weight: 900;
+}
+.to-top
+{
+  animation-name: ani-to-top;
+  animation-duration: 1s;
+  
+  animation-iteration-count: infinite;
+}
+
+@keyframes ani-to-top {
+  0%   {font-size: 22px;}
+  50% {font-size: 26px;}
+  100%   {font-size: 22px;}
+}
+
+.footer-inner
+{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 247px;
 }
