@@ -4,7 +4,7 @@ import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 export default function LeftMenu({ option, isActive, userDetails, setting }) {
-    option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
+    option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, false);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);

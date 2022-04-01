@@ -94,8 +94,8 @@ export default function () {
                     astroData.map((ele, ind) => {
                         if (ind > (astroLimit - 1))
                             return <div key={common.getElementKey()}></div>
-                        return <>
-                        <Link  key={common.getElementKey()} to={"/astrologer?id="+ele.id}>
+                        return <div key={common.getElementKey()}>
+                        <Link to={"/astrologer?id="+ele.id}>
                             <div className="col astro-list">
                                 <div className='astro-list-item'>
                                     <div className="d-flex align-items-center">
@@ -114,7 +114,9 @@ export default function () {
                                         </div>
                                     </div>
                                 </div>
-                            </div></Link></>
+                            </div>
+                            </Link>
+                            </div>
                     })
                 }
             </div>

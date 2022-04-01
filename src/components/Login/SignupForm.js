@@ -1,28 +1,99 @@
-import React from 'react'
+import React,{useState} from 'react'
+import AstButton from '../Controls/AstButton';
+import AstTextbox from '../Controls/AstTextbox';
 
 export default function SignupForm({setHaveAccount}) {
+    const [signupData, setSignupData] = useState({});
+    const handleOnChange = (e) => {
+        setSignupData({ ...signupData, [e.target.name]: e.target.value })
+    }
     const handleHaveAccount=()=>{
         setHaveAccount(true);
     }
+    const txtOptions = {
+        email: {
+            onChange: handleOnChange,
+            id: 'txtEmail',
+            type:"email",
+            name: 'email',
+            width: '100%',
+            value: signupData.email,
+            placeHolder: 'Email Address',
+            hasValidation: true,
+            showLabel: false,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
+        mobile: {
+            onChange: handleOnChange,
+            id: 'txtMobile',
+            name: 'mobile',
+            width: '100%',
+            value: signupData.mobile,
+            placeHolder: 'Mobile Number',
+            hasValidation: true,
+            showLabel: false,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
+        name: {
+            onChange: handleOnChange,
+            id: 'txtName',
+            name: 'name',
+            width: '100%',
+            value: signupData.name,
+            placeHolder: 'Your Name',
+            hasValidation: true,
+            showLabel: false,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
+        password: {
+            onChange: handleOnChange,
+            id: 'txtPassword',
+            type:"password",
+            name: 'password',
+            width: '100%',
+            value: signupData.password,
+            placeHolder: 'Password',
+            hasValidation: true,
+            showLabel: false,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
+        conPassword: {
+            onChange: handleOnChange,
+            id: 'txtConPassword',
+            type:"password",
+            name: 'conPassword',
+            width: '100%',
+            value: signupData.conPassword,
+            placeHolder: 'Confirm Password',
+            hasValidation: true,
+            showLabel: false,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        }
+    };
     return (
         <>
             <div className="mb-3 text-center signup-header">
                 Signup To Bhaskar Jyotis Kendra
             </div>
             <div className="mb-2">
-                <input type="email" className="form-control form-control-sm" id="signupEmail" placeholder="Email Address" />
+                <AstTextbox option={txtOptions.email}></AstTextbox>
             </div>
             <div className="mb-2">
-                <input type="text" className="form-control form-control-sm" id="signupName" placeholder="Your Name" />
+            <AstTextbox option={txtOptions.name}></AstTextbox>
             </div>
             <div className="mb-2">
-                <input type="text" maxLength={13} className="form-control form-control-sm" id="signupName" placeholder="Your Mobile Number" />
+            <AstTextbox option={txtOptions.mobile}></AstTextbox>
             </div>
             <div className="mb-2">
-                <input type="password" className="form-control form-control-sm" id="signupPassword" placeholder="Password" />
+            <AstTextbox option={txtOptions.password}></AstTextbox>
             </div>
             <div className="mb-3">
-                <input type="password" className="form-control form-control-sm" id="signupConPassword" placeholder="Confirm Password" />
+            <AstTextbox option={txtOptions.conPassword}></AstTextbox>
             </div>
             <div className='mb-3'>
                 <div className="form-check form-switch">
@@ -31,7 +102,7 @@ export default function SignupForm({setHaveAccount}) {
                 </div>
             </div>
             <div className="my-3 signup-btn">
-                <button type="button">Sign Up</button>
+               <AstButton option={{text:"Signup"}}></AstButton>
             </div>
             <div className="mb-3 signup-msg">
                 Already have an account? <strong onClick={e=>handleHaveAccount()} className='clickable'>Login</strong>

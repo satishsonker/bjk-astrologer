@@ -4,8 +4,6 @@ import {
   Routes, Route
 } from "react-router-dom";
 import Astrologer from './components/Astrologer';
-import AstroFilter from './components/common/AstroFilter';
-import AstroList from './components/common/AstroList';
 import FAQ from './components/common/FAQ';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
@@ -13,7 +11,6 @@ import LeftMenu from './components/Menus/LeftMenu';
 import SharePage from './components/common/SharePage';
 import Home from './components/Home'
 import NoPage from './components/common/NoPage'
-import Signup from './components/Login/Signup';
 import { AppConfigProvider } from './Context/ConfigContext';
 import './css/App.css';
 import Astrologers from './components/Astrologers';
