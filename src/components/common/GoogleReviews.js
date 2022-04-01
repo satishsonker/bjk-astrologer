@@ -11,6 +11,7 @@ export default function () {
                     <button type="button" data-bs-target="#carouselGoogleReview" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselGoogleReview" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselGoogleReview" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselGoogleReview" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -71,7 +72,7 @@ export default function () {
                                         </div>
                                         <div className='review-item-inner-2'>
                                             <div className='reviewer-name'>
-                                            its_me_sumit Pandey
+                                                its_me_sumit Pandey
                                             </div>
                                             <div className='reviewer-date'>
                                                 20 Mar 2021
@@ -80,8 +81,8 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Thank you so much sir 🙏🙏 The prediction regarding the government job turned out to be accurate.
-                                      </div>
+                                        Thank you so much sir 🙏🙏 The prediction regarding the government job turned out to be accurate.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +108,7 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Best astrologer in City... I am satisfie
+                                        Best astrologer in City... I am satisfie
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +131,7 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Very best astrologer in allahabad
+                                        Very best astrologer in allahabad
                                     </div>
                                 </div>
                             </div>
@@ -153,8 +154,8 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Very great astrologer
-                                     </div>
+                                        Very great astrologer
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +181,7 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Good experience.... Genuine and truth facts shared.
+                                        Good experience.... Genuine and truth facts shared.
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +195,7 @@ export default function () {
                                         </div>
                                         <div className='review-item-inner-2'>
                                             <div className='reviewer-name'>
-                                            Sumit Commerce classes
+                                                Sumit Commerce classes
                                             </div>
                                             <div className='reviewer-date'>
                                                 20 Mar 2021
@@ -203,7 +204,7 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Best astrologer in Allahabad
+                                        Best astrologer in Allahabad
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +218,7 @@ export default function () {
                                         </div>
                                         <div className='review-item-inner-2'>
                                             <div className='reviewer-name'>
-                                            Brij Mohan Kushwaha
+                                                Brij Mohan Kushwaha
                                             </div>
                                             <div className='reviewer-date'>
                                                 20 Mar 2021
@@ -226,15 +227,14 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    Best Astrologer in city
-                                     </div>
+                                        Best Astrologer in city
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className='row row-cols-1 row-cols-md-3'>
-
                             <div className='col'>
                                 <div className='review-item'>
                                     <div className='review-item-inner'>
@@ -254,7 +254,7 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                      Very Good</div>
+                                        Very Good</div>
                                 </div>
                             </div>
                             <div className='col'>
@@ -276,11 +276,11 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    (Translated by Google) Good knowledge of astrology, complete answer to all questions was received..Thanks
+                                        (Translated by Google) Good knowledge of astrology, complete answer to all questions was received..Thanks
 
-(Original)
-ज्योतिष के अच्छे जानकार, सभी प्रश्नों का संतुष्टि पूर्ण उत्तर प्राप्त हुआ..धन्यवाद
-                                     </div>
+                                        (Original)
+                                        ज्योतिष के अच्छे जानकार, सभी प्रश्नों का संतुष्टि पूर्ण उत्तर प्राप्त हुआ..धन्यवाद
+                                    </div>
                                 </div>
                             </div>
                             <div className='col'>
@@ -293,7 +293,7 @@ export default function () {
                                         </div>
                                         <div className='review-item-inner-2'>
                                             <div className='reviewer-name'>
-                                            Ashish Kumar Yadav
+                                                Ashish Kumar Yadav
                                             </div>
                                             <div className='reviewer-date'>
                                                 31 Mar 2022
@@ -302,10 +302,37 @@ export default function () {
                                         </div>
                                     </div>
                                     <div className='review'>
-                                    A great experience with Bhaskar Jyotish Kendra running by Akshay Shukla Ji. He is the diamond in Astrology in Prayagraj. Great knowledge, very impresive communication and convincing skill. I got magnificent response or solution from there.
-                                     </div>
+                                        A great experience with Bhaskar Jyotish Kendra running by Akshay Shukla Ji. He is the diamond in Astrology in Prayagraj. Great knowledge, very impresive communication and convincing skill. I got magnificent response or solution from there.
+                                    </div>
                                 </div>
-                            </div>
+                            </div>                      
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <div className='row row-cols-1 row-cols-md-3'>                               
+                            <div className='col'>
+                                <div className='review-item'>
+                                    <div className='review-item-inner'>
+                                        <div className='review-item-inner-1'>
+                                            <div className='reviewer-image'>
+                                                <img alt='User Image' src='/images/userreview/poosam.png'></img>
+                                            </div>
+                                        </div>
+                                        <div className='review-item-inner-2'>
+                                            <div className='reviewer-name'>
+                                                Poonsam Pvt Ltd
+                                            </div>
+                                            <div className='reviewer-date'>
+                                                31 Mar 2022
+                                            </div>
+                                            <Rating rating={5}></Rating>
+                                        </div>
+                                    </div>
+                                    <div className='review'>
+                                        Akshay sir provides very authentic and genuine  solution
+                                    </div>
+                                </div>
+                            </div>                       
                         </div>
                     </div>
                 </div>

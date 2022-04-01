@@ -90,7 +90,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 </li>
                                 <Link to="/FAQ">
                                     <li className='menu-item'>
-                                        <i className="fa-solid fa-right-from-bracket"></i> <span>FAQs</span>
+                                    <i className="fas fa-question-circle"></i> <span>FAQs</span>
                                     </li>
                                 </Link>
                                 <li className='menu-item'>
