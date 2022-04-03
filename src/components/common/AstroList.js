@@ -5,8 +5,10 @@ import '../../css/components/common/AstroList.css';
 import useWindowDimensions from '../../Hooks/userWindowDimensions';
 import AstButton from '../Controls/AstButton';
 import Rating from './Rating';
+import { useTranslation } from "react-i18next";
 
 export default function () {
+    const {t}=useTranslation();
     const { width } = useWindowDimensions();
     const [astroLimit, setAstroLimit] = useState(2);
 
@@ -121,7 +123,7 @@ export default function () {
                 }
             </div>
             <div className='btn-load-more'>
-                <AstButton option={{ text: "Load More" }}></AstButton>
+                <AstButton option={{ text: t("load_more") }}></AstButton>
             </div>
         </div>
     )

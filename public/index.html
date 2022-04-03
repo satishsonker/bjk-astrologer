@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
   <meta charset="utf-8" />
@@ -48,18 +48,56 @@
   <script>
     if ('serviceWorker' in navigator) // check if seviceWorker supported by client browser
     {
+      //subscribe();
+      function urlBase64ToUint8Array(base64String) {
+        const padding = '='.repeat((4 - base64String.length % 4) % 4);
+        const base64 = (base64String + padding)
+          .replace(/\-/g, '+')
+          .replace(/_/g, '/');
+
+        const rawData = window.atob(base64);
+        const outputArray = new Uint8Array(rawData.length);
+
+        for (let i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+        }
+        return outputArray;
+      }
+      function determineAppServerKey() {
+        const vapidPublicKey =
+          "BJthRQ5myDgc7OSXzPCMftGw-n16F7zQBEN7EUD6XxcfTTvrLGWSIG7y_JxiWtVlCFua0S8MTB5rPziBqNx1qIo";
+        return urlBase64ToUint8Array(vapidPublicKey);
+      }
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/serviceworker.js')//register serviceWorker
-          .then((reg) => console.log('success', reg.scope))
+          .then((reg) => {console.log('success', reg.scope);
+          // reg.pushManager.getSubscription().then((subs)=>{
+          //   return reg.pushManager.subscribe({
+          //     applicationServerKey:determineAppServerKey(),
+          //     userVisibleOnly:true
+          //   });
+          // })
+          
+      })
           .catch((err) => console.log("error", err));
       })
     }
+
+    // async function subscribe()
+    // {
+    //   let sw=await navigator.serviceWorker.ready;
+    //   let push=await sw.pushManager.subscribe({
+    //     userVisibleOnly:true,
+    //     applicationServerKey:""
+    //   });
+    //   console.log(JSON.stringify(push));
+    // }
   </script>
-  <div id="installContainer" className="hidden">
+  <!-- <div id="installContainer" className="hidden">
     <button id="butInstall" type="button">
       Install
     </button>
-  </div>
+  </div> -->
   <style>
     .hidden {
       display: none !important;

@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import AstroFilter from './common/AstroFilter'
 import AstroList from './common/AstroList'
 import '../css/components/Astrologer.css'
-import useWindowDimensions from '../Hooks/userWindowDimensions'
+import useWindowDimensions from '../Hooks/userWindowDimensions';
+import { useTranslation } from "react-i18next";
 
-export default function Astrologers() {
+export default function Astrologers() {    
+    const {t}=useTranslation();
     const [_showFilter, setShowFilter] = useState(false);
     const { width } = useWindowDimensions();
     useEffect(() => {
@@ -33,12 +35,12 @@ export default function Astrologers() {
                 </div>
                 <div className='btn-filter-container'>
                     <div className='ast-view'></div>
-                    <div onClick={e => handleShowFilter()} className='btn-filter'><i className='fas fa-filter' /> Filter</div>
+                    <div onClick={e => handleShowFilter()} className='btn-filter'><i className='fas fa-filter' />{t("filter")}</div>
                 </div>
 
                 <div className='ast-list-container'>
                     <div className='ast-tag-line'>
-                        We have Best and Certified Astrologers
+                        {t("best_astro")}
                     </div>
                     <AstroList></AstroList>
                 </div>

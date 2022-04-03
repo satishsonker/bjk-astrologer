@@ -3,12 +3,14 @@ import { common } from '../../common/common';
 import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function LeftMenu({ option, isActive, userDetails, setting }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, false);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const {t}=useTranslation();
     useEffect(() => {
         setIsMenuOpen(isActive);
     }, [isActive])
@@ -44,27 +46,27 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                         <div className='user-logo'>
                                             <img alt='User Profile' src='/images/top_header_user_profile.png'></img>
                                         </div>
-                                        <span>Welcome Guest</span></li>
+                                        <span>{t("welcome_guest")}</span></li>
                                 }
                             </ul>
                         </li>
                         <Link to="/Home" >
                             <li className='menu-item'>
-                                <i className="fa-solid fa-house-user"></i> <span>Home</span>
+                                <i className="fa-solid fa-house-user"></i> <span>{t("home")}</span>
                             </li>
                         </Link>
                         {!option.isAuthenticated &&
                             <>
                                 <li className='menu-item' onClick={e => handleShowLoginSignup('signup')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
-                                    <i className="fa-solid fa-user"></i> <span>Signup</span>
+                                    <i className="fa-solid fa-user"></i> <span>{t("signup")}</span>
                                 </li>
                                 <li className='menu-item' onClick={e => handleShowLoginSignup('login')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
-                                    <i className="fa-solid fa-user"></i> <span>Login</span>
+                                    <i className="fa-solid fa-user"></i> <span>{t("login")}</span>
                                 </li>
                             </>}
                         <Link to="/Astrologers">
                             <li className='menu-item'>
-                                <i className="fa-solid fa-house-user"></i> <span>Astrologers</span>
+                                <i className="fa-solid fa-house-user"></i> <span>{t("astrologers")}</span>
                             </li>
                         </Link>
                         {option.isAuthenticated &&

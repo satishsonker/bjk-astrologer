@@ -1,0 +1,74 @@
+.ast-badge
+{
+    position: absolute;
+    top: 0;
+    padding: 0px 5px;
+    font-size: 10px;
+    border: 1px solid orange;
+    border-radius: 100%;
+    background: orange;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.panel{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.bjk-nav
+{
+  color: var(--header-font-color);;
+  background-color: var(--header-color);
+  width: 100%;
+  height: var(--header-height);
+  padding:0 0 0 0;
+  box-shadow: 1px 2px 4px grey;
+  z-index: 1000000000000000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.langDdl{
+    font-size: 12px;
+    min-width: 50px !important;
+}
+#ddlLang
+{    
+    font-size: 12px;
+}
+
+.logo-name{
+  max-width: 200px;
+  height: 38px;
+  width: 55vw;
+}
+.logo{
+  width: 40px;
+}
+
+.humberger-bar
+{
+    font-size: 18px;
+    padding: 3px 12px;
+    cursor: pointer;
+    color: var(--header-font-color);
+    transition: color .5s;
+}
+.humberger-bar:hover
+{
+  color:red;
+  transition: color .5s;
+}
+.notify
+{
+    padding: 3px 12px;
+}
+.bjk-nav .d-flex
+{
+    flex-direction: row-reverse;
+}
+.bb-1{
+border-bottom: 1px solid #e7e7e7;
+}

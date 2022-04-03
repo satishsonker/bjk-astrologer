@@ -10,15 +10,17 @@ import Carousel from './common/Carousel';
 import Janamkundali from './Kundali/JanmKundali';
 import KundaliMatch from './Kundali/KundaliMatch';
 import GoogleReviews from './common/GoogleReviews';
+import {useTranslation} from "react-i18next";
 
 export default function Home() {
+  const {t}=useTranslation();
   return (
     <div className='home-content'>
       <div className='ast-carousel'>
         <Carousel></Carousel>
       </div>
       <div className='home-box-astro-list'>
-        <div className="ast-tag-line">We have Best and Certified Astrologers</div>
+        <div className="ast-tag-line">{t('best_astro')}</div>
         <AstroList></AstroList>
       </div>
       <div className='home-box-horo'>

@@ -14,6 +14,11 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+    event.waitUntil(
+        this.registration.showNotification('hello',{
+            body:"hello from notify"
+        })
+    )
     event.respondWith(
         caches.match(event.request)
             .then(() => {
