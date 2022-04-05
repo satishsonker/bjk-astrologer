@@ -3,8 +3,10 @@ import { common } from '../../common/common'
 import '../../css/components/common/JanmKundali.css'
 import AstButton from '../Controls/AstButton'
 import AstSelect from '../Controls/AstSelect'
-import AstTextbox from '../Controls/AstTextbox'
+import AstTextbox from '../Controls/AstTextbox';
+import { useTranslation } from "react-i18next";
 export default function Janamkundali() {
+    const {t}=useTranslation();
     const [kundaliData, setKundaliData] = useState({});
     const handleOnChange = (e) => {
         setKundaliData({ ...kundaliData, [e.target.name]: e.target.value })
@@ -16,7 +18,7 @@ export default function Janamkundali() {
             name: 'name',
             width: '100%',
             value: kundaliData.name,
-            placeHolder: 'Name',
+            placeHolder: t('name'),
             hasValidation: true,
             showLabel: false,
             showHelpText: false,
@@ -28,7 +30,7 @@ export default function Janamkundali() {
             name: 'birthPlace',
             width: '100%',
             value: kundaliData.birthPlace,
-            placeHolder: 'Birth Place',
+            placeHolder: t('birthPlace'),
             className: 'me-2 mb-2',
             hasValidation: true,
             showLabel: false,
@@ -40,7 +42,7 @@ export default function Janamkundali() {
             name: 'mobile',
             width: '100%',
             value: kundaliData.mobile,
-            placeHolder: 'Mobile',
+            placeHolder: t('mobile'),
             className: 'me-2 mb-2',
             hasValidation: true,
             showLabel: false,
@@ -51,10 +53,10 @@ export default function Janamkundali() {
             id: 'ddlKunGender',
             name: 'gender',
             width: '100%',
-            defaultText: 'Gender',
+            defaultText: t('gender'),
             className: 'me-2 mb-2',
             value: kundaliData.gender,
-            data: ['Male', 'female', "Other"],
+            data: [t('male'), t('female'), t("other")],
             hasValidation: true,
             showLabel: false,
             showHelpText: false,
@@ -66,7 +68,7 @@ export default function Janamkundali() {
             width: '100%',
             className: 'me-2 mb-2',
             value: kundaliData.day,
-            defaultText: 'Day',
+            defaultText: t('day'),
             data: common.getNumberArray(1, 31),
             hasValidation: true,
             showLabel: false,
@@ -77,7 +79,7 @@ export default function Janamkundali() {
             id: 'ddlKunMonth',
             name: 'month',
             width: '100%',
-            defaultText: 'Month',
+            defaultText: t('month'),
             className: 'me-2 mb-2',
             value: kundaliData.month,
             data: common.getNumberArray(1, 12),
@@ -89,7 +91,7 @@ export default function Janamkundali() {
             onChange: handleOnChange,
             id: 'ddlKunYear',
             name: 'year',
-            defaultText: 'Year',
+            defaultText: t('year'),
             width: '100%',
             value: kundaliData.year,
             data: common.getNumberArray(new Date().getFullYear() - 70, new Date().getFullYear()),
@@ -103,7 +105,7 @@ export default function Janamkundali() {
             id: 'ddlKunHour',
             name: 'hour',
             width: '100%',
-            defaultText: 'Hour',
+            defaultText: t('hour'),
             value: kundaliData.hour,
             className: 'me-2 mb-2',
             data: common.getNumberArray(1, 23),
@@ -115,7 +117,7 @@ export default function Janamkundali() {
             onChange: handleOnChange,
             id: 'ddlKunMinute',
             name: 'minute',
-            defaultText: 'Minute',
+            defaultText: t('minute'),
             width: '100%',
             value: kundaliData.minute,
             className: 'me-2 mb-2',
@@ -129,7 +131,7 @@ export default function Janamkundali() {
             id: 'ddlKunSecond',
             name: 'second',
             width: '100%',
-            defaultText: 'Second',
+            defaultText: t('seconds'),
             value: kundaliData.second,
             data: common.getNumberArray(0, 59),
             hasValidation: true,
@@ -138,7 +140,7 @@ export default function Janamkundali() {
             className: 'me-2 mb-2',
         },
         getButton: {
-            text: "Get Your Kundali",
+            text:  t("getReport"),
             handler: () => { }
         }
     }
@@ -147,7 +149,7 @@ export default function Janamkundali() {
             <div className='kun-box-header'>
                 <img alt='Banner' src='/images/janamkundali.jpg'></img>
                 <div className='ast-tag-line'>
-                    Get Your Janam kundali
+                   {t("getYourJanamKundali")}
                 </div></div>
             <div className='row row-cols-2'>
                 <div className='col dflex'>

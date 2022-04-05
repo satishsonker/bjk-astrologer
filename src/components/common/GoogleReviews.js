@@ -332,6 +332,52 @@ export default function () {
                                         Akshay sir provides very authentic and genuine  solution
                                     </div>
                                 </div>
+                            </div>  
+                            <div className='col'>
+                                <div className='review-item'>
+                                    <div className='review-item-inner'>
+                                        <div className='review-item-inner-1'>
+                                            <div className='reviewer-image'>
+                                                <img alt='User Image' src='/images/userreview/pratima.png'></img>
+                                            </div>
+                                        </div>
+                                        <div className='review-item-inner-2'>
+                                            <div className='reviewer-name'>
+                                                Pratima Sonkar
+                                            </div>
+                                            <div className='reviewer-date'>
+                                                2 April 2022
+                                            </div>
+                                            <Rating rating={5}></Rating>
+                                        </div>
+                                    </div> 
+                                    <div className='review'>
+                                    Trustworthy astrologer..
+                                    </div>
+                                </div>
+                            </div>  
+                            <div className='col'>
+                                <div className='review-item'>
+                                    <div className='review-item-inner'>
+                                        <div className='review-item-inner-1'>
+                                            <div className='reviewer-image'>
+                                                <img alt='User Image' src='/images/userreview/alka.png'></img>
+                                            </div>
+                                        </div>
+                                        <div className='review-item-inner-2'>
+                                            <div className='reviewer-name'>
+                                                Alka Sonkar
+                                            </div>
+                                            <div className='reviewer-date'>
+                                                5 April 2022
+                                            </div>
+                                            <Rating rating={5}></Rating>
+                                        </div>
+                                    </div> 
+                                    <div className='review'>
+                                    Bahot accha kaam kar rahen hain aap
+                                    </div>
+                                </div>
                             </div>                       
                         </div>
                     </div>

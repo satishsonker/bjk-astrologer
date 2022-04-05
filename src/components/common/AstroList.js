@@ -16,7 +16,7 @@ export default function () {
 
         {
             id:1,
-            name: "Acharya Akshay Shukla",
+            name: `${t('acharya')} ${t('akshay')} ${t('shukla')}`,
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
             path: '../Images/astro/akshayshukla.jpg',
@@ -27,7 +27,7 @@ export default function () {
         },
         {
             id:2,
-            name: "Acharya Harihar Prasad Shukla",
+            name: `${t('acharya')} ${t('harihar')} ${t('prasad')} ${t('shukla')}`,
             expertise: "Vedic, Kp System, Lal Kitab",
             lang: "Hindi",
             path: '../Images/astro/HariharPrasad.jpg',
@@ -82,13 +82,81 @@ export default function () {
     ]);
 
     useEffect(() => {
+        setAstroData([
+
+            {
+                id:1,
+                name: `${t('acharya')} ${t('akshay')} ${t('shukla')}`,
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang: `${t('hindi')}, ${t('english')}`,
+                path: '../Images/astro/akshayshukla.jpg',
+                exp: 6,
+                rating: 5,
+                price: 17,
+                totalUsers: 65
+            },
+            {
+                id:2,
+                name: `${t('acharya')} ${t('harihar')} ${t('prasad')} ${t('shukla')}`,
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang:`${t('hindi')}`,
+                path: '../Images/astro/HariharPrasad.jpg',
+                exp: 16,
+                rating: 2.5,
+                price: 17,
+                totalUsers: 10
+            },
+            {
+                id:2,
+                name: "Acharya Lokesh Gaur",
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang: "Hindi",
+                path: '../Images/logo/bjkLogo64.png',
+                exp: 6,
+                rating: 4.5,
+                price: 17,
+                totalUsers: 45
+            }, {
+                id:2,
+                name: "Acharya Lokesh Gaur",
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang: "Hindi",
+                path: '../Images/logo/bjkLogo64.png',
+                exp: 6,
+                rating: 4.5,
+                price: 17,
+                totalUsers: 5
+            },
+            {
+                id:2,
+                name: "Acharya Akshay Shukla",
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang: "Hindi",
+                path: '../Images/logo/bjkLogo64.png',
+                exp: 6,
+                rating: 5,
+                price: 17,
+                totalUsers: 21
+            },
+            {
+                id:2,
+                name: "Acharya Harihar Prasad Shukla",
+                expertise: "Vedic, Kp System, Lal Kitab",
+                lang: "Hindi",
+                path: '../Images/logo/bjkLogo64.png',
+                exp: 16,
+                rating: 2.5,
+                price: 17,
+                totalUsers: 3
+            }
+        ])
         if (width > 768) {
             setAstroLimit(2)
         }
         else {
             setAstroLimit(2)
         }
-    }, [width]);
+    }, [width,t]);
     return (
         <div className='astro-container'>
             <div className="row row-cols-xl-3 row-cols-lg-3  row-cols-1">
@@ -109,9 +177,9 @@ export default function () {
                                                 <div className="px-2 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> {ele.name}<div className="float-end"><i className="fa-solid fa-bookmark"></i></div></div>
                                                 <div className="px-2 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> {ele.expertise}</div>
                                                 <div className="px-2 bd-highlight"><i className="fa-solid fa-language"></i> {ele.lang} <div className="float-end"><i className="fa-solid fa-graduation-cap"></i> {ele.exp} Exp.</div></div>
-                                                <div className="px-2 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> {ele.price}/Min</div>
+                                                <div className="px-2 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> {ele.price}/{t("min")}</div>
                                                 <div className="px-2 bd-highlight"><Rating rating={ele.rating}></Rating></div>
-                                                <div className="px-2 bd-highlight"><i className="fa-solid fa-users text-primary"></i> {ele.totalUsers} Users</div>
+                                                <div className="px-2 bd-highlight"><i className="fa-solid fa-users text-primary"></i> {ele.totalUsers} {t("users")}</div>
                                             </div>
                                         </div>
                                     </div>

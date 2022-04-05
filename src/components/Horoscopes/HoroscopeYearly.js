@@ -9,7 +9,7 @@ export default function HoroscopeYearly() {
             <div className='kun-box-header'>
                 <img src='/images/janamkundali.jpg'></img>
                 <div className='ast-tag-line'>
-                    Yearly Horoscope - {new Date().getFullYear()}
+                    {t("yearly")} {t("horoscope")} - {new Date().getFullYear()}
                 </div></div>
             <div className='horo-yearly'>
                 <ul>

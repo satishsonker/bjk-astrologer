@@ -15,6 +15,8 @@ import { AppConfigProvider } from './Context/ConfigContext';
 import './css/App.css';
 import Astrologers from './components/Astrologers';
 import Love from './components/Love/Love';
+import Wallet from './components/Wallet/Wallet';
+import PaymentDetails from './components/Wallet/PaymentDetails';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -39,6 +41,8 @@ function App() {
               <Route exact path="/Astrologer" element={<div><Astrologer></Astrologer> </div>}></Route>
               <Route exact path="/Love" element={<div><Love></Love> </div>}></Route>
               <Route exact path="/FAQ" element={<div><FAQ></FAQ> </div>}></Route>
+              <Route exact path="/Wallet" element={<div><Wallet></Wallet> </div>}></Route>
+              <Route exact path="/PaymentDetails" element={<div><PaymentDetails></PaymentDetails> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
@@ -49,5 +53,4 @@ function App() {
     </>
   );
 }
-// whatsapp://send?text=https://varta.astrosage.com/talk-to-astrologers?lang=en
 export default App;

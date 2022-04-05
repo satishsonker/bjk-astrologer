@@ -126,3 +126,8 @@ display: flex;
   background-color: var(--hover-color);
   color: orange;
 }
+.r-icon
+{
+  float: right;
+  padding-right: 10px;
+}

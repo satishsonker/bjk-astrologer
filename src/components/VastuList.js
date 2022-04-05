@@ -1,38 +1,40 @@
 import React from 'react'
 import '../css/components/HoroscopeDaily.css';
+import { useTranslation } from "react-i18next";
 
 export default function VastuList() {
+    const { t } = useTranslation();
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
                 <img alt='Vastu Banner' src='/images/vastu-banner.jpg'></img>
                 <div className='ast-tag-line'>
-                    Know About Your Vastu
+                    {t("knowAboutYourVastu")}
                 </div></div>
             <div className='horo-yearly'>
                 <ul>
-                    <li><a href="/vastu/home">Vastu for home</a> </li>
-                    <li><a href="/vastu/house">Vastu for New House</a> </li>
-                    <li><a href="/vastu/office">Vastu for Office</a> </li>
-                    <li><a href="/vastu/factory">Vastu for Factory</a> </li>
-                    <li><a href="/vastu/bathroom">Vastu for Bathroom</a> </li>
-                    <li><a href="/vastu/kitchen">Vastu for Kitchen</a> </li>
-                    <li><a href="/vastu/study-room">Vastu for Study Room</a> </li>
-                    <li><a href="/vastu/pooja-room">Vastu for Pooja Room</a> </li>
-                    <li><a href="/vastu/shop">Vastu for Shop</a> </li>
-                    <li><a href="/vastu/dining-room">Vastu for Dining Room</a> </li>
-                    <li><a href="/vastu/guest-room">Vastu for Guest Room</a> </li>
-                    <li><a href="/vastu/children-room">Vastu for Children Room</a> </li>
-                    <li><a href="/vastu/career">Vastu for Career</a> </li>
-                    <li><a href="/vastu/married-life">Vastu for Marriage Life</a> </li>
-                    <li><a href="/vastu/health">Vastu for Health</a> </li>
-                    <li><a href="/vastu/colors-for-home">Vastu Color for Home</a> </li>
-                    <li><a href="/vastu/positive-energy">Vastu for positive energy</a> </li>
-                    <li><a href="/vastu/business">Vastu for Business</a> </li>
-                    <li><a href="/vastu/plants-trees">Vastu for Plants</a> </li>
-                    <li><a href="/vastu/happiness ">Vastu for Happiness</a> </li>
-                    <li><a href="/vastu/peace">Vastu for Peace</a> </li>
-                    <li><a href="/vastu/wealth">Vastu for Wealth</a> </li>
+                    <li><a href="/vastu/home">{t("vastu")} {t("forHome")}</a> </li>
+                    <li><a href="/vastu/house">{t("vastu")} {t("forNewHouse")}</a> </li>
+                    <li><a href="/vastu/office">{t("vastu")} {t("forOffice")}</a> </li>
+                    <li><a href="/vastu/factory">{t("vastu")} {t("forFactory")}</a> </li>
+                    <li><a href="/vastu/bathroom">{t("vastu")} {t("forBathroom")}</a> </li>
+                    <li><a href="/vastu/kitchen">{t("vastu")} {t("forKitchen")}</a> </li>
+                    <li><a href="/vastu/study-room">{t("vastu")} {t("forStudyRoom")}</a> </li>
+                    <li><a href="/vastu/pooja-room">{t("vastu")} {t("forPoojaRoom")}</a> </li>
+                    <li><a href="/vastu/shop">{t("vastu")} {t("forShop")}</a> </li>
+                    <li><a href="/vastu/dining-room">{t("vastu")} {t("forDiningRoom")}</a> </li>
+                    <li><a href="/vastu/guest-room">{t("vastu")} {t("forGuestRoom")}</a> </li>
+                    <li><a href="/vastu/children-room">{t("vastu")} {t("forChildrenRoom")}</a> </li>
+                    <li><a href="/vastu/career">{t("vastu")} {t("forCareer")}</a> </li>
+                    <li><a href="/vastu/married-life">{t("vastu")} {t("forMarriageLife")}</a> </li>
+                    <li><a href="/vastu/health">{t("vastu")} {t("forHealth")}</a> </li>
+                    <li><a href="/vastu/colors-for-home">{t("vastu")}  {t("colorForHome")}</a> </li>
+                    <li><a href="/vastu/positive-energy">{t("vastu")} {t("forPositiveEnergy")}</a> </li>
+                    <li><a href="/vastu/business">{t("vastu")} {t("forBusiness")}</a> </li>
+                    <li><a href="/vastu/plants-trees">{t("vastu")} {t("forPlants")}</a> </li>
+                    <li><a href="/vastu/happiness ">{t("vastu")} {t("forHappiness")}</a> </li>
+                    <li><a href="/vastu/peace">{t("vastu")} {t("forPeace")}</a> </li>
+                    <li><a href="/vastu/wealth">{t("vastu")} {t("forWealth")}</a> </li>
                 </ul>
             </div>
         </div>

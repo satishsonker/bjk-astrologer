@@ -73,15 +73,12 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                     <div className="p-2 bd-highlight">
                         <img alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' />
                     </div>
-                    <div className="p-2 bd-highlight">
-                       
-                    </div>
-                    <div className="p-2 bd-highlight">
-                      
+                    <div className="bd-highlight">
+                          <Link to='/home'><div className="p-2 bd-highlight"><img alt='Logo' className='logo' src='../Images/logo/bjkLogo64.png' /></div></Link>
+                
                     </div>
 
 
-                    <Link to='/home'><div className="p-2 bd-highlight"><img alt='Logo' className='logo' src='../Images/logo/bjkLogo64.png' /></div></Link>
                 </div>
             </div>
         </>
