@@ -17,6 +17,10 @@ import Astrologers from './components/Astrologers';
 import Love from './components/Love/Love';
 import Wallet from './components/Wallet/Wallet';
 import PaymentDetails from './components/Wallet/PaymentDetails';
+import UserProfile from './components/UserProfile';
+import RechargeHistory from './components/History/RechargeHistory';
+import ChatHistory from './components/History/ChatHistory';
+import CallHistory from './components/History/CallHistory';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -43,6 +47,10 @@ function App() {
               <Route exact path="/FAQ" element={<div><FAQ></FAQ> </div>}></Route>
               <Route exact path="/Wallet" element={<div><Wallet></Wallet> </div>}></Route>
               <Route exact path="/PaymentDetails" element={<div><PaymentDetails></PaymentDetails> </div>}></Route>
+              <Route exact path="/UserProfile" element={<div><UserProfile></UserProfile> </div>}></Route>
+              <Route exact path="/CallHistory" element={<div><CallHistory></CallHistory> </div>}></Route>
+              <Route exact path="/ChatHistory" element={<div><ChatHistory></ChatHistory> </div>}></Route>
+              <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}

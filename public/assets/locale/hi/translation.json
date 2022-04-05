@@ -1,5 +1,6 @@
 {
     "best_astro": "हमारे पास सर्वश्रेष्ठ और प्रमाणित ज्योतिषी हैं",
+    "astrology":"ज्योतिषी",
     "language_name": "हिन्दी",
     "close": "बंद करे",
     "filter": "फिल्टर",
@@ -11,6 +12,8 @@
     "astrologers": "ज्योतिषियों",
     "expertise": "विशेषज्ञता",
     "price_rating": "कीमत और रेटिंग",
+    "rating": "रेटिंग",
+    "review": "समीक्षा",
     "language": "भाषा",
     "price_low_to_high": "कीमत निम्न से उच्च",
     "price_high_to_low": "कीमत उच्च से निम्न",
@@ -73,6 +76,9 @@
     "day": "दिन",
     "month": "महीना",
     "year": "वर्ष",
+    "years":"वर्षों",
+    "exp":"अनुभव",    
+    "experience":"अनुभव",
     "hour": "घंटा",
     "minute": "मिनट",
     "min": "मिनट",
@@ -130,5 +136,14 @@
     "bookmark":"बुकमार्क",
     "totalAmount":"कुल राशि",
     "totalPayableAmount":"कुल देय राशि",
-    "gst":"जीएसटी"
+    "gst":"जीएसटी",
+    "education": "शिक्षा",
+    "degree": "डिग्री",
+    "certificates": "प्रमाणपत्र",
+    "knowledge": "ज्ञान",
+    "chat":"चैट",
+    "call":"कॉल",
+    "recharge":"रिचार्ज",
+    "faqs":"सामान्य प्रश्न",
+    "logout":"लॉग आउट"
 }

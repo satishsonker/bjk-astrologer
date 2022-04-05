@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import { common } from '../../common/common'
 import Breadcrumb from './Breadcrumb';
+import { useTranslation } from "react-i18next";
 
 export default function FAQ() {
-    
+    const { t } = useTranslation();    
     const breadcrumbOption = [
-        { name: 'Home', link: "/Home" },
-        { name: 'FAQs', isActive: false }
+        { name: t('home'), link: "/Home" },
+        { name: t('faqs'), isActive: false }
     ];
     const [faqData, setFaqData] = useState([
         {
