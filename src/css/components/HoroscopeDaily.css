@@ -29,12 +29,12 @@
 }
 .horo-heading
 {
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid var(--heading-color);;
     text-align: center;
     font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
-    color: orange;
+    color: var(--heading-color);;
 }
 .horo-yearly
 {

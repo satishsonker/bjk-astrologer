@@ -14,7 +14,7 @@
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    color: orange;
+    color: var(--heading-color);
 }
 
 .wallet-header .part-1 .bal

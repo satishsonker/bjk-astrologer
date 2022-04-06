@@ -108,7 +108,7 @@ display: flex;
 .menu-item i{
   margin: 5px;
   width: 22px;
-  color: orange;
+  color: var(--heading-color);;
 }
 
 .menu-item span{
@@ -119,12 +119,12 @@ display: flex;
 }
 
 .menu-item span:hover{
-  color: orange;
+  color: var(--heading-color);;
 }
 .left-menu li:hover
 {
   background-color: var(--hover-color);
-  color: orange;
+  color: var(--heading-color);;
 }
 .r-icon
 {

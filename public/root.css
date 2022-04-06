@@ -1,7 +1,10 @@
 :root {
   --font-size: calc(10px + 2vmin);
   --header-height:60px;
-  --header-color:#8cbbf1;
+  --header-color:#e84949;
+  --heading-color:#ffa500;
+  --button-color:#ffa500;
+  --button-font-color:#ffffff;
   --header-font-color:rgb(245, 241, 241);
   --leftmenu-max-width:300px;
   --leftmenu-trans-time:1s;
@@ -12,4 +15,8 @@
   --whatsapp-color: #25D366;
   --facebook-color: #4267B2;
   --twitter-color: #1DA1F2;
+  --scrollbar-width: 10px;
+  --scrollbar-track-color :#f7d698;
+  --scrollbar-thumb-color:#ffb300;
+  --webkit-scrollbar-thumb-hover-color: orange;
 }

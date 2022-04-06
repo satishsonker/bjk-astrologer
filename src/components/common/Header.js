@@ -71,7 +71,7 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                         </div>
                         
                     </div>
-                    <div className="p-2 bd-highlight">
+                    <div className="bd-highlight">
                         <div className='logo-text'>{t("bhashkar")} {t("jyotish")} {t("kendra")}</div>
                         {/* <span>{t("भास्कर ज्योतिष केंद्र")}</span> */}
                     </div>

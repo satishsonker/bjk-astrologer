@@ -9,7 +9,7 @@
 }
 .love-page-header
 {
-    color: orange;
+    color: var(--heading-color);;
     border-bottom: 2px solid slateblue;
     padding: 10px 80px 10px 5px;
     display: inline-block;
@@ -27,7 +27,7 @@
 }
 .ast-tag-line2
 {
-    color: orange;
+    color: var(--heading-color);;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 700;
