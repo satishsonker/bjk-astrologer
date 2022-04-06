@@ -71,7 +71,8 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                         
                     </div>
                     <div className="p-2 bd-highlight">
-                        <img alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' />
+                        <span>{t("ʙʜᴀꜱʜᴋᴀʀ ᴊʏᴏᴛɪꜱʜ ᴋᴇɴᴅʀᴀ")}</span>
+                        {/* <span>{t("भास्कर ज्योतिष केंद्र")}</span> */}
                     </div>
                     <div className="bd-highlight">
                           <Link to='/home'><div className="p-2 bd-highlight"><img alt='Logo' className='logo' src='../Images/logo/bjkLogo64.png' /></div></Link>

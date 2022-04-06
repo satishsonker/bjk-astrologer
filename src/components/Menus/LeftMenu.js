@@ -58,7 +58,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 <i className="fa-solid fa-house-user"></i> <span>{t("home")}</span>
                             </li>
                         </Link>
-                        {!option.isAuthenticated &&
+                        {option.isAuthenticated &&
                             <>
                                 <li className='menu-item' onClick={e => handleShowLoginSignup('signup')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
                                     <i className="fa-solid fa-user"></i> <span>{t("signup")}</span>
