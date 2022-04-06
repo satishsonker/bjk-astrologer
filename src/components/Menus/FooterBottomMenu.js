@@ -1,52 +1,54 @@
 import React from 'react'
 import '../../css/components/common/Footer.css';
+import { useTranslation } from "react-i18next";
 
 export default function FooterBottomMenu() {
+    const { t } = useTranslation();
     return (
         <>
             <div className='row row-cols-1 row-cols-md-4'>
                 <div className='col'>
                     <div className='list-container'>
-                        <div className='list-header'>Online Consult</div>
+                        <div className='list-header'>{t("Online")} {t("Consult")}</div>
                         <ul className="list">
-                            <li className="list-item"><a href="/astrologer/chat">Chat with Astrologer </a></li>
-                            <li className="list-item"><a href="/talk-to-astrologers">Astrologers </a></li>
-                            <li className="list-item"><a href="/astrologer/tarot-reader">Tarot readers</a></li>
-                            <li className="list-item"><a href="/astrologer/numerologist">Numerologists</a></li>
-                            <li className="list-item"><a href="/astrologer/vastu">Vastu experts</a></li>
-                            <li className="list-item"><a href="/astrologer/feng-shui">Fengshui experts</a></li>
-                            <li className="list-item"><a href="/astrologer/career">Career Astrologers</a></li>
-                            <li className="list-item"><a href="/astrologer/love">Love Astrologers</a></li>
-                            <li className="list-item"><a href="/astrologer/finance">Financial Astrologers</a></li>
-                            <li className="list-item"><a href="/astrologer/marriage">Marriage Astrologers</a></li>
-                            <li className="list-item"><a href="/astrologer/money">Money Astrologers</a></li>
-                            <li className="list-item"><a href="/astrologer/daily-life">Specialist Astrologers</a></li>
-                            <li className="list-item"><a href="/horoscope2022">Horoscope 2022</a></li>
+                            <li className="list-item"><a href="/astrologer/chat">Chat with Astrologer</a></li>
+                            <li className="list-item"><a href="/talk-to-astrologers">{t("astrologers")} </a></li>
+                            <li className="list-item"><a href="/astrologer/tarot-reader">{t("tarot")} {t("readers")}</a></li>
+                            <li className="list-item"><a href="/astrologer/numerologist">{t("numerologists")}</a></li>
+                            <li className="list-item"><a href="/astrologer/vastu">{t("vastu")} {t("experts")}</a></li>
+                            <li className="list-item"><a href="/astrologer/feng-shui">{t("fengshui")} {t("experts")}</a></li>
+                            <li className="list-item"><a href="/astrologer/career">{t("career")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/astrologer/love">{t("love")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/astrologer/finance">{t("financial")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/astrologer/marriage">{t("marriage")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/astrologer/money">{t("money")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/astrologer/daily-life">{t("specialist")} {t("astrologer")}</a></li>
+                            <li className="list-item"><a href="/horoscope2022">{t("horoscope")} {new Date().getFullYear()}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className='col'>
                     <div className='list-container'>
-                        <div className='list-header'>Important Link</div>
+                        <div className='list-header'>{t("important")} {t("link")}</div>
                         <ul className="list">
-                            <li className="list-item active"><a href="#">Contact Us</a></li>
-                            <li className="list-item"><a href="#">Feedback</a></li>
-                            <li className="list-item"><a href="#">About Us</a></li>
-                            <li className="list-item"><a href="#">Privacy Policy</a></li>
-                            <li className="list-item"><a href="#">Terms and Conditions</a></li>
-                            <li className="list-item"><a href="#">Astrologer Registration</a></li>
+                            <li className="list-item active"><a href="#">{t("contactUs")}</a></li>
+                            <li className="list-item"><a href="#">{t("feedback")}</a></li>
+                            <li className="list-item"><a href="#">{t("aboutUs")}</a></li>
+                            <li className="list-item"><a href="#">{t("privacy")} {t("policy")}</a></li>
+                            <li className="list-item"><a href="#">{t("terms")} {t("and")} {t("conditions")}</a></li>
+                            <li className="list-item"><a href="#">{t("astrologers")} {t("ka")} {t("registration")}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className='col'>
                     <div className='list-container'>
-                        <div className='list-header'>Secure</div>
+                        <div className='list-header'>{t("secure")}</div>
                         <ul className="list">
                             <li className="list-item dflex">
-                            <i className="fas fa-hand-holding-usd"></i> Money Back Gaurantee
+                            <i className="fas fa-hand-holding-usd"></i>{t("money")} {t("back")} {t("gaurantee")}
                             </li>
-                            <li className="list-item"><i className="fas fa-user-check"></i> Verified Astrologers</li>
-                            <li className="list-item"><i className="fas fa-lock"></i> 100% Secure Payment</li>
+                            <li className="list-item"><i className="fas fa-user-check"></i>{t("verified")} {t("astrologers")}</li>
+                            <li className="list-item"><i className="fas fa-lock"></i> 100% {t("secure")} {t("payment")}</li>
                         </ul>
                     </div>
                 </div>

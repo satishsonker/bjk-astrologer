@@ -27,6 +27,7 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
     const currentLang=langArray.find(l=>l.code===currentLangCode);
     useEffect(() => {
       document.body.dir=currentLang.dir || 'ltr';
+      document.title=`${t("bhashkar")} ${t("jyotish")} ${t("kendra")}`;
     }, [currentLang]);
    
     const GlobleIcon = ({ width = 16, height = 16 }) => {
@@ -71,7 +72,7 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                         
                     </div>
                     <div className="p-2 bd-highlight">
-                        <span>{t("ʙʜᴀꜱʜᴋᴀʀ ᴊʏᴏᴛɪꜱʜ ᴋᴇɴᴅʀᴀ")}</span>
+                        <div className='logo-text'>{t("bhashkar")} {t("jyotish")} {t("kendra")}</div>
                         {/* <span>{t("भास्कर ज्योतिष केंद्र")}</span> */}
                     </div>
                     <div className="bd-highlight">

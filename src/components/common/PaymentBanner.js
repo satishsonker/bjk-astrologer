@@ -1,11 +1,12 @@
 import React from 'react'
 import '../../css/components/common/PaymentBanner.css';
+import { useTranslation } from "react-i18next";
 
-export default function
-    () {
+export default function() {    
+    const { t } = useTranslation();
     return (
         <div className='pay-banner-container'>
-            <h3 className='banner-text'>Secure Payment Options</h3>
+            <h3 className='banner-text'>{t("secure")} {t("payment")} {t("options")}</h3>
             <div className="pay-banner-list">
                 <div className="col"><img alt="Paytm Logo" src='../images/paytm.png'/></div>
                 <div className="col"><img alt="Visa Logo" src='../images/visa.png'/></div>
