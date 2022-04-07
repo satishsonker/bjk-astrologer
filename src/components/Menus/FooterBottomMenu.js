@@ -34,8 +34,8 @@ export default function FooterBottomMenu() {
                             <li className="list-item active"><a href="#">{t("contactUs")}</a></li>
                             <li className="list-item"><a href="#">{t("feedback")}</a></li>
                             <li className="list-item"><a href="#">{t("aboutUs")}</a></li>
-                            <li className="list-item"><a href="Privacy-Policy">{t("privacy")} {t("policy")}</a></li>
-                            <li className="list-item"><a href="/T-n-C">{t("terms")} {t("and")} {t("conditions")}</a></li>
+                            <li className="list-item"><a href="/privacypolicy">{t("privacy")} {t("policy")}</a></li>
+                            <li className="list-item"><a href="/tnc">{t("terms")} {t("and")} {t("conditions")}</a></li>
                             <li className="list-item"><a href="#">{t("astrologers")} {t("ka")} {t("registration")}</a></li>
                         </ul>
                     </div>

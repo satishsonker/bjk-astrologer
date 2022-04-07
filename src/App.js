@@ -44,6 +44,8 @@ function App() {
               <Route exact path="/Astrologers" element={
                 <div><Astrologers></Astrologers></div>
                 }></Route>
+              <Route exact path="/privacypolicy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
+              <Route exact path="/tnc" element={<div><TnC></TnC> </div>}></Route>
               <Route exact path="/Astrologer" element={<div><Astrologer></Astrologer> </div>}></Route>
               <Route exact path="/Love" element={<div><Love></Love> </div>}></Route>
               <Route exact path="/FAQ" element={<div><FAQ></FAQ> </div>}></Route>
@@ -53,8 +55,6 @@ function App() {
               <Route exact path="/CallHistory" element={<div><CallHistory></CallHistory> </div>}></Route>
               <Route exact path="/ChatHistory" element={<div><ChatHistory></ChatHistory> </div>}></Route>
               <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
-              <Route exact path="/Privacy-Policy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
-              <Route exact path="/T-n-C" element={<div><TnC></TnC> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
