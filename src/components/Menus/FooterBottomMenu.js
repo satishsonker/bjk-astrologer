@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../css/components/common/Footer.css';
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function FooterBottomMenu() {
     const { t } = useTranslation();
@@ -31,11 +32,11 @@ export default function FooterBottomMenu() {
                     <div className='list-container'>
                         <div className='list-header'>{t("important")} {t("link")}</div>
                         <ul className="list">
-                            <li className="list-item active"><a href="#">{t("contactUs")}</a></li>
+                            <li className="list-item active"><Link to='/ContactUs'>{t("contactUs")}</Link></li>
                             <li className="list-item"><a href="#">{t("feedback")}</a></li>
-                            <li className="list-item"><a href="#">{t("aboutUs")}</a></li>
-                            <li className="list-item"><a href="/privacypolicy">{t("privacy")} {t("policy")}</a></li>
-                            <li className="list-item"><a href="/tnc">{t("terms")} {t("and")} {t("conditions")}</a></li>
+                           <li className="list-item"><Link to='/AboutUs'> {t("aboutUs")}</Link></li>
+                            <li className="list-item"><Link to="/privacypolicy">{t("privacy")} {t("policy")}</Link></li>
+                            <li className="list-item"><Link to="/tnc">{t("terms")} {t("and")} {t("conditions")}</Link></li>
                             <li className="list-item"><a href="#">{t("astrologers")} {t("ka")} {t("registration")}</a></li>
                         </ul>
                     </div>
