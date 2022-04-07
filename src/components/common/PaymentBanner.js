@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/components/common/PaymentBanner.css';
 import { useTranslation } from "react-i18next";
 
-export default function() {    
+export default function PaymentBanner() {    
     const { t } = useTranslation();
     return (
         <div className='pay-banner-container'>

@@ -1,6 +1,8 @@
 {
     "app":{
-        "appShareUrl":"https://bhashkarjyotishkendra.netlify.app/"
+        "appShareUrl":"https://bhashkarjyotishkendra.netlify.app/",
+        "appName": "Bhashkar Jyotish Kendra",
+        "appDomain": "BhashkarJyotishKendra.com"
     },
     "contact":{
         "whatsappNo":"918787250204",

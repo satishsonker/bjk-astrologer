@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import { common } from '../../common/common.js'
 import { Link } from "react-router-dom";
 import 'flag-icons/css/flag-icons.css';
@@ -28,7 +28,7 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
     useEffect(() => {
       document.body.dir=currentLang.dir || 'ltr';
       document.title=`${t("bhashkar")} ${t("jyotish")} ${t("kendra")}`;
-    }, [currentLang]);
+    }, [currentLang,t]);
    
     const GlobleIcon = ({ width = 16, height = 16 }) => {
         return <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className="bi bi-globe" viewBox="0 0 16 16">

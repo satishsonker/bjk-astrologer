@@ -1,117 +1,122 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/components/Astrologer.css';
 import { useTranslation } from "react-i18next";
 import Rating from './common/Rating';
-export default function Astrologer() {  
+export default function Astrologer() {
   const { t } = useTranslation();
   const [showRatingNumber, setShowRatingNumber] = useState(false);
-  const [reviewData, setReviewData] = useState([
-    {
+  const [reviewData, setReviewData] = useState();
+  useEffect(() => {
+    setShowRatingNumber(false);
+    setReviewData([
+      {
         imagePath: "/images/userreview/satishkumarsonker.png",
         name: "Satish Kumar Sonker",
         date: "20 Mar 2021",
         review: "Very good astrologer in allahabad, He has all the solution of your queries",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/ramatilwani.png",
         name: "Rama Tilwani",
         date: "20 Mar 2021",
         review: "They are really humble,down to earth.sir Akshay is a noble person.He always helps u when u asked. For astro service their predictions are best.tx a lot Akshay sir.",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/its_me_sumitPandey.png",
         name: "its_me_sumit Pandey",
         date: "20 Mar 2021",
         review: "Thank you so much sir 🙏🙏 The prediction regarding the government job turned out to be accurate.",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/AbhinavRoy.png",
         name: "Abhinav Roy",
         date: "20 Mar 2021",
         review: "Best astrologer in City... I am satisfie",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/deepasonkar.png",
         name: "Deepa Sonkar",
         date: "20 Mar 2021",
         review: "Very best astrologer in allahabad",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/ramroy.png",
         name: "Ram Roy",
         date: "20 Mar 2021",
         review: "Very great astrologer",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/rishirisky.png",
         name: "Rishi Risky",
         date: "20 Mar 2021",
         review: "Good experience.... Genuine and truth facts shared.",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/sumit.png",
         name: "Sumit Commerce classes",
         date: "20 Mar 2021",
         review: "Best astrologer in Allahabad",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/brijmohan.png",
         name: "Brij Mohan Kushwaha",
         date: "20 Mar 2021",
         review: "Best Astrologer in city",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/vikash.png",
         name: "Vikash Chandra",
         date: "20 Mar 2021",
         review: "Very Good",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/sandeep.png",
         name: "Sandeep Kushwaha",
         date: "20 Mar 2021",
         review: "(Translated by Google) Good knowledge of astrology, complete answer to all questions was received..Thanks (Original) ज्योतिष के अच्छे जानकार, सभी प्रश्नों का संतुष्टि पूर्ण उत्तर प्राप्त हुआ..धन्यवाद",
         rating: 4
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/ashishyadav.png",
         name: "Ashish Kumar Yadav",
         date: "31 Mar 2022",
         review: "A great experience with Bhaskar Jyotish Kendra running by Akshay Shukla Ji. He is the diamond in Astrology in Prayagraj. Great knowledge, very impresive communication and convincing skill. I got magnificent response or solution from there.",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/poosam.png",
         name: "Poonsam Pvt Ltd",
         date: "31 Mar 2022",
         review: "Akshay sir provides very authentic and genuine  solution",
         rating: 5
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/pratima.png",
         name: "Pratima Sonkar",
         date: "2 April 2022",
         review: "Trustworthy astrologer..",
         rating: 4
-    },
-    {
+      },
+      {
         imagePath: "/images/userreview/alka.png",
         name: "Alka Sonkar",
         date: "5 April 2022",
         review: "Bahot accha kaam kar rahen hain aap.",
         rating: 5
-    }
-]);
+      }
+    ]);
+  }, []);
+
   return (
     <>
       <div className='ast-header'>
@@ -190,8 +195,8 @@ export default function Astrologer() {
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
               <ul className='ratings'>
-                {reviewData?.map(ele=>{
-                    return <li className='rating'>
+                {reviewData?.map(ele => {
+                  return <li className='rating'>
                     <div className="brb pdtb12 full-width">
                       <div className="reviews-lefts">
                         <img alt='User Logo' src={ele.imagePath} className="us-img" />

@@ -34,6 +34,8 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                 setShowLogin(false);
                 setShowSignUp(true);
                 break;
+            default:
+                break;
         }
     }
     return (

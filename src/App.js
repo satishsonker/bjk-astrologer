@@ -21,6 +21,8 @@ import UserProfile from './components/UserProfile';
 import RechargeHistory from './components/History/RechargeHistory';
 import ChatHistory from './components/History/ChatHistory';
 import CallHistory from './components/History/CallHistory';
+import PrivacyPolicy from './components/common/PrivacyPolicy';
+import TnC from './components/common/TnC';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -51,6 +53,8 @@ function App() {
               <Route exact path="/CallHistory" element={<div><CallHistory></CallHistory> </div>}></Route>
               <Route exact path="/ChatHistory" element={<div><ChatHistory></ChatHistory> </div>}></Route>
               <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
+              <Route exact path="/PrivacyPolicy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
+              <Route exact path="/TnC" element={<div><TnC></TnC> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
