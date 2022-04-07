@@ -1,0 +1,56 @@
+.con-line
+{
+display: flex;
+align-content: space-around;
+align-items: center;
+}
+.con-icon
+{
+    border: 3px solid;
+    height: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50%;
+    border-left: 2px solid orange;
+    border-bottom: 3px solid orange;
+}
+.col {
+    padding: 5px 5px 0px 5px;
+    background: #ed143da1;
+}
+.con-icon i{
+    font-size: 28px;
+}
+.con-text
+{
+    min-height: 80px;
+    min-width: 80px;
+    padding-left: 20px;
+    text-align: justify;
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-family: cursive;
+}
+
+.con-form
+{
+    padding: 20px;
+}
+.form-container
+{
+    padding-bottom: 20px;
+}
+.kun-box {
+    height: 335px;
+    border-radius: 0 0 10px 10px;
+}
+.con-heading
+{
+    text-align: center;
+    border-bottom: 2px solid orange;
+    padding: 10px 20px;
+}
