@@ -53,8 +53,8 @@ function App() {
               <Route exact path="/CallHistory" element={<div><CallHistory></CallHistory> </div>}></Route>
               <Route exact path="/ChatHistory" element={<div><ChatHistory></ChatHistory> </div>}></Route>
               <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
-              <Route exact path="/PrivacyPolicy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
-              <Route exact path="/TnC" element={<div><TnC></TnC> </div>}></Route>
+              <Route exact path="/Privacy-Policy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
+              <Route exact path="/T-n-C" element={<div><TnC></TnC> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
