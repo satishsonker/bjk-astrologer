@@ -193,7 +193,7 @@ export default function TnC() {
                             </div>
                             <div className='pp-para-sub'>
                                 Except as otherwise stated in these Terms of Service, all notices to a party shall be in writing and shall be made either via email or snail mail. Notice shall be deemed given 24 hours after an email is sent, or 3 days after deposit in the snail mail, to Member at the address provided by Member in the Registration Data and to {config.app.appDomain} at the address set forth below:
-                                A-726, Kamla Nagar, Agra (UP), India.</div>
+                                6/121 E.W.S, Awas Vikas Colony, Jhusi Prayagraj - 211019.</div>
                             <div className='pp-para-heading'>
                                 14. ARBITRATION; INJUNCTIVE RELIEF:
                             </div>
