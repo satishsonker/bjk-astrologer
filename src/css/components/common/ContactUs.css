@@ -16,9 +16,8 @@ align-items: center;
     border-left: 2px solid orange;
     border-bottom: 3px solid orange;
 }
-.col {
+.con-details .col {
     padding: 5px 5px 0px 5px;
-    background: #ed143da1;
 }
 .con-icon i{
     font-size: 28px;
@@ -35,7 +34,36 @@ align-items: center;
     font-size: 14px;
     font-family: cursive;
 }
-
+.con-head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 1px solid orange;
+    margin: 20px 0;
+}
+.con-line-center
+{
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.con-line-center .con-icon
+{
+    margin: 0 10px;
+}
+.con-line-center .con-icon:hover
+{
+   background-color: var(--hover-color);
+}
+.con-line-center .fa-whatsapp:hover{
+    color: var(--whatsapp-color);
+}
 .con-form
 {
     padding: 20px;
@@ -44,8 +72,8 @@ align-items: center;
 {
     padding-bottom: 20px;
 }
-.kun-box {
-    height: 335px;
+.form-container .kun-box {
+    height: 380px;
     border-radius: 0 0 10px 10px;
 }
 .con-heading
@@ -53,4 +81,7 @@ align-items: center;
     text-align: center;
     border-bottom: 2px solid orange;
     padding: 10px 20px;
+}
+.con-text a,.con-line-center a{
+    text-decoration:none;
 }

@@ -10,10 +10,11 @@ import Carousel from './common/Carousel';
 import Janamkundali from './Kundali/JanmKundali';
 import KundaliMatch from './Kundali/KundaliMatch';
 import GoogleReviews from './common/GoogleReviews';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import AskQuestionBanner from './Banner/AskQuestionBanner';
 
 export default function Home() {
-  const {t}=useTranslation();
+  const { t } = useTranslation();
   return (
     <div className='home-content'>
       <div className='ast-carousel'>
@@ -56,11 +57,14 @@ export default function Home() {
           <div className='home-box-kundali'>
             <LoveAstrology></LoveAstrology>
           </div>
-        </div>      
+        </div>
       </div>
       <div className='col-12'>
-          <GoogleReviews></GoogleReviews>
-        </div>
+        <AskQuestionBanner></AskQuestionBanner>
+      </div>
+      <div className='col-12'>
+        <GoogleReviews></GoogleReviews>
+      </div>
     </div>
   )
 }

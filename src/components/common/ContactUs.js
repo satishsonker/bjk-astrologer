@@ -2,9 +2,9 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common/Breadcrumb';
 import '../../css/components/common/ContactUs.css';
-import SoulMateSmall from '../Love/SoulMateSmall';
 import { AppConfigConsumer } from '../../Context/ConfigContext';
 import ContactForm from './ContactForm';
+import AskQuestionBanner from '../Banner/AskQuestionBanner';
 
 export default function ContactUs() {
     const { t } = useTranslation();
@@ -25,25 +25,52 @@ export default function ContactUs() {
             <AppConfigConsumer>
                 {
                     (config) => {
-                        return <div className='row row-cols-1 row-cols-md-2'>
+                        return<>
+                         <div className='row row-cols-1 row-cols-md-2 con-details'>
                             <div className='col'>
                                 <div className='con-line'>
                                     <div className='con-icon'><i className="fas fa-map-marker-alt"></i></div>
-                                    <div className='con-text'>6/121 E.W.S, Awas Vikash Colony, Yojana No. 3, Jhusi, Prayagraj - 211019</div>
+                                    <div className='con-text'>6/121 {t("ews")} {t("awas")} {t("vikash")} {t("colony")} {t("yojana")} {t("no.")} {t("jhusi")} {t("prayagraj")} - 211019</div>
                                 </div>
                                 <div className='con-line'>
-                                    <div className='con-icon'><i className="fas fa-mobile-alt"></i></div>
-                                    <div className='con-text'>{config.contact.mobileNo}</div>
+                                    <div className='con-icon'><i className="fas fa-at"></i></div>
+                                    <div className='con-text'>{config.contact.customerCareEmail}</div>
                                 </div>
-                                <div className='con-line'>
-                                    <div className='con-icon'><i className="fab fa-whatsapp"></i></div>
-                                    <div className='con-text'>{config.contact.whatsappNo}</div>
+                                <div className='con-head'>{t('connectWithUs')}</div>
+                                <div className='con-line-center'>
+                                <a href={`mailto:${config.contact.customerCareEmail}?subject=Query from ${config.app.appDomain}`}>
+                                    <div className='con-icon'>
+                                        <i className="fas fa-at"></i>
+                                        </div>
+                                        </a>
+                                <a href={`tel:${config.contact.mobileNo}`}>
+                                    <div className='con-icon'>
+                                        <i className="fas fa-mobile-alt"></i>
+                                        </div>
+                                        </a>
+                                    <a href={`https://api.whatsapp.com/send?text=${config.app.appShareUrl}`} data-action="share/whatsapp/share">
+                                        <div className='con-icon whatsapp'>
+                                            <i className="fab fa-whatsapp"></i>
+                                        </div>
+                                    </a>
+                                    <a target="_blank" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(config.app.appShareUrl)}&amp;src=sdkprepars`} className="fb-xfbml-parse-ignore">
+                                        <div className='con-icon facebook'>
+                                            <i className="fab fa-facebook"></i>
+                                        </div>
+                                    </a>
+                                    <a href={`https://twitter.com/intent/tweet?text=${config.app.appShareUrl}`}>
+                                        <div className='con-icon twitter'>
+                                            <i className="fab fa-twitter"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div className='col form-container'>
-                               <ContactForm></ContactForm>
+                                <ContactForm></ContactForm>
                             </div>
                         </div>
+                        <AskQuestionBanner></AskQuestionBanner>
+                        </>
                     }
                 }
             </AppConfigConsumer>

@@ -15,7 +15,7 @@ export default function Footer() {
             <AppConfigConsumer>
                 {
                     (config) => {
-                        return <div className={isFooterExpand ? 'bjk-footer footer-expand' : 'bjk-footer'}>
+                        return <div className={isFooterExpand ? 'bjk-footer footer-expand' : 'bjk-footer'} onClick={e=>handleFooterExpand()}>
                             <ul className="d-flex bd-highlight ul-buttons" >
                                 <li>
                                     <a href={`https://wa.me/${config.contact.whatsappNo}?text=Hi%2C+I+am+Satish+Kumar+Sonkar.%0D%0AI+want+some+consultation.+Please+reply+back.`}><div className="p-2 flex-fill tc bd-highlight"><i className="control-btn fa-brands fa-whatsapp whatsapp"></i></div></a>

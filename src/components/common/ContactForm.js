@@ -4,12 +4,13 @@ import AstButton from '../Controls/AstButton';
 import { useTranslation } from "react-i18next";
 import '../../css/components/common/ContactUs.css';
 import AstTextbox from '../Controls/AstTextbox';
+import AstTextarea from '../Controls/AstTextarea';
 
 export default function ContactForm() {
     const [contactData, setContactData] = useState({});
     const { t } = useTranslation();
     const btnOption = {
-        text: "Send"
+        text: "send"
     };
     const handleOnChange = (e) => {
         setContactData({ ...contactData, [e.target.name]: e.target.value })
@@ -82,7 +83,7 @@ export default function ContactForm() {
                    <AstTextbox option={txtOptions.mobile}></AstTextbox>
                </div>
                <div className='con-form-item'>
-                   <AstTextbox option={txtOptions.query}></AstTextbox>
+                   <AstTextarea option={txtOptions.query}></AstTextarea>
                </div>
                <div className='con-form-item'>
                    <AstButton option={btnOption}></AstButton>
