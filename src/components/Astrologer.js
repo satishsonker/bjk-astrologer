@@ -127,10 +127,10 @@ export default function Astrologer() {
               <div className="row row-cols-1">
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>{t("acharya")} {t("akshay")} {t("shukla")}</span> <i className="fa-solid fa-bookmark"></i></div>
                 <div className="col-12 bd-highlight"></div>
-                <div className="col-12 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> Vedic, Kp System, Lal Kitab</div>
+                <div className="col-12 bd-highlight"><i className="fa-brands fa-galactic-republic"></i> {t("horoscope")} {t("analysis")}, {t("muhurt")}, {t("prashn")}/{t("horary")}, {t("palmReading")}</div>
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-language"></i> {t("hindi")}, {t("english")}</div>
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-indian-rupee-sign text-success"></i> 17/{t("min")}</div>
-                <div className="col-12 bd-highlight"><i className="fa-solid fa-graduation-cap"></i> 6 {t("years")} {t("exp")} <i className="fa-solid fa-users text-primary"></i> 15  {t("users")}</div>
+                <div className="col-12 bd-highlight"><i className="fa-solid fa-graduation-cap"></i> 8 {t("years")} {t("exp")} <i className="fa-solid fa-users text-primary"></i> 15  {t("users")}</div>
                 <div className="col-12 bd-highlight"></div>
                 <div className="col-12 bd-highlight"></div>
               </div>
@@ -140,8 +140,8 @@ export default function Astrologer() {
       </div>
       <div className='row row-cols-1 ast-profile-container'>
         <div className='col py-2 px-5'>
-          <h5>About {t("acharya")} {t("akshay")} {t("shukla")}</h5>
-          <p className='ast-paragraph-details'>{t("acharya")} {t("akshay")} {t("shukla")} has been associated with the field of Astrology for more than 5 years. He has completed his B.A. in Sanskrit from Rashtriya Sanskrit Sansthan.</p>
+          <h5>{t("aboutAkshay")}</h5>
+          <p className='ast-paragraph-details'>{t("akshayBio")} </p>
           <hr className='mt-2'></hr>
         </div>
         <div className='col py-2 px-5'>
@@ -150,11 +150,11 @@ export default function Astrologer() {
             <div className="ast-heading-left br-2"> <h5>{t("education")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
-              <p className='ast-paragraph-details'>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
+              <p className='ast-paragraph-details'>{t("akshayEdu")}</p>
             </div>
           </div>
         </div>
-        <div className='col py-2 px-5'>
+        {/* <div className='col py-2 px-5'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='Degree' src="/images/degree.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("degree")}</h5> </div>
@@ -163,14 +163,14 @@ export default function Astrologer() {
               <p className='ast-paragraph-details'>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className='col py-2 px-5'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='Certificate' src="/images/certificates.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("certificates")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
-              <p className='ast-paragraph-details'>Jyotish Acharya from Rastriya Sanskrit Sansthan Bhopal.</p>
+              <p className='ast-paragraph-details'>{t("akshayCertificate")}</p>
             </div>
           </div>
         </div>
@@ -181,9 +181,10 @@ export default function Astrologer() {
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
               <ul className='tags'>
-                <li className='tag'>MUHURTA</li>
-                <li className='tag'>PSYCHIC READING</li>
-                <li className='tag'>PRASHNA / HORARY</li>
+                <li className='tag'>{t("horoscope")} {t("analysis")}</li>
+                <li className='tag'>{t("muhurt")}</li>
+                <li className='tag'>{t("prashn")}/{t("horary")}</li>                
+                <li className='tag'>{t("palmReading")}</li>
               </ul>
             </div>
           </div>

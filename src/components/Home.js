@@ -12,6 +12,7 @@ import KundaliMatch from './Kundali/KundaliMatch';
 import GoogleReviews from './common/GoogleReviews';
 import { useTranslation } from "react-i18next";
 import AskQuestionBanner from './Banner/AskQuestionBanner';
+import SubscribeBanner from './Banner/SubscribeBanner';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -61,6 +62,7 @@ export default function Home() {
       </div>
       <div className='col-12'>
         <AskQuestionBanner></AskQuestionBanner>
+        <SubscribeBanner></SubscribeBanner>
       </div>
       <div className='col-12'>
         <GoogleReviews></GoogleReviews>

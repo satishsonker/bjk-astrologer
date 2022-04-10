@@ -5,6 +5,7 @@ import '../../css/components/common/ContactUs.css';
 import { AppConfigConsumer } from '../../Context/ConfigContext';
 import ContactForm from './ContactForm';
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
+import SubscribeBanner from '../Banner/SubscribeBanner';
 
 export default function ContactUs() {
     const { t } = useTranslation();
@@ -70,6 +71,7 @@ export default function ContactUs() {
                             </div>
                         </div>
                         <AskQuestionBanner></AskQuestionBanner>
+                        <SubscribeBanner></SubscribeBanner>
                         </>
                     }
                 }

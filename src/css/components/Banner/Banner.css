@@ -5,7 +5,25 @@
     align-items: center;
     border: 2px solid orange;
     margin: 10px 0;
-    background: lightgoldenrodyellow;
+    background: lightgoldenrodyellow;    
+    justify-content: space-between;
+}
+.flex-logo
+{
+    height: 100px;
+    margin-top: 20px;
+}
+.flex-logo .ban-icon
+{
+    position: relative;
+}
+.flex-logo .ban-icon img
+{
+    position: absolute;
+    width: 100px !important;
+    height: 80px !important;
+    left: 0;
+    top: -61px;
 }
 
 .banner-container .ban-icon {
@@ -33,7 +51,7 @@
 
 @media screen and (max-width: 500px) {
     .banner-container .ban-text {
-        display: none;
+       display: none;
     }
 
     .banner-container {
@@ -46,6 +64,6 @@
     }
 
     .banner-container .ban-icon {
-        min-width: 50vw;
+        min-width: 30vw;
     }
 }
