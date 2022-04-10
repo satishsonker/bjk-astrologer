@@ -9,7 +9,7 @@ export default function AskQuestionBanner() {
     <>
     <div className='banner-container'>
         <div className='ban-icon'>
-            <img src='/images/ask-astro-questions.jpg'></img>
+            <img src='/images/ask-astro-questions.jpg' alt='Ask Question'></img>
         </div>
         <div className='ban-text'>
            {t("askQuestBannerText")}

@@ -203,6 +203,15 @@
     "aboutAkshay":"About Acharya Akshay Shukla",
     "akshayCertificate":"Got Honors Certificate for Jyotish Acharya from Bhartiya Vidhya Bhawan Allahabad Kendra in January 2022",
     "subscribeNow":"Subscribe Now",
-    "subscribeBannerText":"Subscribe our news letter to get free Horoscope and more."
+    "subscribeBannerText":"Subscribe our news letter to get free Horoscope and more.",
+    "enterTextInTextbox":"Enter text in Textbox",
+    "textbox":"Textbox",
+    "alreadyNotAccount":"Already have not an account",
+    "alreadyAccount":"Already have an account",
+    "userConsent":"I authorize {{doamin}} & associated astrologers to contact me via email or phone or SMS.",
+    "signupToApp":"Signup To {{appName}}",
+    "loginToApp":"Login To {{appName}}",
+    "google":"Google",
+    "facebook":"Facebook"
     
 }

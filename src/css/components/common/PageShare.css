@@ -45,5 +45,8 @@ color: black;
     .btn-close
     {
         display: block !important;
-        position: initial !important;
+    }
+    .share.btn-close
+    {
+        display: block !important;
     }

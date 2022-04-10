@@ -13,12 +13,12 @@ export default function AstTextarea({option}) {
     option.width = common.defaultIfEmpty(option.width, '100%');
     option.className = common.defaultIfEmpty(option.className, '');
     option.value = common.defaultIfEmpty(option.value, '');
-    option.placeHolder = common.defaultIfEmpty(option.placeHolder, 'Enter Your Text Here');
+    option.placeHolder = common.defaultIfEmpty(option.placeHolder, `${t('enter')} ${t('your')} ${t('text')} ${t('here')}`);
     option.hasValidation = common.defaultIfEmpty(option.hasValidation, true);
     option.showLabel = common.defaultIfEmpty(option.showLabel, true);
     option.showHelpText = common.defaultIfEmpty(option.showHelpText, true);
-    option.labelText = common.defaultIfEmpty(option.labelText, 'Ast Textbox');
-    option.helpText = common.defaultIfEmpty(option.helpText, 'Enter text in Ast Textbox');
+    option.labelText = common.defaultIfEmpty(option.labelText, t('textbox'));
+    option.helpText = common.defaultIfEmpty(option.helpText, t('enterTextInTextbox'));
     return (
         <>
             {option.showLabel &&

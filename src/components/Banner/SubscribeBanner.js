@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import '../../css/components/Banner/Banner.css';
 import { useTranslation } from "react-i18next";
-import AstButton from '../Controls/AstButton';
 import AstTextboxWithButton from '../Controls/AstTextboxWithButton';
 
 export default function SubscribeBanner() {    

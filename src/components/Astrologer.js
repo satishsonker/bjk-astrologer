@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../css/components/Astrologer.css';
 import { useTranslation } from "react-i18next";
 import Rating from './common/Rating';
+import Breadcrumb from './common/Breadcrumb';
 export default function Astrologer() {
   const { t } = useTranslation();
   const [showRatingNumber, setShowRatingNumber] = useState(false);
   const [reviewData, setReviewData] = useState();
+  const breadcrumbOption = [
+    { name: t('home'), link: "/Home" },
+    { name: `${t('astrologer')}`, isActive: false }];
   useEffect(() => {
     setShowRatingNumber(false);
     setReviewData([
@@ -122,8 +126,8 @@ export default function Astrologer() {
       <div className='ast-header'>
         <div className='text-center'>
           <div className='ast-profile-image-ctr'>
-            <div className='ast-brb px-3'>
-              <img src='/Images/astro/akshayshukla.jpg' alt='Astrologer Image' />
+            <div className='ast-brb px-1'>
+              <img src='/Images/astro/akshayshukla.jpg' alt='Astrologer' />
               <div className="row row-cols-1">
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>{t("acharya")} {t("akshay")} {t("shukla")}</span> <i className="fa-solid fa-bookmark"></i></div>
                 <div className="col-12 bd-highlight"></div>
@@ -138,7 +142,8 @@ export default function Astrologer() {
           </div>
         </div>
       </div>
-      <div className='row row-cols-1 ast-profile-container'>
+      <Breadcrumb option={breadcrumbOption}></Breadcrumb>
+      <div className='row row-cols-1 ast-profile-container mt-5'>
         <div className='col py-2 px-5'>
           <h5>{t("aboutAkshay")}</h5>
           <p className='ast-paragraph-details'>{t("akshayBio")} </p>

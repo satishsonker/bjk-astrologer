@@ -14,7 +14,7 @@
             "enable":true
         },
         "facebook":{
-            "enable":true
+            "enable":false
         }
     }
 }

@@ -6,7 +6,7 @@ export default function HoroscopeDaily() {
   return (
     <>
     <div className='horo-heading'>{t("free")} {t("daily")} {t("horoscope")}</div>
-      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 horo">
         <div className='col'>
           <div className="row row-cols-3 row-cols-sm-3 row-cols-md-6">
             <div className='col'>

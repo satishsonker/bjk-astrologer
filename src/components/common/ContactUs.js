@@ -17,9 +17,8 @@ export default function ContactUs() {
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='con-heading'>{t('contactUs')}</div>
             <div className="mapouter" style={{ height: "294px", width: "100vw", position: "relative", textAlign: "right" }}>
-                <div className="gmap_canvas" style={{ overflow: "hidden", background: "none!important", height: "294px", width: "100vw" }}>
-                    <iframe style={{ height: "294px", width: "100vw" }} id="gmap_canvas" src="https://maps.google.com/maps?q=bhashkar%20jyotish%20kendra%20jhusi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://123movies-to.org"></a><br />
+                <div className="gmap_canvas" style={{ overflow: "hidden", background: "none !important", height: "294px", width: "100vw" }}>
+                    <iframe title='Google Map' style={{ height: "294px", width: "100vw" }} id="gmap_canvas" src="https://maps.google.com/maps?q=bhashkar%20jyotish%20kendra%20jhusi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
                     <a href="https://www.embedgooglemap.net">google embedded</a>
                 </div>
             </div>
