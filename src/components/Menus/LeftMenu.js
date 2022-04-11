@@ -4,7 +4,8 @@ import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-export default function LeftMenu({ option, isActive, userDetails, setting }) {
+import {GoogleLoginConsumer} from '../../Context/GoogleLoginContext'
+export default function LeftMenu({ option, isActive, userDetails, setting,setGoogleLoginData }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
     const [showLogin, setShowLogin] = useState(false);
@@ -39,7 +40,12 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
         }
     }
     return (
-        <>
+         <>
+        <GoogleLoginConsumer>
+            {
+                (loginData)=>{
+                    return <>
+       
             <div className={isMenuOpen ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'} onClick={e => handleMenuClose(false)}>
                 <div className={isMenuOpen ? 'left-menu left-menu-active' : 'left-menu'}>
                     <ul className='menu'>
@@ -49,9 +55,9 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                                 {option.isAuthenticated &&
                                     <li className='left-menu-card-list-item'>
                                         <div className='user-logo'>
-                                            <img alt='User Profile' src='/images/top_header_user_profile.png'></img>
+                                            <img alt='User Profile' src={loginData?.profileObj?.imageUrl!==undefined?(loginData?.profileObj?.imageUrl):('/images/top_header_user_profile.png')}></img>
                                         </div>
-                                        <span>{t("welcome_guest")}</span></li>
+                                        <span className='user-name'>{loginData?.profileObj?.name!==undefined?loginData?.profileObj?.name : t("welcome_guest")}</span></li>
                                 }
                             </ul>
                         </li>
@@ -119,7 +125,11 @@ export default function LeftMenu({ option, isActive, userDetails, setting }) {
                     </ul>
                 </div>
             </div>
-            <Signup showLogin={showLogin} showSignup={showSignUp}></Signup>
+            <Signup showLogin={showLogin} showSignup={showSignUp} setGoogleLoginData={setGoogleLoginData}></Signup>
+            </>
+                }
+            }
+        </GoogleLoginConsumer>
         </>
     )
 }

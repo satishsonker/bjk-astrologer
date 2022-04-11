@@ -12,6 +12,7 @@ import SharePage from './components/common/SharePage';
 import Home from './components/Home'
 import NoPage from './components/common/NoPage'
 import { AppConfigProvider } from './Context/ConfigContext';
+import { GoogleLoginProvider } from './Context/GoogleLoginContext';
 import './css/App.css';
 import Astrologers from './components/Astrologers';
 import Love from './components/Love/Love';
@@ -28,15 +29,17 @@ import ContactUs from './components/common/ContactUs';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
+  const [googleLoginData, setGoogleLoginData] = useState({});
   const config = require('./config.json');
   return (
     <>
       <AppConfigProvider value={config}>
+      <GoogleLoginProvider value={googleLoginData}>
         <Router>
           <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
           <LeftMenu option={{
             setIsLeftMenuActive: setIsLeftMenuActive
-          }} isActive={isLeftMenuActive} userDetails={{}} setting={{}}></LeftMenu>
+          }} isActive={isLeftMenuActive} userDetails={{}} setting={{}} setGoogleLoginData={setGoogleLoginData}></LeftMenu>
           <Footer></Footer>
           <SharePage></SharePage>
           <div className='content-area'>
@@ -65,6 +68,7 @@ function App() {
           </div>
 
         </Router>
+      </GoogleLoginProvider>
       </AppConfigProvider>
     </>
   );

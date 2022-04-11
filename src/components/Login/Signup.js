@@ -4,7 +4,7 @@ import '../../css/components/Signup.css';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 
-export default function Signup({ showLogin, showSignup }) {
+export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
   showLogin = common.defaultIfEmpty(showLogin, false);
   showSignup = common.defaultIfEmpty(showSignup, false);
 
@@ -38,7 +38,7 @@ export default function Signup({ showLogin, showSignup }) {
                   <img alt="Signup" className='signup-banner img-fluid' src="../Images/signup.jpg" alt="..." />
                 </div>
                 <div className="col py-3">
-                  {haveAccount && <LoginForm setHaveAccount={setHaveAccount}></LoginForm>}
+                  {haveAccount && <LoginForm setHaveAccount={setHaveAccount} setGoogleLoginData={setGoogleLoginData}></LoginForm>}
                   {!haveAccount && <SignupForm setHaveAccount={setHaveAccount}></SignupForm>}
                 </div>
               </div>

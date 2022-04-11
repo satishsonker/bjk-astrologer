@@ -94,10 +94,22 @@ display: flex;
 .left-menu-card-list-item .user-logo img
 {
   width: 32px;
+  border-radius: 20px;
 }
 .left-menu-card-list-item .user-logo
 {
   width: 20%;
+}
+.left-menu-card-list-item .user-name
+{
+  font-size: 14px;
+}
+@media only screen and (max-width: 600px)
+{
+  .left-menu-card-list-item .user-name
+  {
+    font-size: 12px;
+  }
 }
 .left-menu-card-list-item span
 {

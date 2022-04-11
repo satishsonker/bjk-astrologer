@@ -4,7 +4,7 @@ import { AppConfigConsumer } from '../../Context/ConfigContext';
 import { useTranslation } from "react-i18next";
 import AstTextbox from '../Controls/AstTextbox';
 import AstButton from '../Controls/AstButton';
-export default function LoginForm({ setHaveAccount }) {
+export default function LoginForm({ setHaveAccount,setGoogleLoginData }) {
     const {t}=useTranslation();
     const [loginData, setLoginData] = useState({});
     const handleHaveAccount = () => {
@@ -44,10 +44,11 @@ setLoginData({...loginData,[e.target.name]:e.target.value})
         }
     }
     const responseGoogle = (response) => {
-        console.log(response);
+        setGoogleLoginData(response);
+      console.table(response);
     }
-    return (
-        <>
+    return ( 
+       
          <AppConfigConsumer>
                 {
                     (config) => {
@@ -93,6 +94,5 @@ setLoginData({...loginData,[e.target.name]:e.target.value})
                     }
                 }
             </AppConfigConsumer>
-        </>
     )
 }
