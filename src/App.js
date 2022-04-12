@@ -45,26 +45,26 @@ function App() {
           <SharePage></SharePage>
           <div className='content-area'>
             <Routes>
-              <Route exact path="/" element={<div><Home></Home> </div>}></Route>
-              <Route exact path="/Home" element={<div><Home></Home> </div>}></Route>
+              <Route exact path="/" element={<div className='pb-5'><Home></Home> </div>}></Route>
+              <Route exact path="/Home" element={<div  className='pb-80'><Home></Home> </div>}></Route>
               <Route exact path="/Astrologers" element={
-                <div><Astrologers></Astrologers></div>
+                <div  className='pb-80'><Astrologers></Astrologers></div>
                 }></Route>
-              <Route exact path="/privacypolicy" element={<div><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
-              <Route exact path="/tnc" element={<div><TnC></TnC> </div>}></Route>
-              <Route exact path="/Astrologer" element={<div><Astrologer></Astrologer> </div>}></Route>
-              <Route exact path="/Love" element={<div><Love></Love> </div>}></Route>
-              <Route exact path="/FAQ" element={<div><FAQ></FAQ> </div>}></Route>
-              <Route exact path="/Wallet" element={<div><Wallet></Wallet> </div>}></Route>
-              <Route exact path="/PaymentDetails" element={<div><PaymentDetails></PaymentDetails> </div>}></Route>
-              <Route exact path="/UserProfile" element={<div><UserProfile></UserProfile> </div>}></Route>
-              <Route exact path="/CallHistory" element={<div><CallHistory></CallHistory> </div>}></Route>
-              <Route exact path="/ChatHistory" element={<div><ChatHistory></ChatHistory> </div>}></Route>
-              <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
-              <Route exact path="/AboutUs" element={<div><AboutUs></AboutUs> </div>}></Route>
-              <Route exact path="/ContactUs" element={<div><ContactUs></ContactUs> </div>}></Route>
-              <Route exact path="/horoscope/daily/:zodiac/:period" element={<div><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
-              <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
+              <Route exact path="/privacypolicy" element={<div  className='pb-80'><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
+              <Route exact path="/tnc" element={<div  className='pb-80'><TnC></TnC> </div>}></Route>
+              <Route exact path="/Astrologer" element={<div  className='pb-80'><Astrologer></Astrologer> </div>}></Route>
+              <Route exact path="/Love" element={<div  className='pb-80'><Love></Love> </div>}></Route>
+              <Route exact path="/FAQ" element={<div  className='pb-80'><FAQ></FAQ> </div>}></Route>
+              <Route exact path="/Wallet" element={<div  className='pb-80'><Wallet></Wallet> </div>}></Route>
+              <Route exact path="/PaymentDetails" element={<div  className='pb-80'><PaymentDetails></PaymentDetails> </div>}></Route>
+              <Route exact path="/UserProfile" element={<div  className='pb-80'><UserProfile></UserProfile> </div>}></Route>
+              <Route exact path="/CallHistory" element={<div  className='pb-80'><CallHistory></CallHistory> </div>}></Route>
+              <Route exact path="/ChatHistory" element={<div  className='pb-80'><ChatHistory></ChatHistory> </div>}></Route>
+              <Route exact path="/RechargeHistory" element={<div  className='pb-80'><RechargeHistory></RechargeHistory> </div>}></Route>
+              <Route exact path="/AboutUs" element={<div  className='pb-80'><AboutUs></AboutUs> </div>}></Route>
+              <Route exact path="/ContactUs" element={<div  className='pb-80'><ContactUs></ContactUs> </div>}></Route>
+              <Route exact path="/horoscope/daily/:zodiac/:period" element={<div  className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
+              <Route exact path="*" element={<div  className='pb-80'><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}
           </div>

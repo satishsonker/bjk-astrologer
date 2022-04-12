@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
+import { common } from '../../common/common';
 export default function HoroscopeDaily() {
   const { t } = useTranslation();
   const [zodiacData, setZodiacData] = useState([
@@ -88,8 +89,8 @@ export default function HoroscopeDaily() {
             {
               zodiacData.map((ele, ind) => {
                 if (ind < 6)
-                  return <>
-                    <div className='col'>
+                  return <div key={common.getElementKey()}>
+                    <div className='col horo-sec'>
                       <Link to={`/horoscope/daily/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className='horo-box'>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
@@ -98,7 +99,7 @@ export default function HoroscopeDaily() {
                         </div>
                       </Link>
                     </div>
-                  </>
+                  </ div>
               })
             }
 
@@ -109,8 +110,8 @@ export default function HoroscopeDaily() {
           {
               zodiacData.map((ele, ind) => {
                 if (ind >=6)
-                  return <>
-                    <div className='col'>
+                  return <div key={common.getElementKey()}>
+                    <div key={common.getElementKey()} className='col horo-sec'>
                       <Link to={`/horoscope/daily/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className='horo-box'>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
@@ -119,7 +120,7 @@ export default function HoroscopeDaily() {
                         </div>
                       </Link>
                     </div>
-                  </>
+                  </div>
               })
             }
           </div>

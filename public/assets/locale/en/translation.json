@@ -214,6 +214,9 @@
     "google":"Google",
     "facebook":"Facebook",
     "zodiac":"Zodiac",
-    "chooseDifferentZodiacSign":"Choose different zodiac sign"
+    "chooseDifferentZodiacSign":"Choose different zodiac sign",
+    "select":"Select",
+    "monthly":"Monthly",
+    "weekly":"Weekly"
     
 }

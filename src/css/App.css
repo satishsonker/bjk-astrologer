@@ -79,3 +79,7 @@ select:focus{
 input:focus{
   background-color: var(--focus-color) !important;
 }
+.pb-80
+{
+  padding-bottom:100px ;
+}

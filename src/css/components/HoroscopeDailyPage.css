@@ -39,6 +39,7 @@
     border-bottom: 1px solid orange;
     margin-bottom: 20px;
     padding-bottom: 15px;
+    font-family: serif;
 }
 
 .horoPage .banner-container {
@@ -76,4 +77,53 @@
     .horoPage .banner-container.flex-logo {
         height: 200px !important;
     }
+
+    .horoPage .col:first-child {
+        width: 100vw !important;
+    }
+
+    .horoPage .col:nth-child(2) {
+        width: 100vw !important;
+    }
+}
+@media only screen and (max-width: 800px) {
+    
+    .horoPage .col:first-child {
+        width: 100vw !important;
+    }
+
+    .horoPage .col:nth-child(2) {
+        width: 100vw !important;
+    }
+}
+
+.horo-list {
+    border: 1px solid #e7e7e7
+}
+
+.horo-list .horo-list-header {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    color: orange;
+    background-color: blanchedalmond;
+}
+
+.horo-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    background-color: blanchedalmond;
+}
+
+.horo-list ul li {
+    padding: 10px 20px;
+}
+
+.horoPage .col:first-child {
+    width: 45vw;
+}
+
+.horoPage .col:nth-child(2) {
+    width: 20vw;
 }

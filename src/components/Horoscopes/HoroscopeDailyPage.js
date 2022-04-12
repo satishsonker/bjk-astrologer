@@ -6,27 +6,29 @@ import { useParams } from "react-router-dom";
 import AstSelect from '../Controls/AstSelect';
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
-
+import { useNavigate } from "react-router-dom";
 export default function () {
     const { t } = useTranslation();
-
-    const handleOnChange = () => {
-
+    const urlParam = useParams();
+    let navigate = useNavigate();
+    const handleOnChange = (e) => {
+        setZodiacSelection(e.target.value);
+        navigate(`/horoscope/daily/${e.target.value.split("|")[0]}/${e.target.value.split("|")[1]}`);
     }
     const [zodiacSelection, setZodiacSelection] = useState("");
     const zodiacList = [
-        { id: "aries", value: t("aries") },
-        { id: "taurus", value: t("taurus") },
-        { id: "gemini", value: t("gemini") },
-        { id: "cancer", value: t("cancer") },
-        { id: "leo", value: t("leo") },
-        { id: "virgo", value: t("virgo") },
-        { id: "libra", value: t("libra") },
-        { id: "scorpio", value: t("scorpio") },
-        { id: "sagittarius", value: t("sagittarius") },
-        { id: "capricorn", value: t("capricorn") },
-        { id: "aquarius", value: t("aquarius") },
-        { id: "pisces", value: t("pisces") }];
+        { id: "aries|21.3-19.4", value: t("aries") },
+        { id: "taurus|20.4-20.5", value: t("taurus") },
+        { id: "gemini|21.5-20.6", value: t("gemini") },
+        { id: "cancer|21.6-22.7", value: t("cancer") },
+        { id: "leo|23.7-22.8", value: t("leo") },
+        { id: "virgo|23.8-22.9", value: t("virgo") },
+        { id: "libra|23.9-22.10", value: t("libra") },
+        { id: "scorpio|23.10-21.11", value: t("scorpio") },
+        { id: "sagittarius|22.11-21.12", value: t("sagittarius") },
+        { id: "capricorn|22.12-19.1", value: t("capricorn") },
+        { id: "aquarius|20.1-18.2", value: t("aquarius") },
+        { id: "pisces|19.2-20.3", value: t("pisces") }];
     const selectOption = {
         onChange: handleOnChange,
         id: 'ddlZodic',
@@ -40,8 +42,6 @@ export default function () {
         showLabel: false,
         showHelpText: false,
     }
-    const urlParam = useParams();
-    console.log(urlParam.zodiac);
     const breadcrumbOption = [
         { name: t('home'), link: "/Home" },
         { name: `${t('daily')} ${t('horoscope')} - ${t(urlParam.zodiac)}`, isActive: false }];
@@ -69,6 +69,17 @@ export default function () {
                 <div className='col'>
                     <p>{t("chooseDifferentZodiacSign")}</p>
                     <AstSelect option={selectOption}></AstSelect>
+                    <div className='horo-list'>
+                        <div className='horo-list-header'>
+                            {t("more")} {t("horoscope")}
+                        </div>
+                        <ul>
+                            <li>{t("daily")} {t("horoscope")}</li>
+                            <li>{t("weekly")} {t("horoscope")}</li>
+                            <li>{t("monthly")} {t("horoscope")}</li>
+                            <li>{t("yearly")} {t("horoscope")}</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='col'>
                     <AskQuestionBanner></AskQuestionBanner>

@@ -215,5 +215,7 @@
     "facebook":"फ़ेसबुक",
     "zodiac":"राशि",
     "chooseDifferentZodiacSign":"अलग राशि चिन्ह चुनें",
-    "select":"{{word}} चुनें"
+    "select":"{{word}} चुनें",
+    "monthly":"मासिक",
+    "weekly":"साप्ताहिक"
 }
