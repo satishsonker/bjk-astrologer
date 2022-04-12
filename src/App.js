@@ -26,6 +26,7 @@ import PrivacyPolicy from './components/common/PrivacyPolicy';
 import TnC from './components/common/TnC';
 import AboutUs from './components/common/AboutUs';
 import ContactUs from './components/common/ContactUs';
+import HoroscopeDailyPage from './components/Horoscopes/HoroscopeDailyPage';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -62,6 +63,7 @@ function App() {
               <Route exact path="/RechargeHistory" element={<div><RechargeHistory></RechargeHistory> </div>}></Route>
               <Route exact path="/AboutUs" element={<div><AboutUs></AboutUs> </div>}></Route>
               <Route exact path="/ContactUs" element={<div><ContactUs></ContactUs> </div>}></Route>
+              <Route exact path="/horoscope/daily/:zodiac/:period" element={<div><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
               <Route exact path="*" element={<div><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}

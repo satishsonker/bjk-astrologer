@@ -53,7 +53,7 @@
     "virgo": "Virgo",
     "libra": "Libra",
     "scorpio": "Scorpio",
-    "sagittiarius": "Sagittiarius",
+    "sagittarius": "sagittarius",
     "capricorn": "Capricorn",
     "aquarius": "Aquarius",
     "pisces": "Pisces",
@@ -212,6 +212,8 @@
     "signupToApp":"Signup To {{appName}}",
     "loginToApp":"Login To {{appName}}",
     "google":"Google",
-    "facebook":"Facebook"
+    "facebook":"Facebook",
+    "zodiac":"Zodiac",
+    "chooseDifferentZodiacSign":"Choose different zodiac sign"
     
 }

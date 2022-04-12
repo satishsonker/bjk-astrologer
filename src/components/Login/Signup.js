@@ -19,10 +19,6 @@ export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
   
   return (
     <>
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginSignupModel">
-        Launch demo modal
-      </button>
-
       <div className="modal  fade" id="loginSignupModel" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg modal-dialog-centered">
           <div className="modal-content">

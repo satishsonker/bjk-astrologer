@@ -53,7 +53,7 @@
     "virgo": "कन्या राशि",
     "libra": "तुला राशि",
     "scorpio": "वृश्चिक राशि",
-    "sagittiarius": "धनु राशि",
+    "sagittarius": "धनु राशि",
     "capricorn": "मकर राशि",
     "aquarius": "कुंभ राशि",
     "pisces": "मीन राशि",
@@ -212,5 +212,8 @@
     "signupToApp":"{{appName}} के लिए साइन अप करें",
     "loginToApp":"{{appName}} में लॉग इन करें",
     "google":"गूगल",
-    "facebook":"फ़ेसबुक"
+    "facebook":"फ़ेसबुक",
+    "zodiac":"राशि",
+    "chooseDifferentZodiacSign":"अलग राशि चिन्ह चुनें",
+    "select":"{{word}} चुनें"
 }
