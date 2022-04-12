@@ -14,14 +14,14 @@
   background-color: white;
 }
 .left-menu .menu,.sub-menu{
-    padding: 0;
+  padding: 0 0 99px 0;
     margin: 0;
     list-style: none;
     text-align: left;
     width: 50vw;
     max-width: var(--leftmenu-max-width);
     background: white;
-    min-height: 723px;
+    min-height: max-content;
 }
 .left-menu .menu .menu-item
 {

@@ -234,6 +234,7 @@
     .ast-brb{
       display: block !important;
       transition: .5s;
+      font-size: 14px;
     }
     .ast-heading-left {
         padding: 0 20px 0 0;

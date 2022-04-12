@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/components/Astrologer.css';
 import { useTranslation } from "react-i18next";
 import Rating from './common/Rating';
+import {common} from './../common/common'
 import Breadcrumb from './common/Breadcrumb';
 export default function Astrologer() {
   const { t } = useTranslation();
@@ -144,12 +145,12 @@ export default function Astrologer() {
       </div>
       <Breadcrumb option={breadcrumbOption}></Breadcrumb>
       <div className='row row-cols-1 ast-profile-container mt-5'>
-        <div className='col py-2 px-5'>
+        <div className='col py-2 px-3'>
           <h5>{t("aboutAkshay")}</h5>
           <p className='ast-paragraph-details'>{t("akshayBio")} </p>
           <hr className='mt-2'></hr>
         </div>
-        <div className='col py-2 px-5'>
+        <div className='col py-2 px-4'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='education' src="/images/education.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("education")}</h5> </div>
@@ -169,7 +170,7 @@ export default function Astrologer() {
             </div>
           </div>
         </div> */}
-        <div className='col py-2 px-5'>
+        <div className='col py-2 px-4'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='Certificate' src="/images/certificates.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("certificates")}</h5> </div>
@@ -179,7 +180,7 @@ export default function Astrologer() {
             </div>
           </div>
         </div>
-        <div className='col py-2 px-5'>
+        <div className='col py-2 px-4'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='Astrologer Knowledge' src="/images/astroKnow.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("astrology")} {t("knowledge")}</h5> </div>
@@ -194,7 +195,7 @@ export default function Astrologer() {
             </div>
           </div>
         </div>
-        <div className='col py-2 px-5'>
+        <div className='col py-2 px-4'>
           <div className="ast-widg-content">
             <div className="ast-ic_img shw-2"> <img alt='Rating' src="/images/rating.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("rating")} &amp; {t("review")}</h5> </div>
@@ -202,7 +203,7 @@ export default function Astrologer() {
             <div className="ast-paragraph clear">
               <ul className='ratings'>
                 {reviewData?.map(ele => {
-                  return <li className='rating'>
+                  return <li key={common.getElementKey()} className='rating'>
                     <div className="brb pdtb12 full-width">
                       <div className="reviews-lefts">
                         <img alt='User Logo' src={ele.imagePath} className="us-img" />

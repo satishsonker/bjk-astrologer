@@ -39,7 +39,7 @@ function App() {
           <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
           <LeftMenu option={{
             setIsLeftMenuActive: setIsLeftMenuActive
-          }} isActive={isLeftMenuActive} userDetails={{}} setting={{}} setGoogleLoginData={setGoogleLoginData}></LeftMenu>
+          }} isActive={isLeftMenuActive} googleLoginData={googleLoginData} setting={{}} setGoogleLoginData={setGoogleLoginData}></LeftMenu>
           <Footer></Footer>
           <SharePage></SharePage>
           <div className='content-area'>

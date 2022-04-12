@@ -11,7 +11,8 @@
     },
     "socialButton":{
         "google":{
-            "enable":true
+            "enable":true,
+            "clienId":"394604212634-urqqp0kr7cf09ftqhrlq5lbfd1ol6jnl.apps.googleusercontent.com"
         },
         "facebook":{
             "enable":false

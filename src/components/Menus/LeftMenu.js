@@ -4,10 +4,12 @@ import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {GoogleLoginConsumer} from '../../Context/GoogleLoginContext'
-export default function LeftMenu({ option, isActive, userDetails, setting,setGoogleLoginData }) {
+import { GoogleLoginConsumer } from '../../Context/GoogleLoginContext';
+import { GoogleLogout } from 'react-google-login';
+export default function LeftMenu({ option, isActive, googleLoginData, setting, setGoogleLoginData }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +19,20 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
     }
     useEffect(() => {
         setIsMenuOpen(isActive);
-    }, [isActive])
-
+    }, [isActive]);
+    useEffect(() => {
+        if (googleLoginData.profileObj) {
+            setIsAuthenticated(true);
+            setShowLogin(false);
+            setShowSignUp(false);
+        }
+    }, [googleLoginData])
+    const logout = (res) => {
+        setGoogleLoginData({});
+        setIsAuthenticated(false);
+        setShowLogin(true);
+        setShowSignUp(false);
+    }
     const handleMenuClose = (isOpen) => {
         setIsMenuOpen(isOpen);
         option.setIsLeftMenuActive(isOpen);
@@ -40,12 +54,7 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
         }
     }
     return (
-         <>
-        <GoogleLoginConsumer>
-            {
-                (loginData)=>{
-                    return <>
-       
+        <>
             <div className={isMenuOpen ? 'left-menu-layover left-menu-layover-active' : 'left-menu-layover'} onClick={e => handleMenuClose(false)}>
                 <div className={isMenuOpen ? 'left-menu left-menu-active' : 'left-menu'}>
                     <ul className='menu'>
@@ -55,9 +64,9 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
                                 {option.isAuthenticated &&
                                     <li className='left-menu-card-list-item'>
                                         <div className='user-logo'>
-                                            <img alt='User Profile' src={loginData?.profileObj?.imageUrl!==undefined?(loginData?.profileObj?.imageUrl):('/images/top_header_user_profile.png')}></img>
+                                            <img alt='User Profile' src={googleLoginData?.profileObj?.imageUrl !== undefined ? (googleLoginData?.profileObj?.imageUrl) : ('/images/top_header_user_profile.png')}></img>
                                         </div>
-                                        <span className='user-name'>{loginData?.profileObj?.name!==undefined?loginData?.profileObj?.name : t("welcome_guest")}</span></li>
+                                        <span className='user-name'>{googleLoginData?.profileObj?.name !== undefined ? googleLoginData?.profileObj?.name : t("welcome_guest")}</span></li>
                                 }
                             </ul>
                         </li>
@@ -66,7 +75,8 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
                                 <i className="fa-solid fa-house-user"></i> <span>{t("home")}</span>
                             </li>
                         </Link>
-                        {option.isAuthenticated &&
+                        {
+                            !isAuthenticated &&
                             <>
                                 <li className='menu-item' onClick={e => handleShowLoginSignup('signup')} data-bs-toggle="modal" data-bs-target="#loginSignupModel">
                                     <i className="fa-solid fa-user"></i> <span>{t("signup")}</span>
@@ -80,7 +90,12 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
                                 <i className="fa-solid fa-house-user"></i> <span>{t("astrologers")}</span>
                             </li>
                         </Link>
-                        {option.isAuthenticated &&
+                        <Link to="/FAQ">
+                            <li className='menu-item'>
+                                <i className="fas fa-question-circle"></i> <span>{t("faqs")}</span>
+                            </li>
+                        </Link>
+                        {isAuthenticated &&
                             <>
                                 <Link to="/UserProfile">
                                     <li className='menu-item'>
@@ -111,25 +126,22 @@ export default function LeftMenu({ option, isActive, userDetails, setting,setGoo
                                         <i className="fa-solid fa-receipt"></i> <span>{t("recharge")} {t("history")}</span>
                                     </li>
                                 </Link>
-                                <Link to="/FAQ">
-                                    <li className='menu-item'>
-                                        <i className="fas fa-question-circle"></i> <span>{t("faqs")}</span>
-                                    </li>
-                                </Link>
                                 <li className='menu-item'>
-                                    <i className="fa-solid fa-right-from-bracket"></i> <span>{t("logout")}</span>
-                                </li>
+                            <GoogleLogout
+                                clientId="394604212634-urqqp0kr7cf09ftqhrlq5lbfd1ol6jnl.apps.googleusercontent.com"
+                                buttonText="Logout" icon={false}
+                                onLogoutSuccess={logout}>
+                                <i className="fa-solid fa-right-from-bracket"></i> <span>{t("logout")}</span>
+                            </GoogleLogout>
+                            </li>
                             </>
-                        }
+                        }                       
+                        
 
                     </ul>
                 </div>
             </div>
             <Signup showLogin={showLogin} showSignup={showSignUp} setGoogleLoginData={setGoogleLoginData}></Signup>
-            </>
-                }
-            }
-        </GoogleLoginConsumer>
         </>
     )
 }
