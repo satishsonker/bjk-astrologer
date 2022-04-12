@@ -3,7 +3,9 @@ import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { common } from '../../common/common';
-export default function HoroscopeDaily() {
+export default function HoroscopeDaily({interval,horoName}) {
+  interval=common.defaultIfEmpty(interval,"daily");
+  horoName=common.defaultIfEmpty(horoName,"aries");
   const { t } = useTranslation();
   const [zodiacData, setZodiacData] = useState([
     {
@@ -81,7 +83,7 @@ export default function HoroscopeDaily() {
   ])
   return (
     <>
-      <div className='horo-heading'>{t("free")} {t("daily")} {t("horoscope")}</div>
+      <div className='horo-heading'>{t("free")} {t(interval)} {t("horoscope")}</div>
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 horo">
 
         <div className='col'>
@@ -91,8 +93,8 @@ export default function HoroscopeDaily() {
                 if (ind < 6)
                   return <div key={common.getElementKey()}>
                     <div className='col horo-sec'>
-                      <Link to={`/horoscope/daily/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
-                        <div className='horo-box'>
+                      <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
+                        <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
                           <div className='horo-period'>{ele.period}</div>
@@ -112,8 +114,8 @@ export default function HoroscopeDaily() {
                 if (ind >=6)
                   return <div key={common.getElementKey()}>
                     <div key={common.getElementKey()} className='col horo-sec'>
-                      <Link to={`/horoscope/daily/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
-                        <div className='horo-box'>
+                      <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
+                        <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
                           <div className='horo-period'>{ele.period}</div>

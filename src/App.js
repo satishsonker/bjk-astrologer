@@ -63,7 +63,7 @@ function App() {
               <Route exact path="/RechargeHistory" element={<div  className='pb-80'><RechargeHistory></RechargeHistory> </div>}></Route>
               <Route exact path="/AboutUs" element={<div  className='pb-80'><AboutUs></AboutUs> </div>}></Route>
               <Route exact path="/ContactUs" element={<div  className='pb-80'><ContactUs></ContactUs> </div>}></Route>
-              <Route exact path="/horoscope/daily/:zodiac/:period" element={<div  className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
+              <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div  className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
               <Route exact path="*" element={<div  className='pb-80'><NoPage></NoPage> </div>}></Route>
             </Routes>
             {/* <FAQ></FAQ> */}

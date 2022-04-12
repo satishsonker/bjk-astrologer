@@ -118,6 +118,7 @@
 
 .horo-list ul li {
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .horoPage .col:first-child {
@@ -126,4 +127,8 @@
 
 .horoPage .col:nth-child(2) {
     width: 20vw;
+}
+.int-selected
+{
+    color: orange;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
 import '../../css/components/HoroscopeDailyPage.css';
@@ -7,15 +7,27 @@ import AstSelect from '../Controls/AstSelect';
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
 import { useNavigate } from "react-router-dom";
+import HoroscopeDaily from './HoroscopeDaily';
 export default function () {
     const { t } = useTranslation();
     const urlParam = useParams();
+    const [horoInterval, setHoroInterval] = useState(urlParam.interval);
+    useEffect(() => {
+      setHoroInterval(urlParam.interval);
+    }, [urlParam]);
+    
     let navigate = useNavigate();
     const handleOnChange = (e) => {
-        setZodiacSelection(e.target.value);
-        navigate(`/horoscope/daily/${e.target.value.split("|")[0]}/${e.target.value.split("|")[1]}`);
+        setZodiacSelection(e.target.value===""?"aries|21.3-19.4":e.target.value.split("|")[0]);
+        let z=e.target.value.split("|")[0]===undefined?urlParam.zodiac:e.target.value.split("|")[0];
+        let per=e.target.value.split("|")[1]===undefined?urlParam.interval:e.target.value.split("|")[1];
+        navigate(`/horoscope/${horoInterval}/${z}/${per}`);
     }
-    const [zodiacSelection, setZodiacSelection] = useState("");
+    const handleChangeInterval = (e) => {
+        setHoroInterval(e);
+        navigate(`/horoscope/${e}/${zodiacSelection.split("|")[0]}/${zodiacSelection.split("|")[1]}`);
+    }
+    const [zodiacSelection, setZodiacSelection] = useState("aries|21.3-19.4");
     const zodiacList = [
         { id: "aries|21.3-19.4", value: t("aries") },
         { id: "taurus|20.4-20.5", value: t("taurus") },
@@ -44,12 +56,13 @@ export default function () {
     }
     const breadcrumbOption = [
         { name: t('home'), link: "/Home" },
-        { name: `${t('daily')} ${t('horoscope')} - ${t(urlParam.zodiac)}`, isActive: false }];
+        { name: `${t(urlParam.interval)} ${t('horoscope')} - ${t(urlParam.zodiac)}`, isActive: false }];
     return (
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
+            <HoroscopeDaily interval={horoInterval} horoName={urlParam.zodiac}></HoroscopeDaily>
             <div className='horo-heading my-3'>
-                {t('daily')} {t('horoscope')} - {t(urlParam.zodiac)}
+                {t(urlParam.interval)} {t('horoscope')} - {t(urlParam.zodiac)}
             </div>
             <div className='row row-cols-1 row-cols-md-3 horoPage'>
                 <div className='col'>
@@ -74,10 +87,10 @@ export default function () {
                             {t("more")} {t("horoscope")}
                         </div>
                         <ul>
-                            <li>{t("daily")} {t("horoscope")}</li>
-                            <li>{t("weekly")} {t("horoscope")}</li>
-                            <li>{t("monthly")} {t("horoscope")}</li>
-                            <li>{t("yearly")} {t("horoscope")}</li>
+                            <li className={horoInterval==="daily"?"int-selected":""} onClick={e=>handleChangeInterval("daily")}>{t("daily")} {t("horoscope")}</li>
+                            <li className={horoInterval==="weekly"?"int-selected":""} onClick={e=>handleChangeInterval("weekly")}>{t("weekly")} {t("horoscope")}</li>
+                            <li className={horoInterval==="monthly"?"int-selected":""} onClick={e=>handleChangeInterval("monthly")}>{t("monthly")} {t("horoscope")}</li>
+                            <li className={horoInterval==="yearly"?"int-selected":""} onClick={e=>handleChangeInterval("yearly")}>{t("yearly")} {t("horoscope")}</li>
                         </ul>
                     </div>
                 </div>

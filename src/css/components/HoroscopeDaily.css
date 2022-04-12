@@ -83,3 +83,12 @@ overflow-y:scroll ;
 text-decoration: none;
 color: black;
 }
+
+.horo-active
+{
+    background-color: orange;
+}
+.horo-yearly a{
+    color: black;
+    text-decoration: none;
+}
