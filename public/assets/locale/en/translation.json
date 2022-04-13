@@ -215,7 +215,7 @@
     "facebook":"Facebook",
     "zodiac":"Zodiac",
     "chooseDifferentZodiacSign":"Choose different zodiac sign",
-    "select":"Select",
+    "select":"Select {{word}}",
     "monthly":"Monthly",
     "weekly":"Weekly",
     "to":"To",
@@ -257,6 +257,12 @@
    "state":"State",
    "country":"Country",
    "pinCode":"PIN Code",
-   "city":"City"
+   "city":"City",
+   "primary":"Primary",
+   "contact":"Contact",
+   "details":"Details",
+   "dateOfBirth": "Date Of Birth",
+   "timeOfBirth": "Time Of Birth",
+   "time": "Time"
     
 }

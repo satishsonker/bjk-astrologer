@@ -3,15 +3,13 @@
 }
 .pro-tab
 {
-    margin-top: 30px;
+    margin-top: 0px; 
 }
 
 .pro-tab ul {
     list-style: none;   
     padding: 0;
     display: flex;
-    width: 90vw; 
-    margin:0 5vw;
 }
 
 .pro-tab ul li {
@@ -21,6 +19,7 @@
     width: 33vw;
     background: lightgoldenrodyellow;
     transition: .5s;
+    font-size: 13px;
 }
 .pro-tab ul li:first-child {
     border-left: 1px solid orange;
@@ -39,11 +38,9 @@ background: var(--hover-color) !important;
 }
 .pro-tab-data
 {
-    height: 90vh;
-    width: 90vw;
-    margin: 0 5vw;
+    height: max-content;
     border-radius: 0px 0 6px 6px;
-    border:1px solid #e7e7e7
+    padding:10px 0 20px 0;
 }
 @media only screen and (min-width: 800px)
 {
@@ -56,11 +53,17 @@ background: var(--hover-color) !important;
 
 .pro-controls
 {   
-    border-left: 1px solid #e7e7e7;
-    border-right: 1px solid #e7e7e7;
-    padding: 9px;
+    padding:0 9px;
     display: flex;
     justify-content: flex-end;
+}
+.pro-shadow
+{
+    box-shadow: 1px 1px 19px 6px #e7e7e7; 
     width: 90vw; 
     margin:0 5vw;
+    margin-top: 20px;
+    border:1px solid orange;
+    padding-top: 20px;
 }
+

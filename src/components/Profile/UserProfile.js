@@ -14,8 +14,8 @@ export default function UserProfile({ googleLoginData }) {
         setActiveTab(index);
     }
     const handleEditProfile = (val) => {
-        val=common.defaultIfEmpty(val,true);
-       setIsEditProfile(val);
+        val = common.defaultIfEmpty(val, true);
+        setIsEditProfile(val);
     };
     const breadcrumbOption = [
         { name: t('home'), link: "/Home" },
@@ -52,7 +52,7 @@ export default function UserProfile({ googleLoginData }) {
             readOnly: !isEditProfile,
             name: 'flatNo',
             width: '100%',
-            value: userData?.address?.flatNo,
+            value: userData?.flatNo,
             placeHolder: `${t('house')}/${t('flat')}/${t('apartment')} ${t('no.')}`,
             hasValidation: true,
             showLabel: true,
@@ -66,7 +66,7 @@ export default function UserProfile({ googleLoginData }) {
             readOnly: !isEditProfile,
             name: 'landmark',
             width: '100%',
-            value: userData?.address?.landmark,
+            value: userData?.landmark,
             placeHolder: `${t('street')}/${t('society')}/${t('landmark')}`,
             hasValidation: true,
             showLabel: true,
@@ -80,7 +80,7 @@ export default function UserProfile({ googleLoginData }) {
             readOnly: !isEditProfile,
             name: 'city',
             width: '100%',
-            value: userData?.address?.city,
+            value: userData?.city,
             placeHolder: `${t('city')}`,
             hasValidation: true,
             showLabel: true,
@@ -90,17 +90,18 @@ export default function UserProfile({ googleLoginData }) {
         },
         state: {
             onChange: handleOnChange,
-            id: 'txtState',
             readOnly: !isEditProfile,
+            id: 'ddlState',
             name: 'state',
             width: '100%',
-            value: userData?.address?.state,
-            placeHolder: `${t('state')}`,
+            defaultText: t('select', { word: t('state') }),
+            className: 'me-2 mb-2',
+            value: userData.gender,
+            data: common.stateArray,
             hasValidation: true,
             showLabel: true,
             labelText: `${t('state')}`,
             showHelpText: false,
-            className: 'me-2 mb-2',
         },
         district: {
             onChange: handleOnChange,
@@ -108,7 +109,7 @@ export default function UserProfile({ googleLoginData }) {
             readOnly: !isEditProfile,
             name: 'district',
             width: '100%',
-            value: userData?.address?.district,
+            value: userData?.district,
             placeHolder: `${t('district')}`,
             hasValidation: true,
             showLabel: true,
@@ -122,7 +123,7 @@ export default function UserProfile({ googleLoginData }) {
             readOnly: !isEditProfile,
             name: 'country',
             width: '100%',
-            value: userData?.address?.country,
+            value: userData?.country,
             placeHolder: `${t('country')}`,
             hasValidation: true,
             showLabel: true,
@@ -133,10 +134,13 @@ export default function UserProfile({ googleLoginData }) {
         pinCode: {
             onChange: handleOnChange,
             id: 'txtPinCode',
+            type: "number",
             readOnly: !isEditProfile,
+            min: 100000,
+            max: 999999,
             name: 'pinCode',
             width: '100%',
-            value: userData?.address?.pinCode,
+            value: userData?.pinCode,
             placeHolder: `${t('pinCode')}`,
             hasValidation: true,
             showLabel: true,
@@ -216,64 +220,178 @@ export default function UserProfile({ googleLoginData }) {
             showLabel: true,
             labelText: `${t('language')}`,
             showHelpText: false,
+        },
+        days: {
+            onChange: handleOnChange,
+            id: 'ddlDay',
+            name: 'day',
+            width: '100%',
+            className: 'me-2 mb-2',
+            value: userData.day,
+            defaultText: t('select', { word: t('day') }),
+            data: common.getNumberArray(1, 31),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('dateOfBirth')}`,
+            showHelpText: false,
+        },
+        months: {
+            onChange: handleOnChange,
+            id: 'ddlMonth',
+            name: 'month',
+            width: '100%',
+            defaultText: t('select', { word: t('month') }),
+            className: 'me-2 mb-2',
+            value: userData.month,
+            data: common.getNumberArray(1, 12),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('month')}`,
+            showHelpText: false,
+        },
+        years: {
+            onChange: handleOnChange,
+            id: 'ddlYear',
+            name: 'year',
+            defaultText: t('select', { word: t('year') }),
+            width: '100%',
+            value: userData.year,
+            data: common.getNumberArray(new Date().getFullYear() - 70, new Date().getFullYear()),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('year')}`,
+            showHelpText: false,
+            className: 'me-2 mb-2'
+        },
+        hour: {
+            onChange: handleOnChange,
+            id: 'ddlHour',
+            name: 'hour',
+            width: '100%',
+            defaultText: t('select', { word: t('hour') }),
+            value: userData.hour,
+            className: 'me-2 mb-2',
+            data: common.getNumberArray(1, 23),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('timeOfBirth')}`,
+            showHelpText: false,
+        },
+        minute: {
+            onChange: handleOnChange,
+            id: 'ddlMinute',
+            name: 'minute',
+            defaultText: t('select', { word: t('minute') }),
+            width: '100%',
+            value: userData.minute,
+            className: 'me-2 mb-2',
+            data: common.getNumberArray(0, 59),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('minute')}`,
+            showHelpText: false,
+        },
+        second: {
+            onChange: handleOnChange,
+            id: 'ddlSecond',
+            name: 'second',
+            width: '100%',
+            defaultText: t('select', { word: t('seconds') }),
+            value: userData.second,
+            data: common.getNumberArray(0, 59),
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('seconds')}`,
+            showHelpText: false,
+            className: 'me-2 mb-2',
         }
     }
     return (
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
-            <div className='pro-tab'>
-                <ul>
-                    <li onClick={e => handleTabClick(0)} className={activeTab == 0 ? "li-active" : ""}>Basic</li>
-                    <li onClick={e => handleTabClick(1)} className={activeTab == 1 ? "li-active" : ""}>Contact</li>
-                    <li onClick={e => handleTabClick(2)} className={activeTab == 2 ? "li-active" : ""}>Astrology</li>
-                </ul>
-                <div className='pro-controls'>
+            <div className='pro-shadow'>
+                <div className='pro-tab'>
+                    <ul>
+                        <li onClick={e => handleTabClick(0)} className={activeTab == 0 ? "li-active" : ""}>{t("primary")} {t("details")}</li>
+                        <li onClick={e => handleTabClick(1)} className={activeTab == 1 ? "li-active" : ""}>{t("contact")} {t("details")}</li>
+                        <li onClick={e => handleTabClick(2)} className={activeTab == 2 ? "li-active" : ""}>{t("astrology")} {t("details")}</li>
+                    </ul>
+                    <div className='pro-controls'>
                         <div className="btn-group btn-group-sm">
-                          {!isEditProfile && <a href="#" title='Edit Profile' onClick={e=>handleEditProfile()} className="btn btn-outline-secondary" aria-current="page">{t("edit")} <i className="far fa-edit"></i></a>}
-                          {isEditProfile && <a href="#" title='Edit Profile'  className="btn btn-outline-secondary" aria-current="page">{t("save")} <i className="far fa-save"></i></a>}
-                          {isEditProfile && <a href="#" title='Cancel Edit' onClick={e=>handleEditProfile(false)} className="btn btn-outline-secondary" aria-current="page">{t("cancel")} <i className="fas fa-times"></i></a>}
+                            {!isEditProfile && <a href="#" title='Edit Profile' onClick={e => handleEditProfile()} className="btn btn-outline-secondary" aria-current="page">{t("edit")} <i className="far fa-edit"></i></a>}
+                            {isEditProfile && <a href="#" title='Edit Profile' className="btn btn-outline-secondary" aria-current="page">{t("save")} <i className="far fa-save"></i></a>}
+                            {isEditProfile && <a href="#" title='Cancel Edit' onClick={e => handleEditProfile(false)} className="btn btn-outline-secondary" aria-current="page">{t("cancel")} <i className="fas fa-times"></i></a>}
                         </div>
                     </div>
+                </div>
+                {
+                    activeTab == 0 &&
+                    <div className='pro-tab-data'>
+
+                        <div className='container'>
+                            <AstTextbox option={txtOption.email}></AstTextbox>
+                            <AstTextbox option={txtOption.firstName}></AstTextbox>
+                            <AstTextbox option={txtOption.lastName}></AstTextbox>
+                            <AstTextbox option={txtOption.mobile}></AstTextbox>
+                            <AstSelect option={txtOption.gender}></AstSelect>
+                            <AstSelect option={txtOption.language}></AstSelect>
+                        </div>
+                    </div>
+                }
+                {
+                    activeTab == 1 &&
+                    <div className='pro-tab-data'>
+                        <div className='container'>
+                            <AstTextbox option={txtOption.flatNo}></AstTextbox>
+                            <AstTextbox option={txtOption.landmark}></AstTextbox>
+                            <AstTextbox option={txtOption.city}></AstTextbox>
+                            <AstTextbox option={txtOption.district}></AstTextbox>
+                            <AstSelect option={txtOption.state}></AstSelect>
+                            <AstTextbox option={txtOption.pinCode}></AstTextbox>
+                            <AstTextbox option={txtOption.country}></AstTextbox>
+                        </div>
+                    </div>
+                }
+                {
+                    activeTab == 2 &&
+                    <div className='pro-tab-data'>
+                        <div className='container'>
+                            <div className='row row-cols-3'>
+                            <div className='col-12'>{t("dateOfBirth")}</div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.days}></AstSelect>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.months}></AstSelect>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.years}></AstSelect>
+                                </div>
+                                <div className='col-12'>{t("timeOfBirth")}</div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.hour}></AstSelect>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.minute}></AstSelect>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.second}></AstSelect>
+                                </div>
+                                <div className='col-12'>{t("birthPlace")}</div>
+                                <div className='col'>
+                                    <AstTextbox option={txtOption.district}></AstTextbox>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.state}></AstSelect>
+                                </div>
+                                <div className='col'>
+                                    <AstSelect option={txtOption.country}></AstSelect>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
-            {
-                activeTab == 0 &&
-                <div className='pro-tab-data'>
-                   
-                    <div className='container'>
-                        <AstTextbox option={txtOption.email}></AstTextbox>
-                        <AstTextbox option={txtOption.firstName}></AstTextbox>
-                        <AstTextbox option={txtOption.lastName}></AstTextbox>
-                        <AstTextbox option={txtOption.mobile}></AstTextbox>
-                        <AstSelect option={txtOption.gender}></AstSelect>
-                        <AstSelect option={txtOption.language}></AstSelect>
-                    </div>
-                </div>
-            }
-            {
-                activeTab == 1 &&
-                <div className='pro-tab-data'>
-                    <div className='container'>
-                        <AstTextbox option={txtOption.flatNo}></AstTextbox>
-                        <AstTextbox option={txtOption.landmark}></AstTextbox>
-                        <AstTextbox option={txtOption.city}></AstTextbox>
-                        <AstTextbox option={txtOption.district}></AstTextbox>
-                        <AstTextbox option={txtOption.state}></AstTextbox>
-                        <AstTextbox option={txtOption.pinCode}></AstTextbox>                        
-                        <AstTextbox option={txtOption.country}></AstTextbox>
-                    </div>
-                </div>
-            }
-            {
-                activeTab == 2 &&
-                <div className='pro-tab-data'>
-                    <div className='container'>
-                        <AstTextbox></AstTextbox>
-                        <AstTextbox></AstTextbox>
-                        <AstTextbox></AstTextbox>
-                        <AstTextbox></AstTextbox>
-                    </div>
-                </div>
-            }
         </>
     )
 }

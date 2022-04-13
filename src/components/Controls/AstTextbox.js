@@ -5,6 +5,10 @@ import { useTranslation } from "react-i18next";
 export default function AstTextbox({ option }) {
     const { t } = useTranslation();
     option = common.defaultIfEmpty(option, {});
+    option.min = common.defaultIfEmpty(option.min, -2147483648);
+    option.minLength = common.defaultIfEmpty(option.minLength, 0);
+    option.max = common.defaultIfEmpty(option.max, 2147483647);
+    option.maxLength = common.defaultIfEmpty(option.maxLength, 2147483647);
     option.readOnly = common.defaultIfEmpty(option.readOnly, false);
     option.type = common.defaultIfEmpty(option.type, 'text');
     option.onChange = common.defaultIfEmpty(option.onChange, () => { });
@@ -25,7 +29,7 @@ export default function AstTextbox({ option }) {
                 <label htmlFor={option.id} className="form-label">{option.labelText}
                     {option.hasValidation && <strong className="text-danger">*</strong>}
                 </label>}
-            <input style={{width:option.width}} readOnly={option.readOnly} type={option.type} placeholder={option.placeHolder} name={option.name} value={common.defaultIfEmpty(option.value,"")} onChange={e => option.onChange(e)} className={option.className+ " form-control ast-textbox"} id={option.id} aria-describedby={option.id+"Help"} />
+            <input style={{width:option.width}} max={option.max} min={option.min} maxLength={option.maxLength} minLength={option.minLength} readOnly={option.readOnly} type={option.type} placeholder={option.placeHolder} name={option.name} value={common.defaultIfEmpty(option.value,"")} onChange={e => option.onChange(e)} className={option.className+ " form-control ast-textbox"} id={option.id} aria-describedby={option.id+"Help"} />
             {option.showHelpText && <div id={option.id+"Help"} className="form-text">{option.helpText}</div>}
         </>
     )
