@@ -241,6 +241,22 @@
     "november":"November", 
     "nov":"November", 
     "december":"December",
-    "dec":"December"
+    "dec":"December",
+    "first":"First",
+    "surname":"Surname",
+    "save":"Save",
+   "cancel":"Cancel",
+   "edit":"Edit",
+   "flat":"Flat",
+   "house":"House",
+   "apartment":"Apartment",
+   "street":"street",
+   "landmark":"landmark",
+   "society":"Society",
+   "district":"District",
+   "state":"State",
+   "country":"Country",
+   "pinCode":"PIN Code",
+   "city":"City"
     
 }

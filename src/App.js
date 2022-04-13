@@ -18,7 +18,6 @@ import Astrologers from './components/Astrologers';
 import Love from './components/Love/Love';
 import Wallet from './components/Wallet/Wallet';
 import PaymentDetails from './components/Wallet/PaymentDetails';
-import UserProfile from './components/UserProfile';
 import RechargeHistory from './components/History/RechargeHistory';
 import ChatHistory from './components/History/ChatHistory';
 import CallHistory from './components/History/CallHistory';
@@ -27,6 +26,7 @@ import TnC from './components/common/TnC';
 import AboutUs from './components/common/AboutUs';
 import ContactUs from './components/common/ContactUs';
 import HoroscopeDailyPage from './components/Horoscopes/HoroscopeDailyPage';
+import UserProfile from './components/Profile/UserProfile';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -57,12 +57,12 @@ function App() {
               <Route exact path="/FAQ" element={<div  className='pb-80'><FAQ></FAQ> </div>}></Route>
               <Route exact path="/Wallet" element={<div  className='pb-80'><Wallet></Wallet> </div>}></Route>
               <Route exact path="/PaymentDetails" element={<div  className='pb-80'><PaymentDetails></PaymentDetails> </div>}></Route>
-              <Route exact path="/UserProfile" element={<div  className='pb-80'><UserProfile></UserProfile> </div>}></Route>
               <Route exact path="/CallHistory" element={<div  className='pb-80'><CallHistory></CallHistory> </div>}></Route>
               <Route exact path="/ChatHistory" element={<div  className='pb-80'><ChatHistory></ChatHistory> </div>}></Route>
               <Route exact path="/RechargeHistory" element={<div  className='pb-80'><RechargeHistory></RechargeHistory> </div>}></Route>
               <Route exact path="/AboutUs" element={<div  className='pb-80'><AboutUs></AboutUs> </div>}></Route>
               <Route exact path="/ContactUs" element={<div  className='pb-80'><ContactUs></ContactUs> </div>}></Route>
+              <Route exact path="/UserProfile" element={<div  className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
               <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div  className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
               <Route exact path="*" element={<div  className='pb-80'><NoPage></NoPage> </div>}></Route>
             </Routes>

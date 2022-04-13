@@ -4,6 +4,7 @@ import  '../../css/components/Buttons/AstButton.css';
 
 export default function AstSelect({ option }) {
     option = common.defaultIfEmpty(option, {});
+    option.readOnly = common.defaultIfEmpty(option.readOnly, false);
     option.onChange = common.defaultIfEmpty(option.onChange, () => { });
     option.id = common.defaultIfEmpty(option.id, 'astSelect');
     option.name = common.defaultIfEmpty(option.name, 'astSelect');
@@ -23,7 +24,7 @@ export default function AstSelect({ option }) {
                 <label htmlFor="txtDeviceName" className="form-label">{option.labelText}
                     {option.hasValidation && <strong className="text-danger">*</strong>}
                 </label>}
-            <select style={{ width: option.width }} name={option.name} value={option.value} onChange={e => option.onChange(e)} className={option.className + " form-control ast-select"} id={option.id} aria-describedby={option.id + "Help"}>
+            <select style={{ width: option.width }} readOnly={option.readOnly} name={option.name} value={option.value} onChange={e => option.onChange(e)} className={option.className + " form-control ast-select"} id={option.id} aria-describedby={option.id + "Help"}>
                 <option value=''>{option.defaultText}</option>
                 {
                     option.data.map(ele => {

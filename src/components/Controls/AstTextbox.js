@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 export default function AstTextbox({ option }) {
     const { t } = useTranslation();
     option = common.defaultIfEmpty(option, {});
+    option.readOnly = common.defaultIfEmpty(option.readOnly, false);
     option.type = common.defaultIfEmpty(option.type, 'text');
     option.onChange = common.defaultIfEmpty(option.onChange, () => { });
     option.id = common.defaultIfEmpty(option.id, 'astTextbox');
@@ -24,7 +25,7 @@ export default function AstTextbox({ option }) {
                 <label htmlFor={option.id} className="form-label">{option.labelText}
                     {option.hasValidation && <strong className="text-danger">*</strong>}
                 </label>}
-            <input style={{width:option.width}} type={option.type} placeholder={option.placeHolder} name={option.name} value={common.defaultIfEmpty(option.value,"")} onChange={e => option.onChange(e)} className={option.className+ " form-control ast-textbox"} id={option.id} aria-describedby={option.id+"Help"} />
+            <input style={{width:option.width}} readOnly={option.readOnly} type={option.type} placeholder={option.placeHolder} name={option.name} value={common.defaultIfEmpty(option.value,"")} onChange={e => option.onChange(e)} className={option.className+ " form-control ast-textbox"} id={option.id} aria-describedby={option.id+"Help"} />
             {option.showHelpText && <div id={option.id+"Help"} className="form-text">{option.helpText}</div>}
         </>
     )

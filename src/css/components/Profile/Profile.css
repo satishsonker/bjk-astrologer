@@ -1,0 +1,66 @@
+.pro-tab,.pro-tab-data {
+    padding: 0px;
+}
+.pro-tab
+{
+    margin-top: 30px;
+}
+
+.pro-tab ul {
+    list-style: none;   
+    padding: 0;
+    display: flex;
+    width: 90vw; 
+    margin:0 5vw;
+}
+
+.pro-tab ul li {
+    border: 1px solid orange;
+    padding: 10px 20px;
+    text-align: center;
+    width: 33vw;
+    background: lightgoldenrodyellow;
+    transition: .5s;
+}
+.pro-tab ul li:first-child {
+    border-left: 1px solid orange;
+}
+
+.pro-tab ul li:hover {
+background: var(--hover-color) !important;
+}
+.li-active{
+    border-bottom: 1px solid white !important;
+    background-color: white !important;
+    color: orange;
+    border-radius: 20px 20px 0 0;
+    transition: .5s;
+
+}
+.pro-tab-data
+{
+    height: 90vh;
+    width: 90vw;
+    margin: 0 5vw;
+    border-radius: 0px 0 6px 6px;
+    border:1px solid #e7e7e7
+}
+@media only screen and (min-width: 800px)
+{
+   
+    .pro-tab-data .container
+    {
+        padding: 20px 40vw 20px 20px;
+    }
+}
+
+.pro-controls
+{   
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    padding: 9px;
+    display: flex;
+    justify-content: flex-end;
+    width: 90vw; 
+    margin:0 5vw;
+}
