@@ -106,21 +106,28 @@
     text-align: center;
     border: 1px solid #e7e7e7;
     color: orange;
-    background-color: blanchedalmond;
+    background-color: lightgoldenrodyellow;
 }
 
 .horo-list ul {
     list-style: none;
     margin: 0;
     padding: 0px;
-    background-color: blanchedalmond;
+    background-color: lightgoldenrodyellow;
 }
 
 .horo-list ul li {
     padding: 10px 20px;
     cursor: pointer;
 }
-
+.horo-list ul li:hover
+{
+    background-color: var(--hover-color) !important;
+}
+.horo-list ul li div:nth-child(2)
+{
+    font-size: 13px;
+}
 .horoPage .col:first-child {
     width: 45vw;
 }

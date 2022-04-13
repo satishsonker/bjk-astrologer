@@ -26,7 +26,7 @@ export default function Home() {
         <AstroList></AstroList>
       </div>
       <div className='home-box-horo'>
-        <HoroscopeDaily></HoroscopeDaily>
+        <HoroscopeDaily horoName={"t"}></HoroscopeDaily>
       </div>
       <div className='row row-cols-1 row-cols-md-3'>
         <div className='col'>

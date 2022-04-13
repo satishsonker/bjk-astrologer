@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
 import '../../css/components/HoroscopeDailyPage.css';
@@ -8,19 +8,20 @@ import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
 import { useNavigate } from "react-router-dom";
 import HoroscopeDaily from './HoroscopeDaily';
+import { common } from '../../common/common';
 export default function () {
     const { t } = useTranslation();
     const urlParam = useParams();
     const [horoInterval, setHoroInterval] = useState(urlParam.interval);
     useEffect(() => {
-      setHoroInterval(urlParam.interval);
+        setHoroInterval(urlParam.interval);
     }, [urlParam]);
-    
+
     let navigate = useNavigate();
     const handleOnChange = (e) => {
-        setZodiacSelection(e.target.value===""?"aries|21.3-19.4":e.target.value.split("|")[0]);
-        let z=e.target.value.split("|")[0]===undefined?urlParam.zodiac:e.target.value.split("|")[0];
-        let per=e.target.value.split("|")[1]===undefined?urlParam.interval:e.target.value.split("|")[1];
+        setZodiacSelection(e.target.value === "" ? "aries|21.3-19.4" : e.target.value.split("|")[0]);
+        let z = e.target.value.split("|")[0] === undefined ? urlParam.zodiac : e.target.value.split("|")[0];
+        let per = e.target.value.split("|")[1] === undefined ? urlParam.interval : e.target.value.split("|")[1];
         navigate(`/horoscope/${horoInterval}/${z}/${per}`);
     }
     const handleChangeInterval = (e) => {
@@ -72,7 +73,7 @@ export default function () {
                         </div>
                         <div className='h-zodiac-period'>
                             <div>{t(urlParam.zodiac)}</div>
-                            <div>{t(urlParam.period.replace(/\./g, "/"))}</div>
+                            <div>{common.formatDayMonth(urlParam.period.replace(/\./g, "/"))[0]}-{t(common.formatDayMonth(urlParam.period.replace(/\./g, "/"))[1])} {t("to")} {common.formatDayMonth(urlParam.period.replace(/\./g, "/"))[2]}-{t(common.formatDayMonth(urlParam.period.replace(/\./g, "/"))[3])}</div>
                         </div>
                     </div>
                     <p className='hflex-para'>
@@ -87,10 +88,22 @@ export default function () {
                             {t("more")} {t("horoscope")}
                         </div>
                         <ul>
-                            <li className={horoInterval==="daily"?"int-selected":""} onClick={e=>handleChangeInterval("daily")}>{t("daily")} {t("horoscope")}</li>
-                            <li className={horoInterval==="weekly"?"int-selected":""} onClick={e=>handleChangeInterval("weekly")}>{t("weekly")} {t("horoscope")}</li>
-                            <li className={horoInterval==="monthly"?"int-selected":""} onClick={e=>handleChangeInterval("monthly")}>{t("monthly")} {t("horoscope")}</li>
-                            <li className={horoInterval==="yearly"?"int-selected":""} onClick={e=>handleChangeInterval("yearly")}>{t("yearly")} {t("horoscope")}</li>
+                            <li className={horoInterval === "daily" ? "int-selected" : ""} onClick={e => handleChangeInterval("daily")}>
+                                <div>{t("daily")} {t("horoscope")}</div>
+                                <div>{common.getFullDate()}</div>
+                            </li>
+                            <li className={horoInterval === "weekly" ? "int-selected" : ""} onClick={e => handleChangeInterval("weekly")}>
+                                <div>{t("weekly")} {t("horoscope")}</div>
+                                <div>{common.getFullDate({ dateObj: common.getWeekDateRange().firstday, returnType: 'dm' })} {t("to")} {common.getFullDate({ dateObj: common.getWeekDateRange().lastday })}</div>
+                            </li>
+                            <li className={horoInterval === "monthly" ? "int-selected" : ""} onClick={e => handleChangeInterval("monthly")}>
+                                <div>{t("monthly")} {t("horoscope")}</div>
+                                <div>{t(common.getFullDate({ fullMonth: true, returnType: "m" }).toLowerCase())}, {common.getFullDate({ returnType: "y" })}</div>
+                            </li>
+                            <li className={horoInterval === "yearly" ? "int-selected" : ""} onClick={e => handleChangeInterval("yearly")}>
+                                <div>{t("yearly")} {t("horoscope")}</div>
+                                <div>{common.getFullDate({ returnType: "y" })}</div>
+                            </li>
                         </ul>
                     </div>
                 </div>

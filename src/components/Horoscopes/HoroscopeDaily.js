@@ -97,7 +97,7 @@ export default function HoroscopeDaily({interval,horoName}) {
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
-                          <div className='horo-period'>{ele.period}</div>
+                          <div className='horo-period'>{common.formatDayMonth(ele.period)[0]}-{t(common.formatDayMonth(ele.period)[1])} {t("to")} {common.formatDayMonth(ele.period)[2]}-{t(common.formatDayMonth(ele.period)[3])}</div>
                         </div>
                       </Link>
                     </div>
@@ -118,7 +118,7 @@ export default function HoroscopeDaily({interval,horoName}) {
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
-                          <div className='horo-period'>{ele.period}</div>
+                          <div className='horo-period'>{common.formatDayMonth(ele.period)[0]}-{t(common.formatDayMonth(ele.period)[1])} {t("to")} {common.formatDayMonth(ele.period)[2]}-{t(common.formatDayMonth(ele.period)[3])}</div>
                         </div>
                       </Link>
                     </div>
