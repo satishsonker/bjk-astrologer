@@ -3,8 +3,9 @@ import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { common } from '../../common/common';
-export default function HoroscopeDaily({interval,horoName}) {
+export default function HoroscopeDaily({interval,horoName,showHeader}) {
   interval=common.defaultIfEmpty(interval,"daily");
+  showHeader=common.defaultIfEmpty(showHeader,true);
   horoName=common.defaultIfEmpty(horoName,"aries");
   const { t } = useTranslation();
   const [zodiacData, setZodiacData] = useState([
@@ -83,9 +84,8 @@ export default function HoroscopeDaily({interval,horoName}) {
   ])
   return (
     <>
-      <div className='horo-heading'>{t("free")} {t(interval)} {t("horoscope")}</div>
+      { showHeader && <div className='horo-heading'>{t("free")} {t(interval)} {t("horoscope")}</div>}
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 horo">
-
         <div className='col'>
           <div className="row row-cols-3 row-cols-sm-3 row-cols-md-6">
             {

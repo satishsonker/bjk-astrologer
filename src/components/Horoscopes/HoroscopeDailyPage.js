@@ -61,7 +61,7 @@ export default function () {
     return (
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
-            <HoroscopeDaily interval={horoInterval} horoName={urlParam.zodiac}></HoroscopeDaily>
+            <HoroscopeDaily showHeader={false} interval={horoInterval} horoName={urlParam.zodiac}></HoroscopeDaily>
             <div className='horo-heading my-3'>
                 {t(urlParam.interval)} {t('horoscope')} - {t(urlParam.zodiac)}
             </div>
