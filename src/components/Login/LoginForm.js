@@ -45,7 +45,6 @@ setLoginData({...loginData,[e.target.name]:e.target.value})
     }
     const responseGoogle = (response) => {
         setGoogleLoginData(response);
-      console.table(response);
     }
     return ( 
        
@@ -74,7 +73,7 @@ setLoginData({...loginData,[e.target.name]:e.target.value})
                                 {
                                     config.socialButton.google.enable &&
                                     <GoogleLogin className='login-social-btn'
-                                        clientId="394604212634-urqqp0kr7cf09ftqhrlq5lbfd1ol6jnl.apps.googleusercontent.com"
+                                        clientId={config.socialButton.google.clienId}
                                         buttonText= {t("google")+" "+ t("login")}
                                         onSuccess={responseGoogle}
                                         onFailure={responseGoogle}

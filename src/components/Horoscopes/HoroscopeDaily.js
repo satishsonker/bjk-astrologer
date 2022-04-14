@@ -91,8 +91,8 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
             {
               zodiacData.map((ele, ind) => {
                 if (ind < 6)
-                  return <div key={common.getElementKey()}>
-                    <div className='col horo-sec'>
+                  return <div key={common.getElementKey()} className='horo-sec'>
+                    <div className='col'>
                       <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
@@ -112,8 +112,8 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
           {
               zodiacData.map((ele, ind) => {
                 if (ind >=6)
-                  return <div key={common.getElementKey()}>
-                    <div key={common.getElementKey()} className='col horo-sec'>
+                  return <div key={common.getElementKey()} className='horo-sec'>
+                    <div key={common.getElementKey()} className='col'>
                       <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
                           <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />

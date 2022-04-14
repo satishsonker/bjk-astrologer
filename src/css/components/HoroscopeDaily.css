@@ -67,6 +67,10 @@ overflow-y:scroll ;
     text-decoration: none;
     color: black;
 }
+.horo-sec{
+    padding: 0;
+    margin: 3px 0;
+}
 
 .horo-sec a
 {

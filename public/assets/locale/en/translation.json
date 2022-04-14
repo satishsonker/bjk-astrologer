@@ -263,6 +263,9 @@
    "details":"Details",
    "dateOfBirth": "Date Of Birth",
    "timeOfBirth": "Time Of Birth",
-   "time": "Time"
+   "time": "Time",
+   "checkbox":"",
+   "dontKnowbirthTime":"Check here if you don't know you time of birth",
+   "iKnowbirthTime":"I know my time of Birth"
     
 }

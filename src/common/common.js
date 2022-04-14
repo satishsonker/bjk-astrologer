@@ -36,6 +36,7 @@ const common = {
                 "Delhi",
                 "Lakshadweep",
                 "Puducherry"],
+    countryArray:[{id:"ind",value:"India"}],
     defaultIfEmpty: (input, defaultValue) => {
         if (input === undefined || input === null || input === "")
             return defaultValue;

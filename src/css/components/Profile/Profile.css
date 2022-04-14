@@ -67,3 +67,6 @@ background: var(--hover-color) !important;
     padding-top: 20px;
 }
 
+input[type='date']:after {
+    content: attr(placeholder)
+  }

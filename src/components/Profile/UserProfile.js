@@ -5,6 +5,7 @@ import Breadcrumb from '../common/Breadcrumb';
 import AstTextbox from '../Controls/AstTextbox';
 import AstSelect from '../Controls/AstSelect';
 import { common } from '../../common/common';
+import AstCheckbox from '../Controls/AstCheckbox';
 
 export default function UserProfile({ googleLoginData }) {
     const { t } = useTranslation();
@@ -124,7 +125,8 @@ export default function UserProfile({ googleLoginData }) {
             name: 'country',
             width: '100%',
             value: userData?.country,
-            placeHolder: `${t('country')}`,
+            data: common.countryArray,
+            defaultText: `${t('select', { word: t('country') })}`,
             hasValidation: true,
             showLabel: true,
             labelText: `${t('country')}`,
@@ -221,90 +223,95 @@ export default function UserProfile({ googleLoginData }) {
             labelText: `${t('language')}`,
             showHelpText: false,
         },
-        days: {
+        dateOfBirth: {
             onChange: handleOnChange,
-            id: 'ddlDay',
-            name: 'day',
+            readOnly: !isEditProfile,
+            id: 'txtDate',
+            type:'date',
+            name: 'dateOfBirth',
             width: '100%',
+            placeHolder: t("dateOfBirth"),
+            value: userData.hour,
             className: 'me-2 mb-2',
-            value: userData.day,
-            defaultText: t('select', { word: t('day') }),
-            data: common.getNumberArray(1, 31),
             hasValidation: true,
-            showLabel: false,
+            showLabel: true,
             labelText: `${t('dateOfBirth')}`,
             showHelpText: false,
         },
-        months: {
+        timeOfBirth: {
             onChange: handleOnChange,
-            id: 'ddlMonth',
-            name: 'month',
+            readOnly: !isEditProfile,
+            type:'time',
+            id: 'txtTime',
+            name: 'timeOfBirth',
+            placeHolder: t('timeOfBirth'),
             width: '100%',
-            defaultText: t('select', { word: t('month') }),
+            value: userData.timeOfBirth,
             className: 'me-2 mb-2',
-            value: userData.month,
-            data: common.getNumberArray(1, 12),
+            data: common.getNumberArray(0, 59),
             hasValidation: true,
-            showLabel: false,
-            labelText: `${t('month')}`,
-            showHelpText: false,
-        },
-        years: {
-            onChange: handleOnChange,
-            id: 'ddlYear',
-            name: 'year',
-            defaultText: t('select', { word: t('year') }),
-            width: '100%',
-            value: userData.year,
-            data: common.getNumberArray(new Date().getFullYear() - 70, new Date().getFullYear()),
-            hasValidation: true,
-            showLabel: false,
-            labelText: `${t('year')}`,
-            showHelpText: false,
-            className: 'me-2 mb-2'
-        },
-        hour: {
-            onChange: handleOnChange,
-            id: 'ddlHour',
-            name: 'hour',
-            width: '100%',
-            defaultText: t('select', { word: t('hour') }),
-            value: userData.hour,
-            className: 'me-2 mb-2',
-            data: common.getNumberArray(1, 23),
-            hasValidation: true,
-            showLabel: false,
+            showLabel: true,
             labelText: `${t('timeOfBirth')}`,
             showHelpText: false,
         },
-        minute: {
+        birthState: {
             onChange: handleOnChange,
-            id: 'ddlMinute',
-            name: 'minute',
-            defaultText: t('select', { word: t('minute') }),
+            readOnly: !isEditProfile,
+            id: 'ddlState',
+            name: 'birthState',
             width: '100%',
-            value: userData.minute,
+            defaultText: t('select', { word: t('state') }),
             className: 'me-2 mb-2',
-            data: common.getNumberArray(0, 59),
+            value: userData.birthState,
+            data: common.stateArray,
             hasValidation: true,
             showLabel: false,
-            labelText: `${t('minute')}`,
+            labelText: `${t('state')}`,
             showHelpText: false,
         },
-        second: {
+        birthDistrict: {
             onChange: handleOnChange,
-            id: 'ddlSecond',
-            name: 'second',
+            id: 'txtDistrict',
+            readOnly: !isEditProfile,
+            name: 'birthDistrict',
             width: '100%',
-            defaultText: t('select', { word: t('seconds') }),
-            value: userData.second,
-            data: common.getNumberArray(0, 59),
+            value: userData?.birthDistrict,
+            placeHolder: `${t('district')}`,
             hasValidation: true,
             showLabel: false,
-            labelText: `${t('seconds')}`,
+            labelText: `${t('district')}`,
             showHelpText: false,
             className: 'me-2 mb-2',
-        }
+        },
+        birthCountry: {
+            onChange: handleOnChange,
+            id: 'ddlCountry',
+            readOnly: !isEditProfile,
+            name: 'birthCountry',
+            width: '100%',
+            value: userData?.birthCountry,
+            defaultText: `${t('select', { word: t('country') })}`,
+            data: common.countryArray,
+            hasValidation: true,
+            showLabel: false,
+            labelText: `${t('country')}`,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
+        knowBirthTime: {
+            onChange: handleOnChange,
+            id: 'chkKnowBirthTime',
+            disabled: !isEditProfile,
+            name: 'knowBirthTime',
+            width: '100%',
+            value: userData?.knowBirthTime,
+            text: `${t('dontKnowbirthTime')}`,
+            hasValidation: true,
+            showLabel: true,
+            labelText: `${t('iKnowbirthTime')}`,
+            showHelpText: false,
+            className: 'me-2 mb-2',
+        },
     }
     return (
         <>
@@ -348,7 +355,7 @@ export default function UserProfile({ googleLoginData }) {
                             <AstTextbox option={txtOption.district}></AstTextbox>
                             <AstSelect option={txtOption.state}></AstSelect>
                             <AstTextbox option={txtOption.pinCode}></AstTextbox>
-                            <AstTextbox option={txtOption.country}></AstTextbox>
+                            <AstSelect option={txtOption.country}></AstSelect>
                         </div>
                     </div>
                 }
@@ -356,36 +363,19 @@ export default function UserProfile({ googleLoginData }) {
                     activeTab == 2 &&
                     <div className='pro-tab-data'>
                         <div className='container'>
+                            <AstTextbox option={txtOption.dateOfBirth}></AstTextbox>
+                            <AstCheckbox option={txtOption.knowBirthTime}></AstCheckbox>
+                            <AstTextbox option={txtOption.timeOfBirth}></AstTextbox>
                             <div className='row row-cols-3'>
-                            <div className='col-12'>{t("dateOfBirth")}</div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.days}></AstSelect>
+                                <div className='col-12 px-0'>{t("birthPlace")}</div>
+                                <div className='col p-0'>
+                                    <AstTextbox option={txtOption.birthDistrict}></AstTextbox>
                                 </div>
                                 <div className='col'>
-                                    <AstSelect option={txtOption.months}></AstSelect>
+                                    <AstSelect option={txtOption.birthState}></AstSelect>
                                 </div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.years}></AstSelect>
-                                </div>
-                                <div className='col-12'>{t("timeOfBirth")}</div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.hour}></AstSelect>
-                                </div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.minute}></AstSelect>
-                                </div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.second}></AstSelect>
-                                </div>
-                                <div className='col-12'>{t("birthPlace")}</div>
-                                <div className='col'>
-                                    <AstTextbox option={txtOption.district}></AstTextbox>
-                                </div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.state}></AstSelect>
-                                </div>
-                                <div className='col'>
-                                    <AstSelect option={txtOption.country}></AstSelect>
+                                <div className='col p-0'>
+                                    <AstSelect option={txtOption.birthCountry}></AstSelect>
                                 </div>
                             </div>
                         </div>

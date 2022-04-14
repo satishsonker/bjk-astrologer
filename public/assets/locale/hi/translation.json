@@ -263,5 +263,8 @@
     "details": "विवरण",
     "dateOfBirth": "जन्म की तारीख",
     "timeOfBirth": "जन्म का समय",
-    "time": "समय"
+    "time": "समय",
+    "checkbox":"चेक बॉक्स",
+    "dontKnowbirthTime":"यदि आप अपने जन्म का समय नहीं जानते हैं तो यहां टिक करें",
+    "iKnowbirthTime":"मुझे अपने जन्म का समय पता है"
 }
