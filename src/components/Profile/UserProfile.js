@@ -30,6 +30,11 @@ export default function UserProfile({ googleLoginData }) {
         id: 'en'
     }];
     const handleOnChange = (e) => {
+        if(e.target.type==="checkbox")
+        {
+            setUserData({ ...userData, [e.target.name]: userData.knowBirthTime===undefined?false:!userData.knowBirthTime });
+        }
+        else
         setUserData({ ...userData, [e.target.name]: e.target.value });
     }
     const txtOption = {
@@ -319,20 +324,20 @@ export default function UserProfile({ googleLoginData }) {
             <div className='pro-shadow'>
                 <div className='pro-tab'>
                     <ul>
-                        <li onClick={e => handleTabClick(0)} className={activeTab == 0 ? "li-active" : ""}>{t("primary")} {t("details")}</li>
-                        <li onClick={e => handleTabClick(1)} className={activeTab == 1 ? "li-active" : ""}>{t("contact")} {t("details")}</li>
-                        <li onClick={e => handleTabClick(2)} className={activeTab == 2 ? "li-active" : ""}>{t("astrology")} {t("details")}</li>
+                        <li onClick={e => handleTabClick(0)} className={activeTab === 0 ? "li-active" : ""}>{t("primary")} {t("details")}</li>
+                        <li onClick={e => handleTabClick(1)} className={activeTab === 1 ? "li-active" : ""}>{t("contact")} {t("details")}</li>
+                        <li onClick={e => handleTabClick(2)} className={activeTab === 2 ? "li-active" : ""}>{t("astrology")} {t("details")}</li>
                     </ul>
                     <div className='pro-controls'>
                         <div className="btn-group btn-group-sm">
-                            {!isEditProfile && <a href="#" title='Edit Profile' onClick={e => handleEditProfile()} className="btn btn-outline-secondary" aria-current="page">{t("edit")} <i className="far fa-edit"></i></a>}
-                            {isEditProfile && <a href="#" title='Edit Profile' className="btn btn-outline-secondary" aria-current="page">{t("save")} <i className="far fa-save"></i></a>}
-                            {isEditProfile && <a href="#" title='Cancel Edit' onClick={e => handleEditProfile(false)} className="btn btn-outline-secondary" aria-current="page">{t("cancel")} <i className="fas fa-times"></i></a>}
+                            {!isEditProfile && <button title='Edit Profile' onClick={e => handleEditProfile()} className="btn btn-outline-secondary" aria-current="page">{t("edit")} <i className="far fa-edit"></i></button>}
+                            {isEditProfile && <button title='Edit Profile' className="btn btn-outline-secondary" aria-current="page">{t("save")} <i className="far fa-save"></i></button>}
+                            {isEditProfile && <button title='Cancel Edit' onClick={e => handleEditProfile(false)} className="btn btn-outline-secondary" aria-current="page">{t("cancel")} <i className="fas fa-times"></i></button>}
                         </div>
                     </div>
                 </div>
                 {
-                    activeTab == 0 &&
+                    activeTab === 0 &&
                     <div className='pro-tab-data'>
 
                         <div className='container'>
@@ -346,7 +351,7 @@ export default function UserProfile({ googleLoginData }) {
                     </div>
                 }
                 {
-                    activeTab == 1 &&
+                    activeTab === 1 &&
                     <div className='pro-tab-data'>
                         <div className='container'>
                             <AstTextbox option={txtOption.flatNo}></AstTextbox>
@@ -360,12 +365,15 @@ export default function UserProfile({ googleLoginData }) {
                     </div>
                 }
                 {
-                    activeTab == 2 &&
+                    activeTab === 2 &&
                     <div className='pro-tab-data'>
                         <div className='container'>
                             <AstTextbox option={txtOption.dateOfBirth}></AstTextbox>
+                            
                             <AstCheckbox option={txtOption.knowBirthTime}></AstCheckbox>
+                            {(userData.knowBirthTime===undefined?true:userData.knowBirthTime) &&
                             <AstTextbox option={txtOption.timeOfBirth}></AstTextbox>
+}
                             <div className='row row-cols-3'>
                                 <div className='col-12 px-0'>{t("birthPlace")}</div>
                                 <div className='col p-0'>

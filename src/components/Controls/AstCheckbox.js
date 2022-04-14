@@ -24,7 +24,7 @@ export default function AstCheckbox({ option }) {
                 {option.hasValidation && <strong className="text-danger">*</strong>}
             </label>}
             <div className="form-check form-switch">
-                <input className={option.className+ " form-check-input"} defaultChecked={option.value} type={option.type} id={option.id} disabled={option.disabled?"disabled":""} />
+                <input className={option.className+ " form-check-input"} name={option.name} onChange={e=>option.onChange(e)} defaultChecked={option.value} type={option.type} id={option.id} disabled={option.disabled?"disabled":""} />
                 <label className="form-check-label" htmlFor={option.id}>{option.text}</label>
             </div>
         </>

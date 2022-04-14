@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../css/components/Astrologer.css';
+import '../../css/components/Astrologer.css';
 import { useTranslation } from "react-i18next";
-import Rating from './common/Rating';
-import {common} from './../common/common'
-import Breadcrumb from './common/Breadcrumb';
+import Rating from '../common/Rating';
+import {common} from '../../common/common'
+import Breadcrumb from '../common/Breadcrumb';
 export default function Astrologer() {
   const { t } = useTranslation();
   const [showRatingNumber, setShowRatingNumber] = useState(false);

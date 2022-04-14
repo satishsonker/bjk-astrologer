@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { GoogleLogin } from 'react-google-login';
-import Astrologer from './components/Astrologer';
+import Astrologer from './components/Astrologer/Astrologer';
 import FAQ from './components/common/FAQ';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
@@ -16,7 +16,7 @@ import NoPage from './components/common/NoPage'
 import { AppConfigProvider } from './Context/ConfigContext';
 import { GoogleLoginProvider } from './Context/GoogleLoginContext';
 import './css/App.css';
-import Astrologers from './components/Astrologers';
+import Astrologers from './components/Astrologer/Astrologers';
 import Love from './components/Love/Love';
 import Wallet from './components/Wallet/Wallet';
 import PaymentDetails from './components/Wallet/PaymentDetails';

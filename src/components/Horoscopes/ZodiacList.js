@@ -1,9 +1,83 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 
 export default function ZodiacList() {
     const { t } = useTranslation();
+    const [zodiacData, setZodiacData] = useState([
+        {
+            name: "aries",
+            period: "21/3-19/4",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "taurus",
+            period: "20/4-20/5",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "gemini",
+            period: "21/5-20/6",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "cancer",
+            period: "21/6-22/7",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "leo",
+            period: "23/7-22/8",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "virgo",
+            period: "23/8-22/9",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "libra",
+            period: "23/9-22/10",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "scorpio",
+            period: "23/10-21/11",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "sagittarius",
+            period: "22/11-21/12",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "capricorn",
+            period: "22/12-19/1",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "aquarius",
+            period: "20/1-18/2",
+            logoPath: "/images/ZodiacSign/",
+
+        },
+        {
+            name: "pisces",
+            period: "19/2-20/3",
+            logoPath: "/images/ZodiacSign/",
+
+        }
+    ]);
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
@@ -13,54 +87,14 @@ export default function ZodiacList() {
                 </div></div>
             <div className='horo-yearly'>
                 <ul>
-                    <li>
-                        <div><img alt="Aries" src='/images/ZodiacSign/aries.png' /></div>
-                        <div className='horo-name'>{t("aries")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Taurus" src='/images/ZodiacSign/taurus.png' /></div>
-                        <div className='horo-name'>{t("taurus")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Gemini" src='/images/ZodiacSign/Gemini.png' /></div>
-                        <div className='horo-name'>{t("gemini")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Cancer" src='/images/ZodiacSign/Cancer.png' /></div>
-                        <div className='horo-name'>{t("cancer")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Leo" src='/images/ZodiacSign/Leo.png' /></div>
-                        <div className='horo-name'>{t("leo")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Virgo" src='/images/ZodiacSign/Virgo.png' /></div>
-                        <div className='horo-name'>{t("virgo")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Libra" src='/images/ZodiacSign/Libra.png' /></div>
-                        <div className='horo-name'>{t("libra")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Scorpio" src='/images/ZodiacSign/Scorpio.png' /></div>
-                        <div className='horo-name'>{t("scorpio")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Sagittiarius" src='/images/ZodiacSign/Sagittiarius.png' /></div>
-                        <div className='horo-name'>{t("sagittiarius")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Capricorn" src='/images/ZodiacSign/Capricorn.png' /></div>
-                        <div className='horo-name'>{t("capricorn")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Aquarius" src='/images/ZodiacSign/Aquarius.png' /></div>
-                        <div className='horo-name'>{t("aquarius")}</div>
-                    </li>
-                    <li>
-                        <div><img alt="Pisces" src='/images/ZodiacSign/Pisces.png' /></div>
-                        <div className='horo-name'>{t("pisces")}</div>
-                    </li>
+                    {
+                        zodiacData.map(ele => {
+                            return <li>
+                                <div><img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
+                                <div className='horo-name'>{t(ele.name)}</div>
+                            </li>
+                        })
+                    }
                 </ul>
             </div>
         </div>

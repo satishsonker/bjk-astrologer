@@ -82,7 +82,7 @@ export default function HoroscopeYearly() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img src='/images/janamkundali.jpg'></img>
+                <img src='/images/janamkundali.jpg' alt='Janam Kundali'/>
                 <div className='ast-tag-line'>
                     {t("yearly")} {t("horoscope")} - {new Date().getFullYear()}
                 </div></div>

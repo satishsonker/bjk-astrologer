@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import AstroFilter from './common/AstroFilter'
-import AstroList from './common/AstroList'
-import '../css/components/Astrologer.css'
-import useWindowDimensions from '../Hooks/userWindowDimensions';
+import AstroFilter from '../common/AstroFilter'
+import AstroList from '../common/AstroList'
+import '../../css/components/Astrologer.css'
+import useWindowDimensions from '../../Hooks/userWindowDimensions';
 import { useTranslation } from "react-i18next";
 
 export default function Astrologers() {    
@@ -15,15 +15,8 @@ export default function Astrologers() {
         }
         else
             setShowFilter(false)
-    }, [width])
-
-    const getWindowDimensions = () => {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-            width,
-            height
-        };
-    }
+    }, [width]);
+    
     const handleShowFilter = () => {
         setShowFilter(true);
     }

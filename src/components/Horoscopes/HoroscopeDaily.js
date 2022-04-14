@@ -81,7 +81,7 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
       logoPath: "/images/ZodiacSign/",
 
     }
-  ])
+  ]);
   return (
     <>
       { showHeader && <div className='horo-heading'>{t("free")} {t(interval)} {t("horoscope")}</div>}
@@ -102,6 +102,8 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
                       </Link>
                     </div>
                   </ div>
+                  else
+                  return <></>
               })
             }
 
@@ -122,7 +124,9 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
                         </div>
                       </Link>
                     </div>
-                  </div>
+                  </div>                  
+                  else
+                  return <></>
               })
             }
           </div>

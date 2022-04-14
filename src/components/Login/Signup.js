@@ -31,7 +31,7 @@ export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
               <div className="btn-close" data-bs-dismiss="modal" aria-label="Close"></div>
               <div className="row row-cols m-0">
                 <div className="col d-none d-sm-none d-lg-block px-0">
-                  <img alt="Signup" className='signup-banner img-fluid' src="../Images/signup.jpg" alt="..." />
+                  <img alt="Signup" className='signup-banner img-fluid' src="../Images/signup.jpg" />
                 </div>
                 <div className="col py-3">
                   {haveAccount && <LoginForm setHaveAccount={setHaveAccount} setGoogleLoginData={setGoogleLoginData}></LoginForm>}
