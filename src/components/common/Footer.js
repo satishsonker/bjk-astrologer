@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../css/components/common/Footer.css';
 import FooterBottomMenu from '../Menus/FooterBottomMenu';
-import PaymentBanner from './PaymentBanner';
+import PaymentBanner from '../Banner/PaymentBanner';
 import { AppConfigConsumer } from '../../Context/ConfigContext';
 
 

@@ -1,5 +1,4 @@
-.wallet-header
-{
+.wallet-header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -9,57 +8,70 @@
     padding: 20px;
     border-bottom: 1px solid orange;
 }
-.wallet-header .part-2
-{
+
+.wallet-header .part-2 {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     color: var(--heading-color);
 }
 
-.wallet-header .part-1 .bal
-{
-font-size: 25px;
+.wallet-header .part-1 .bal {
+    font-size: 25px;
 }
-.recharge-packs a{
+
+.recharge-packs a {
     text-decoration: none;
     color: black;
 }
-.recharge-packs a:hover{
-    color:white;
+
+.recharge-packs a:hover {
+    color: white;
 }
-.recharge-packs
-{
-display:flex;
-flex-wrap: wrap;
-padding: 20px;
+
+.recharge-packs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
 }
-.recharge-pack{
+
+.recharge-pack {
     border: 1px solid orange;
     min-width: 200px;
     min-height: 100px;
-    text-align: center;    
+    text-align: center;
     border-radius: 10px;
+    margin: 10px;
 }
-.recharge-pack:hover
-{
+
+.recharge-pack:hover {
     color: white;
     background-color: orange;
     cursor: pointer;
 }
-.recharge-pack .ribbon
-{
-    position:relative;
+.recharge-pack.payd {
+    background-color: lightgoldenrodyellow;
+    color: black;
 }
-.recharge-pack .ribbon .ribbon-img
-{
+
+.recharge-pack .ribbon {
+    position: relative;
+}
+
+.recharge-pack .ribbon .ribbon-img {
     position: absolute;
     width: 80px;
-    left: -2px;
-    top: -3px;
+    left: -3px;
+    top: -4px;
 }
-.recharge-pack .ribbon .ribbon-text
-{
+
+.recharge-pack.payd .ribbon .ribbon-img {
+    position: absolute;
+    width: 80px;
+    left: -11px;
+    top: -20px;
+}
+.recharge-pack .ribbon .ribbon-text {
     position: absolute;
     transform: rotate(-44deg);
     font-size: 11px;
@@ -68,8 +80,8 @@ padding: 20px;
     left: -3px;
     font-weight: 700;
 }
-.pack-amount
-{
+
+.pack-amount {
     display: flex;
     height: 71px;
     justify-content: center;
@@ -77,35 +89,63 @@ padding: 20px;
     align-content: center;
     flex-direction: column;
 }
-.pack-amount .amount{
+
+.pack-amount .amount {
     padding-top: 23px;
 }
-.pay-text
-{
-    padding-top:10px ;
+
+.pay-text {
+    padding-top: 10px;
 }
-.content-area
-{
+
+.content-area {
     padding-bottom: 15px;
 }
-.wallet-heading
-{
+
+.wallet-heading {
     padding: 20px;
     text-transform: capitalize;
 }
-.paybtn{
-text-align: center;
-width: 100vw;
-padding: 10px;
+
+.paybtn {
+    text-align: center;
+    width: 92vw;
+    padding: 10px;
 }
-.wallet-heading .part-1 .text-mute
-{
+
+.wallet-heading .part-1 .text-mute {
     color: grey;
 }
-.pay-section
-{
+
+.pay-section {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 10px 20px;
+}
+.payd .pack-amount {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.pay-details {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    margin: 4vw;
+    box-shadow: 3px 3px 7px 4px #e7e7e7;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .paybtn {
+        width: 50vw;
+    }
+
+    .pay-details {
+        margin: 20px 25vw;
+    }
 }

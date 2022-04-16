@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common/Breadcrumb';
 import '../../css/components/Wallet/Wallet.css'
-import PaymentBanner from '../common/PaymentBanner';
+import PaymentBanner from '../Banner/PaymentBanner';
 import { useEffect } from 'react';
 import { common } from '../../common/common';
 import { Link } from "react-router-dom";
@@ -89,7 +89,7 @@ export default function Wallet() {
             <div className='row row-cols-1 row-cols-md-4 recharge-packs'>
                 {
                     data?.map(ele => {
-                        return <Link to="/PaymentDetails">  <div className='col' key={common.getElementKey()}>
+                        return <Link to={`/PaymentDetails/${ele.amount}/${String(ele?.ribbonText?.match(/\d+%?/g))}`}>  <div className='col' key={common.getElementKey()}>
                             <div className='recharge-pack'>
                                 <div className='ribbon'>
                                     <img className='ribbon-img' src='/images/red-ribbon.png' alt='ribbon'></img>
