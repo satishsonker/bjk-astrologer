@@ -29,6 +29,7 @@ import AboutUs from './components/common/AboutUs';
 import ContactUs from './components/common/ContactUs';
 import HoroscopeDailyPage from './components/Horoscopes/HoroscopeDailyPage';
 import UserProfile from './components/Profile/UserProfile';
+import AstroRegistration from './components/Astrologer/AstroRegistration';
 
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
@@ -71,6 +72,7 @@ function App() {
                 <Route exact path="/UserProfile" element={<div className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
                 <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
                 <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
+                <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
               </Routes>
               {/* <FAQ></FAQ> */}
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../../css/components/Profile/Profile.css';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common/Breadcrumb';
@@ -6,8 +6,17 @@ import AstTextbox from '../Controls/AstTextbox';
 import AstSelect from '../Controls/AstSelect';
 import { common } from '../../common/common';
 import AstCheckbox from '../Controls/AstCheckbox';
+import { useNavigate } from "react-router-dom";
 
-export default function UserProfile({ googleLoginData }) {
+export default function UserProfile({ googleLoginData }) {    
+    let navigate = useNavigate();
+    useEffect(() => {
+        if(!googleLoginData?.profileObj?.name)
+        {
+            navigate('/');
+        }
+    }, [googleLoginData]);
+    
     const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState(0);
     const [isEditProfile, setIsEditProfile] = useState(false);

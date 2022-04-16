@@ -5,7 +5,8 @@ import { common } from '../../common/common';
 import { Link } from 'react-router-dom';
 ;
 export default function HoroscopeYearly() { 
-    const { t } = useTranslation();const [zodiacData, setZodiacData] = useState([
+    const { t } = useTranslation();
+    const [zodiacData, setZodiacData] = useState([
         {
           name: "aries",
           period: "21/3-19/4",

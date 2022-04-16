@@ -1,5 +1,5 @@
 const CACHE_NAME = "version-1";
-const urlsToCache = ["index.html", "offline.html"];
+const urlsToCache = ["index.html", "offline.html","/images/logo/bjkLogo256.png"];
 const self = this;
 
 
@@ -14,11 +14,11 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    event.waitUntil(
-        this.registration.showNotification('hello',{
-            body:"hello from notify"
-        })
-    )
+    // event.waitUntil(
+    //     this.registration.showNotification('hello',{
+    //         body:"hello from notify"
+    //     })
+    // );
     event.respondWith(
         caches.match(event.request)
             .then(() => {

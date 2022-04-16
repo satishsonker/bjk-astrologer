@@ -12,6 +12,7 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
     const [showSignUp, setShowSignUp] = useState(false);
+    const [closeLoginForm, setCloseLoginForm] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { t } = useTranslation();
     const RupeeIcon = ({ height = 16, width = 16 }) => {
@@ -20,6 +21,18 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
     useEffect(() => {
         setIsMenuOpen(isActive);
     }, [isActive]);
+    useEffect(() => {
+        debugger;
+        if(googleLoginData?.profileObj?.name)
+        {
+            setShowSignUp(false);
+            setShowLogin(false);
+            setCloseLoginForm(true);
+        }
+        else{
+            setCloseLoginForm(false);
+        }
+    }, [googleLoginData]);
     useEffect(() => {
         if (googleLoginData.profileObj) {
             setIsAuthenticated(true);
@@ -141,7 +154,10 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
                     </ul>
                 </div>
             </div>
-            <Signup showLogin={showLogin} showSignup={showSignUp} setGoogleLoginData={setGoogleLoginData}></Signup>
+            {
+                !closeLoginForm && <Signup closeLoginForm={closeLoginForm} showLogin={showLogin} showSignup={showSignUp} setGoogleLoginData={setGoogleLoginData}></Signup>
+            }
+            
         </>
     )
 }

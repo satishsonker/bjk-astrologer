@@ -4,7 +4,7 @@ import '../../css/components/Signup.css';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 
-export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
+export default function Signup({ showLogin,closeLoginForm, showSignup,setGoogleLoginData }) {
   showLogin = common.defaultIfEmpty(showLogin, false);
   showSignup = common.defaultIfEmpty(showSignup, false);
 
@@ -19,6 +19,7 @@ export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
   
   return (
     <>
+    {!closeLoginForm && 
       <div className="modal  fade" id="loginSignupModel" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg modal-dialog-centered">
           <div className="modal-content">
@@ -46,6 +47,7 @@ export default function Signup({ showLogin, showSignup,setGoogleLoginData }) {
           </div>
         </div>
       </div>
+      }
     </>
   )
 }
