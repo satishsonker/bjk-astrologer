@@ -148,4 +148,7 @@
     .pay-details {
         margin: 20px 25vw;
     }
+    .payd .pack-amount {
+        font-size: 13px;
+    }
 }

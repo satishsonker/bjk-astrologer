@@ -71,7 +71,7 @@ export default function PaymentDetails() {
                                     <img className='ribbon-img' src='/images/bonus.png' alt='ribbon'></img>
                                 </div>
                                 <div className='pack-amount'>
-                               After making payment of <RupeeIcon></RupeeIcon> {paymentData.total} you will get <RupeeIcon></RupeeIcon> {paymentData.totalAfterPayment}
+                                {t("bonusText",{amt1:+paymentData.total,amt2:paymentData.totalAfterPayment})}
                                 </div>
                             </div>
                 

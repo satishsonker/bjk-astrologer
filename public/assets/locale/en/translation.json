@@ -266,6 +266,7 @@
    "time": "Time",
    "checkbox":"",
    "dontKnowbirthTime":"Check here if you don't know your time of birth",
-   "iKnowbirthTime":"I know my time of Birth"
+   "iKnowbirthTime":"I know my time of Birth",
+   "bonusText":"After making payment of Rs. {{amt1}} you will get Rs. {{amt2}}"
     
 }
