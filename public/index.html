@@ -4,18 +4,19 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/png" href="./favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />  
-  <meta name="keywords" content="astrology, today astrology, astrology today prediction,astrology horoscope, astrology chart, astrology reading, indian astrology, free astrology, live astrology, online astrology, astrologer, Bhashkar, Jyotish, kendra">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords"
+    content="astrology, today astrology, astrology today prediction,astrology horoscope, astrology chart, astrology reading, indian astrology, free astrology, live astrology, online astrology, astrologer, Bhashkar, Jyotish, kendra">
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="We provide complete solution of Astrology" />
   <link rel="apple-touch-icon" href="./images/logo/bjkLogo256.png" />
   <meta property="og:title" content="AstroBhashkar - Bhashkar Jyotish Kendra" />
-<meta property="og:type" content="artical" />
-<meta property="og:url" content="https://bhashkarjyotishkendra.netlify.app/" />
-<meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
-<meta name="twitter:card" content="We provide complete solution of Astrology" />
-<meta name="twitter:site" content="@AstroBhaskarBJK" />
-<meta name="twitter:creator" content="@AstroBhaskarBJK" />
+  <meta property="og:type" content="artical" />
+  <meta property="og:url" content="https://bhashkarjyotishkendra.netlify.app/" />
+  <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+  <meta name="twitter:card" content="We provide complete solution of Astrology" />
+  <meta name="twitter:site" content="@AstroBhaskarBJK" />
+  <meta name="twitter:creator" content="@AstroBhaskarBJK" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -77,22 +78,17 @@
         return urlBase64ToUint8Array(vapidPublicKey);
       }
       window.addEventListener('load', () => {
-      //   navigator.serviceWorker.register('/serviceworker.js')//register serviceWorker
-      //     .then((reg) => {console.log('success', reg.scope);
-      //     // reg.pushManager.getSubscription().then((subs)=>{
-      //     //   return reg.pushManager.subscribe({
-      //     //     applicationServerKey:determineAppServerKey(),
-      //     //     userVisibleOnly:true
-      //     //   });
-      //     // })
-          
-      // })
-      //     .catch((err) => console.log("error", err));
-          navigator.serviceWorker.register('/firebase-messaging-sw.js')//register serviceWorker
-          .then((reg) => {console.log('success', reg.scope);
-          
-      })
+        navigator.serviceWorker.register('/serviceworker.js')//register serviceWorker
+          .then((reg) => {
+            console.log('success', reg.scope);
+          })
           .catch((err) => console.log("error", err));
+        // navigator.serviceWorker.register('/firebase-messaging-sw.js')//register serviceWorker
+        //   .then((reg) => {
+        //     console.log('success', reg.scope);
+
+        //   })
+        //   .catch((err) => console.log("error", err));
       })
     }
 
