@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {
   BrowserRouter as Router,
   Routes, Route
@@ -30,15 +30,32 @@ import ContactUs from './components/common/ContactUs';
 import HoroscopeDailyPage from './components/Horoscopes/HoroscopeDailyPage';
 import UserProfile from './components/Profile/UserProfile';
 import AstroRegistration from './components/Astrologer/AstroRegistration';
-
+import {app,messaging,analytics,getToken} from './firebase'
 function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
   const { t } = useTranslation();
-  const config = require('./config.json');
+  const config = require('./Configs/config.json');
   const responseGoogle = (response) => {
     setGoogleLoginData(response);
   }
+  useEffect(() => {
+    getToken(messaging, { vapidKey: 'BA4kc8lgMUuy_w6njDthOW0uxc3X9AMoe47WJT_iql0ccMQwxhTvUimJFzR4DCyOsvUypVWDOAVrKjLYkNQPDYo' }).then((currentToken) => {
+      if (currentToken) {
+        // Send the token to your server and update the UI if necessary
+        // ...
+        console.log('token',currentToken);
+      } else {
+        // Show permission request UI
+        console.log('No registration token available. Request permission to generate one.');
+        // ...
+      }
+    }).catch((err) => {
+      console.log('An error occurred while retrieving token. ', err);
+      // ...
+    });
+  }, []);
+  
   return (
     <>
       <AppConfigProvider value={config}>

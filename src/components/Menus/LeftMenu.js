@@ -22,7 +22,6 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
         setIsMenuOpen(isActive);
     }, [isActive]);
     useEffect(() => {
-        debugger;
         if(googleLoginData?.profileObj?.name)
         {
             setShowSignUp(false);

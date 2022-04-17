@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
+import { common } from '../../common/common';
 
 export default function ZodiacList() {
     const { t } = useTranslation();
@@ -89,7 +90,7 @@ export default function ZodiacList() {
                 <ul>
                     {
                         zodiacData.map(ele => {
-                            return <li>
+                            return <li key={common.getElementKey()}>
                                 <div><img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
                                 <div className='horo-name'>{t(ele.name)}</div>
                             </li>

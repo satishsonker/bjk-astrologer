@@ -77,14 +77,19 @@
         return urlBase64ToUint8Array(vapidPublicKey);
       }
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/serviceworker.js')//register serviceWorker
+      //   navigator.serviceWorker.register('/serviceworker.js')//register serviceWorker
+      //     .then((reg) => {console.log('success', reg.scope);
+      //     // reg.pushManager.getSubscription().then((subs)=>{
+      //     //   return reg.pushManager.subscribe({
+      //     //     applicationServerKey:determineAppServerKey(),
+      //     //     userVisibleOnly:true
+      //     //   });
+      //     // })
+          
+      // })
+      //     .catch((err) => console.log("error", err));
+          navigator.serviceWorker.register('/firebase-messaging-sw.js')//register serviceWorker
           .then((reg) => {console.log('success', reg.scope);
-          // reg.pushManager.getSubscription().then((subs)=>{
-          //   return reg.pushManager.subscribe({
-          //     applicationServerKey:determineAppServerKey(),
-          //     userVisibleOnly:true
-          //   });
-          // })
           
       })
           .catch((err) => console.log("error", err));
