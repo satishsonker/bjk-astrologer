@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   BrowserRouter as Router,
   Routes, Route
@@ -30,44 +30,91 @@ import ContactUs from './components/common/ContactUs';
 import HoroscopeDailyPage from './components/Horoscopes/HoroscopeDailyPage';
 import UserProfile from './components/Profile/UserProfile';
 import AstroRegistration from './components/Astrologer/AstroRegistration';
-import {app,messaging,analytics,getToken} from './firebase'
-function App() {
+import { messaging, getToken } from './firebase';
+import { Api } from './apis/Api';
+import { apiUrls } from './apis/apiUrl';
+import Admin from './Admin/admin';
+import AdminDashboard from './Admin/Components/AdminDashboard';
+import UsersList from './Admin/Components/Users/UsersList';
+export default function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
+  const [isAdminPageOpen, setIsAdminPageOpen] = useState(false);
+  const [userRoles, setUserRoles] = useState({});
   const { t } = useTranslation();
   const config = require('./Configs/config.json');
   const responseGoogle = (response) => {
+    let profile = response.profileObj;
     setGoogleLoginData(response);
+    var userData = {
+      email: profile.email,
+      firstName: profile.givenName,
+      lastName: profile.familyName,
+      imageUrl: profile.imageUrl,
+      googleId: profile.googleId,
+      AuthProvidor: 'Google'
+    }
+    Api.Put(apiUrls.userController.addUser, userData).then(res => {
+      Api.Get(apiUrls.userController.getUserPermission+`?email=${userData.email}`).then(uPer => {
+       setUserRoles(uPer.data.userPermission);
+      }).catch(uErr => {
+        console.log('Error', uErr);
+      })
+    }).catch(err => {
+      console.log('Error', err);
+    })
   }
   useEffect(() => {
-    getToken(messaging, { vapidKey: 'BA4kc8lgMUuy_w6njDthOW0uxc3X9AMoe47WJT_iql0ccMQwxhTvUimJFzR4DCyOsvUypVWDOAVrKjLYkNQPDYo' }).then((currentToken) => {
-      if (currentToken) {
-        // Send the token to your server and update the UI if necessary
+    if (window.location.pathname.toLowerCase().indexOf('admin') > -1)
+      setIsAdminPageOpen(true);
+    else
+      setIsAdminPageOpen(false);
+
+    getToken(messaging,
+      {
+        vapidKey: 'BA4kc8lgMUuy_w6njDthOW0uxc3X9AMoe47WJT_iql0ccMQwxhTvUimJFzR4DCyOsvUypVWDOAVrKjLYkNQPDYo'
+      })
+      .then((currentToken) => {
+        if (currentToken) {
+          // Send the token to your server and update the UI if necessary
+          // ...
+          var data = {
+            token: currentToken,
+            userEmail: "abcd@gmail.com"
+          }
+          Api.Put(apiUrls.firebaseTokenController.addFirebaseToken, data).then(res => {
+            console.log('response', res);
+          }).catch(err => {
+            console.log('error', err);
+          })
+          console.log('token', currentToken);
+        } else {
+          // Show permission request UI
+          console.log('No registration token available. Request permission to generate one.');
+          // ...
+        }
+      })
+      .catch((err) => {
+        console.log('An error occurred while retrieving token. ', err);
         // ...
-        console.log('token',currentToken);
-      } else {
-        // Show permission request UI
-        console.log('No registration token available. Request permission to generate one.');
-        // ...
-      }
-    }).catch((err) => {
-      console.log('An error occurred while retrieving token. ', err);
-      // ...
-    });
+      });
   }, []);
-  
+
   return (
     <>
       <AppConfigProvider value={config}>
         <GoogleLoginProvider value={googleLoginData}>
           <Router>
-            <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
-            <LeftMenu option={{
-              setIsLeftMenuActive: setIsLeftMenuActive
-            }} isActive={isLeftMenuActive} googleLoginData={googleLoginData} setting={{}} setGoogleLoginData={setGoogleLoginData}></LeftMenu>
-            <Footer></Footer>
-            <SharePage></SharePage>
-            <div className='content-area'>
+            {!isAdminPageOpen && <>
+              <Header setIsLeftMenuActive={setIsLeftMenuActive} isLeftMenuActive={isLeftMenuActive}></Header>
+              <LeftMenu option={{
+                setIsLeftMenuActive: setIsLeftMenuActive
+              }} isActive={isLeftMenuActive} googleLoginData={googleLoginData} setting={{}} setGoogleLoginData={setGoogleLoginData}></LeftMenu>
+              <Footer></Footer>
+              <SharePage></SharePage>
+            </>
+            }
+            <div className={isAdminPageOpen ? 'content-area-admin' : 'content-area'}>
               <Routes>
                 <Route exact path="/" element={<div className='pb-5'><Home></Home> </div>}></Route>
                 <Route exact path="/Home" element={<div className='pb-80'><Home></Home> </div>}></Route>
@@ -90,6 +137,10 @@ function App() {
                 <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
                 <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
                 <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
+                <Route exact path="Admin" element={<div className='pb-80'><Admin setIsAdminPageOpen={setIsAdminPageOpen}></Admin> </div>}>
+                  <Route exact path="dashboard" element={<AdminDashboard></AdminDashboard>}></Route>
+                  <Route exact path="users" element={<UsersList userRole={userRoles}></UsersList>}></Route>
+                </Route>
               </Routes>
               {/* <FAQ></FAQ> */}
             </div>
@@ -108,4 +159,3 @@ function App() {
     </>
   );
 }
-export default App;

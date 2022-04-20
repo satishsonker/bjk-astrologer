@@ -1,0 +1,30 @@
+ul.user-list{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+ul.user-list li{
+    display: flex;
+    border: 1px solid #e7e7e7;
+    padding: 5px 20px;
+}
+
+ul.user-list li .user-img
+{
+    border-radius: 40px;
+    border: 1px solid;
+    overflow: hidden;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+ul.user-list li .user-img img
+{
+width: 40px;
+height: 40px;
+}
+ul.user-list li .user-details
+{
+
+}

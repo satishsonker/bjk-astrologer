@@ -7,6 +7,8 @@ import i18n  from "i18next";
 import {initReactI18next} from "react-i18next";
 import HttpApi from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import Admin from './Admin/admin';
+import { BrowserRouter } from 'react-router-dom';
 
 i18n
 .use(HttpApi)
@@ -30,7 +32,7 @@ const loadingMarkup=()=>{
 ReactDOM.render(
   <Suspense fallback={loadingMarkup}>
   <React.StrictMode>
-    <App />
+  <App/>
   </React.StrictMode>
   </Suspense>,
   document.getElementById('root')

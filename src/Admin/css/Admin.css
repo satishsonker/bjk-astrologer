@@ -1,0 +1,16 @@
+.admin-area,.admin-area-expande{
+    border: 1px solid black;
+    transition: .7s;
+    padding: 10px;
+}
+.admin-area{
+    margin-left: 54px;
+}
+.admin-area-expande{
+    margin-left: 235px;
+}
+@media screen and (orientation: landscape ) and (max-width: 600px) {
+    .admin-area,.admin-area-expande{
+        padding: 10px;
+    }
+  }

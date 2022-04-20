@@ -1,0 +1,31 @@
+.adm-header {
+    border: 1px solid var(--border-color);
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adm-header-left {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.adm-header-right {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.adm-header-left .adm-header-logo {
+    padding: 0 10px 0 10px;
+}
+
+.adm-header-left .adm-header-name {
+    padding: 0 10px 0 0;
+}

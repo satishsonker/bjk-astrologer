@@ -3,7 +3,7 @@ const apiBaseUrl = process.env.REACT_APP_API_URL;
 const headers = {
     'Access-Control-Allow-Origin': "*"
 }
-const apiUrlData = require('./apiUrl.json');
+const apiUrlData = require('./apiUrl');
 export const Api = {
     "Post": (url, data) => {
         if (data) {
@@ -40,7 +40,7 @@ export const Api = {
         let head=useDefault !== undefined && useDefault !== null && !useDefault?{}: {
             'Access-Control-Allow-Origin': "*"
         };
-        if (apiUrlData.userLocation == url) {
+        if (apiUrlData.userLocation === url) {
         }
         return axios.get((useDefault !== undefined && useDefault !== null && !useDefault ? '' : apiBaseUrl) + url, {
             headers: head

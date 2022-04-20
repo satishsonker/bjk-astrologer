@@ -4,7 +4,6 @@ import '../../css/components/common/LeftMenu.css';
 import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { GoogleLoginConsumer } from '../../Context/GoogleLoginContext';
 import { GoogleLogout } from 'react-google-login';
 export default function LeftMenu({ option, isActive, googleLoginData, setting, setGoogleLoginData }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
@@ -136,6 +135,11 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
                                 <Link to="/RechargeHistory">
                                     <li className='menu-item'>
                                         <i className="fa-solid fa-receipt"></i> <span>{t("recharge")} {t("history")}</span>
+                                    </li>
+                                </Link>
+                                <Link to="/Admin">
+                                    <li className='menu-item'>
+                                        <i className="fa-solid fa-user"></i> <span>{t("admin")}</span>
                                     </li>
                                 </Link>
                                 <li className='menu-item'>

@@ -18,6 +18,13 @@ body{
     padding-bottom: 13px;
     max-height: 100vh;
 }
+.content-area-admin
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    max-height: 100vh;
+}
 @media screen and (orientation: landscape ) and (max-width: 852px) {
   .content-area {
       height: 100vh;
