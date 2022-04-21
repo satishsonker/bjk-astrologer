@@ -1,30 +1,80 @@
-ul.user-list{
-list-style: none;
-padding: 0;
-margin: 0;
+ul.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-ul.user-list li{
+ul.user-list li {
     display: flex;
     border: 1px solid #e7e7e7;
-    padding: 5px 20px;
+    padding: 5px 20px 5px 0;
+    transition: 0.7s;
+    min-width: 99vw;
 }
 
-ul.user-list li .user-img
-{
+ul.user-list li .user-img {
     border-radius: 40px;
-    border: 1px solid;
     overflow: hidden;
     margin-right: 10px;
     width: 40px;
     height: 40px;
 }
-ul.user-list li .user-img img
-{
-width: 40px;
-height: 40px;
-}
-ul.user-list li .user-details
-{
 
+ul.user-list li .user-img img {
+    width: 40px;
+    height: 40px;
+}
+
+ul.user-list li .user-details-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+}
+ul.user-list li:hover{
+    background-color: var(--hover-color);
+    transition: 0.7s;
+}
+ul.user-list li .user-details-box .user-details {
+    display: flex;
+    flex-direction: row;
+}
+.part .sub-part
+{
+font-size: 15px;
+}
+.part .sub-text
+{
+    font-size: 13px;
+}
+.part .sub-email
+{
+    min-width: 237px;
+}
+.part .part-badge-success
+{
+    border: 1px solid #53b053;
+    background: #53b053;
+    color: black;
+    padding: 0 10px;
+    font-size: 11px;
+    border-radius: 17px;
+}
+.part .part-badge-danger
+{
+    border: 1px solid #ea6666;
+    background: #ea6666;
+    color: black;
+    padding: 0 10px;
+    font-size: 11px;
+    border-radius: 17px;
+}
+
+.table-container .sr{
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }

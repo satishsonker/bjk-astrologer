@@ -1,16 +1,26 @@
-.admin-area,.admin-area-expande{
-    border: 1px solid black;
+.admin-area, .admin-area-expande {
+    border: 1px solid transparent;
     transition: .7s;
     padding: 10px;
+    overflow: hidden;
+    width: initial;
 }
-.admin-area{
+
+.admin-area {
     margin-left: 54px;
 }
-.admin-area-expande{
+
+.admin-area-expande {
     margin-left: 235px;
 }
-@media screen and (orientation: landscape ) and (max-width: 600px) {
-    .admin-area,.admin-area-expande{
+
+@media screen and (orientation: landscape) and (max-width: 600px) {
+    .admin-area, .admin-area-expande {
         padding: 10px;
     }
-  }
+}
+
+.table-container
+{
+    overflow: auto;
+}

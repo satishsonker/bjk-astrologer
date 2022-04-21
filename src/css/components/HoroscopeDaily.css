@@ -38,6 +38,10 @@
 {
 height: 187px;
 overflow-x: hidden;
+overflow-y:hidden ;
+}
+.horo-yearly:hover
+{
 overflow-y:scroll ;
 }
 .horo-yearly ul{

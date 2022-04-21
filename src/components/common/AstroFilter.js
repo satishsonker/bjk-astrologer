@@ -34,7 +34,6 @@ export default function AstroFilter({ showFilter, onCloseFilter }) {
 
     }
     const parseTransKey=(key)=>{
-        debugger;
         var data= key.indexOf('(')===-1?key:key.substr(0,key.indexOf('(')).trim();
         return data;
     }

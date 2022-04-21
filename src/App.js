@@ -36,6 +36,10 @@ import { apiUrls } from './apis/apiUrl';
 import Admin from './Admin/admin';
 import AdminDashboard from './Admin/Components/AdminDashboard';
 import UsersList from './Admin/Components/Users/UsersList';
+import PaymentBanner from './components/Banner/PaymentBanner';
+import FooterBottomMenu from './components/Menus/FooterBottomMenu';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 export default function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
@@ -55,8 +59,8 @@ export default function App() {
       AuthProvidor: 'Google'
     }
     Api.Put(apiUrls.userController.addUser, userData).then(res => {
-      Api.Get(apiUrls.userController.getUserPermission+`?email=${userData.email}`).then(uPer => {
-       setUserRoles(uPer.data.userPermission);
+      Api.Get(apiUrls.userController.getUserPermission + `?email=${userData.email}`).then(uPer => {
+        setUserRoles(uPer.data.userPermission);
       }).catch(uErr => {
         console.log('Error', uErr);
       })
@@ -114,37 +118,42 @@ export default function App() {
               <SharePage></SharePage>
             </>
             }
-            <div className={isAdminPageOpen ? 'content-area-admin' : 'content-area'}>
-              <Routes>
-                <Route exact path="/" element={<div className='pb-5'><Home></Home> </div>}></Route>
-                <Route exact path="/Home" element={<div className='pb-80'><Home></Home> </div>}></Route>
-                <Route exact path="/Astrologers" element={
-                  <div className='pb-80'><Astrologers></Astrologers></div>
-                }></Route>
-                <Route exact path="/privacypolicy" element={<div className='pb-80'><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
-                <Route exact path="/tnc" element={<div className='pb-80'><TnC></TnC> </div>}></Route>
-                <Route exact path="/Astrologer" element={<div className='pb-80'><Astrologer></Astrologer> </div>}></Route>
-                <Route exact path="/Love" element={<div className='pb-80'><Love></Love> </div>}></Route>
-                <Route exact path="/FAQ" element={<div className='pb-80'><FAQ></FAQ> </div>}></Route>
-                <Route exact path="/Wallet" element={<div className='pb-80'><Wallet></Wallet> </div>}></Route>
-                <Route exact path="/PaymentDetails/:pay/:offer" element={<div className='pb-80'><PaymentDetails></PaymentDetails> </div>}></Route>
-                <Route exact path="/CallHistory" element={<div className='pb-80'><CallHistory></CallHistory> </div>}></Route>
-                <Route exact path="/ChatHistory" element={<div className='pb-80'><ChatHistory></ChatHistory> </div>}></Route>
-                <Route exact path="/RechargeHistory" element={<div className='pb-80'><RechargeHistory></RechargeHistory> </div>}></Route>
-                <Route exact path="/AboutUs" element={<div className='pb-80'><AboutUs></AboutUs> </div>}></Route>
-                <Route exact path="/ContactUs" element={<div className='pb-80'><ContactUs></ContactUs> </div>}></Route>
-                <Route exact path="/UserProfile" element={<div className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
-                <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
-                <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
-                <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
-                <Route exact path="Admin" element={<div className='pb-80'><Admin setIsAdminPageOpen={setIsAdminPageOpen}></Admin> </div>}>
-                  <Route exact path="dashboard" element={<AdminDashboard></AdminDashboard>}></Route>
-                  <Route exact path="users" element={<UsersList userRole={userRoles}></UsersList>}></Route>
-                </Route>
-              </Routes>
-              {/* <FAQ></FAQ> */}
-            </div>
+            <div className='root-area'>
+              <div className={isAdminPageOpen ? 'content-area-admin' : 'content-area'}>
+                <Routes>
+                  <Route exact path="/" element={<div className='pb-5'><Home></Home> </div>}></Route>
+                  <Route exact path="/Home" element={<div className='pb-80'><Home></Home> </div>}></Route>
+                  <Route exact path="/Astrologers" element={
+                    <div className='pb-80'><Astrologers></Astrologers></div>
+                  }></Route>
+                  <Route exact path="/privacypolicy" element={<div className='pb-80'><PrivacyPolicy></PrivacyPolicy> </div>}></Route>
+                  <Route exact path="/tnc" element={<div className='pb-80'><TnC></TnC> </div>}></Route>
+                  <Route exact path="/Astrologer" element={<div className='pb-80'><Astrologer></Astrologer> </div>}></Route>
+                  <Route exact path="/Love" element={<div className='pb-80'><Love></Love> </div>}></Route>
+                  <Route exact path="/FAQ" element={<div className='pb-80'><FAQ></FAQ> </div>}></Route>
+                  <Route exact path="/Wallet" element={<div className='pb-80'><Wallet></Wallet> </div>}></Route>
+                  <Route exact path="/PaymentDetails/:pay/:offer" element={<div className='pb-80'><PaymentDetails></PaymentDetails> </div>}></Route>
+                  <Route exact path="/CallHistory" element={<div className='pb-80'><CallHistory></CallHistory> </div>}></Route>
+                  <Route exact path="/ChatHistory" element={<div className='pb-80'><ChatHistory></ChatHistory> </div>}></Route>
+                  <Route exact path="/RechargeHistory" element={<div className='pb-80'><RechargeHistory></RechargeHistory> </div>}></Route>
+                  <Route exact path="/AboutUs" element={<div className='pb-80'><AboutUs></AboutUs> </div>}></Route>
+                  <Route exact path="/ContactUs" element={<div className='pb-80'><ContactUs></ContactUs> </div>}></Route>
+                  <Route exact path="/UserProfile" element={<div className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
+                  <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
+                  <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
+                  <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
+                  <Route exact path="Admin" element={<div className='pb-80'><Admin setIsAdminPageOpen={setIsAdminPageOpen}></Admin> </div>}>
+                    <Route exact path="dashboard" element={<AdminDashboard></AdminDashboard>}></Route>
+                    <Route exact path="users" element={<UsersList userRole={userRoles}></UsersList>}></Route>
+                  </Route>
+                </Routes>
+                {/* <FAQ></FAQ> */}
+              </div>
 
+              <PaymentBanner></PaymentBanner>
+              <FooterBottomMenu></FooterBottomMenu>
+              <ToastContainer position="top-right" className='ast-toast'></ToastContainer>
+            </div>
           </Router>
         </GoogleLoginProvider>
       </AppConfigProvider>
@@ -156,6 +165,7 @@ export default function App() {
         cookiePolicy={'single_host_origin'}
         isSignedIn={true}
       />
+
     </>
   );
 }

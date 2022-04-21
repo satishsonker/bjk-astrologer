@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { common } from '../../Configurations/common'
+import { common } from '../../../common/common'
 
 export default function TableFooter({ option, currPageNo, currPageSize, pagingData, totalRecords }) {
     option = common.defaultIfEmpty(option, {});
     option.totalRecord = common.defaultIfEmpty(option.totalRecord, 0);
     option.currPage = common.defaultIfEmpty(option.currPage, 1);
-    option.pageSize = common.defaultIfEmpty(option.pageSize, common.getTablePageSize());
+    option.pageSize = common.defaultIfEmpty(option.pageSize, common.tablePageSize);
     const [totalPageCount, setTotalPageCount] = useState([1]);
     const [pageSize, setPageSize] = useState(common.defaultIfEmpty(currPageSize, 10));
     const [pageNo, setPageNo] = useState(common.defaultIfEmpty(currPageNo, 1));

@@ -51,6 +51,9 @@
 .review {
     text-align: justify;
     padding: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 130px;
 }
 
 @media screen and (orientation: landscape) and (max-width: 900px) {

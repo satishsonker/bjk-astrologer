@@ -26,5 +26,14 @@ export const apiUrls= {
         "usdateUserPermission": "userPermission/updateUserPermission",
         "deleteUserPermission": "userPermission/deleteUserPermission",
         "searchUserPermission": "userPermission/searchUserPermission"
+    },
+    "subscribeController": {
+        "addSubscribe": "Subscribe/addSubscribe",
+        "getSubscribeById": "Subscribe/getSubscribeById",         
+        "getSubscribeByEmail": "Subscribe/getSubscribeByEmail",        
+        "getSubscribes": "Subscribe/getSubscribes",
+        "usdateSubscribe": "Subscribe/updateSubscribe",
+        "deleteSubscribe": "Subscribe/deleteSubscribe",
+        "searchSubscribe": "Subscribe/searchSubscribe"
     }
 }

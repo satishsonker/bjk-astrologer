@@ -93,7 +93,12 @@ const common = {
     },
     formatDayMonth: (inputString) => {
         var arr = inputString.replace(/-/g, "/").split("/");
-        return [arr[0],common.monthsArray[parseInt(arr[1] - 1)].toLowerCase(),arr[2],common.monthsArray[parseInt(arr[3] - 1)].toLowerCase()];
+        return [arr[0],common.monthsArray[parseInt(arr[1] - 1)].toLowerCase().substring(0,3),arr[2],common.monthsArray[parseInt(arr[3] - 1)].toLowerCase().substring(0,3)];
+    },
+    tablePageSize:process.env.REACT_APP_TABLE_PAGE_SIZE===undefined?[10,20,30,40,50,100]:process.env.REACT_APP_TABLE_PAGE_SIZE,
+    subscriptionType:{
+        newsLetter:"News Letter",
+        horoscope:"Horoscope"
     }
 }
 
