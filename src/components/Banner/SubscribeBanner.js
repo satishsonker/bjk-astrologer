@@ -9,27 +9,35 @@ import { toast } from 'react-toastify';
 
 export default function SubscribeBanner() {
     const [subscribeEmail, setSubscribeEmail] = useState("");
+    const { t } = useTranslation();
     const handleOnClick = () => {
-        Api.Put(apiUrls.subscribeController.addSubscribe, { email: subscribeEmail, type: common.subscriptionType.newsLetter })
-            .then(res => {
-                if (res.data == 2) {
-                    toast.info('This email is already subscribed');
-                }
-                else if (res.data == 1) {
-                    toast.success('You have subscribed');
-                    setSubscribeEmail('');
-                }
-                else
-                toast.warn('We unable to subscribe your email. Please try later');
-            })
-            .catch(err => { 
-                toast.error('Something went wrong. Please try later')
-            })
+        if (subscribeEmail === '') {
+            toast.warn(t('enterYour', { word: t('email') }));
+            return false;
+        }
+        else if (subscribeEmail.match(common.regex.email) === null) {
+            toast.warn(t('enterValid', { word: t('email') }));
+            return false;
+        }
+        else {
+            Api.Put(apiUrls.subscribeController.addSubscribe, { email: subscribeEmail, type: common.subscriptionType.newsLetter })
+                .then(res => {
+                    if (res.data == 2) {
+                        toast.info(t('emailAlreadySubscribed'));
+                    }
+                    else if (res.data == 1) {
+                        toast.success(t('completed'));
+                        setSubscribeEmail('');
+                    }
+                    else
+                        toast.warn('We unable to subscribe your email. Please try later');
+                });
+        }
     }
     const handleOnChange = (e) => {
         setSubscribeEmail(e.target.value);
     }
-    const { t } = useTranslation(); const txtOption = {
+    const txtOption = {
         onChange: handleOnChange,
         id: 'txtSubscribeEmail',
         name: 'email',

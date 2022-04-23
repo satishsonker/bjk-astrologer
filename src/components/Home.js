@@ -13,6 +13,7 @@ import GoogleReviews from './common/GoogleReviews';
 import { useTranslation } from "react-i18next";
 import AskQuestionBanner from './Banner/AskQuestionBanner';
 import SubscribeBanner from './Banner/SubscribeBanner';
+import PlaneteryRemedies from './Remedies/PlaneteryRemedies';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -57,6 +58,11 @@ export default function Home() {
         <div className='col'>
           <div className='home-box-kundali'>
             <LoveAstrology></LoveAstrology>
+          </div>
+        </div>
+        <div className='col'>
+          <div className='home-box-kundali'>
+            <PlaneteryRemedies></PlaneteryRemedies>
           </div>
         </div>
       </div>

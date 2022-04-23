@@ -99,6 +99,9 @@ const common = {
     subscriptionType:{
         newsLetter:"News Letter",
         horoscope:"Horoscope"
+    },
+    regex:{
+        email:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
     }
 }
 

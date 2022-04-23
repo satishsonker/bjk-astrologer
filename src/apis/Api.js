@@ -1,5 +1,7 @@
 import axios from "axios";
 import axiosRetry from 'axios-retry';
+import { useTranslation } from "react-i18next";
+import { toast } from 'react-toastify';
 const apiBaseUrl = process.env.REACT_APP_API_URL;
 const headers = {
     'Access-Control-Allow-Origin': "*"
@@ -60,11 +62,13 @@ axios.interceptors.response.use(
     (res) => {
         // Add configurations here
         if (res.status === 200) {
-            console.log('Posted Successfully');
+            //console.log('Posted Successfully');
         }
         return res;
     },
     (err) => {
+        const { t } = useTranslation();
+        toast.error(t('somethingWentWrong'));
         return Promise.reject(err);
     }
 );

@@ -268,6 +268,26 @@
    "dontKnowbirthTime":"Check here if you don't know your time of birth",
    "iKnowbirthTime":"I know my time of Birth",
    "bonusText":"After making payment of Rs. {{amt1}} you will get Rs. {{amt2}}",
-   "admin":"Admin"
+   "admin":"Admin",
+   "somethingWentWrong":"Something went wrong. Please try again later",
+   "emailAlreadySubscribed":"This email is already subscribed",
+   "completed":"Completed",
+   "unsubscribe":"Unsubscribe",
+   "unsubscribeNewsLetter":"Unsubscribe News Letter",
+   "enterYour":"Enter your {{word}}",
+   "pleaseTryLater":"Please Try Later",
+   "unableToUnsubscribeYourEmail":"We unable to unsubscribe your email",
+   "enterValid":"Please enter right {{word}}",
+   "knowAboutPlaneteryRemedies":"Know About Planetery Remedies",
+   "remedies": "Remedies",
+   "sun": "Sun",
+   "moon": "Moon",
+   "mercury": "Mercuty",
+   "jupiter": "Jupiter",
+   "venus": "Venus",
+   "saturn": "Saturn",
+   "rahu": "Rahu",
+   "ketu": "Ketu",
+   "mars": "Mars"
     
 }

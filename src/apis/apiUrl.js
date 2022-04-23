@@ -28,12 +28,23 @@ export const apiUrls= {
         "searchUserPermission": "userPermission/searchUserPermission"
     },
     "subscribeController": {
-        "addSubscribe": "Subscribe/addSubscribe",
-        "getSubscribeById": "Subscribe/getSubscribeById",         
-        "getSubscribeByEmail": "Subscribe/getSubscribeByEmail",        
-        "getSubscribes": "Subscribe/getSubscribes",
-        "usdateSubscribe": "Subscribe/updateSubscribe",
-        "deleteSubscribe": "Subscribe/deleteSubscribe",
-        "searchSubscribe": "Subscribe/searchSubscribe"
+        "addSubscribe": "subscribe/addSubscribe",
+        "getSubscribeById": "subscribe/getSubscribeById",         
+        "getSubscribeByEmail": "subscribe/getSubscribeByEmail",        
+        "getSubscribes": "subscribe/getSubscribes",
+        "usdateSubscribe": "subscribe/updateSubscribe",
+        "deleteSubscribe": "subscribe/deleteSubscribe",
+        "searchSubscribe": "subscribe/searchSubscribe",
+        "getUnsubscribeReason":"subscribe/getUnsubscribeReason"
+    },
+    "masterCollectionController": {
+        "addMasterCollection": "masterCollection/addMasterCollection",
+        "getMasterCollectionById": "masterCollection/getMasterCollectionById",         
+        "getByCollectionName": "masterCollection/getByCollectionName",        
+        "getMasterCollections": "masterCollection/getMasterCollections",
+        "usdateMasterCollection": "masterCollection/updateMasterCollection",
+        "deleteMasterCollection": "masterCollection/deleteMasterCollection",
+        "searchMasterCollection": "masterCollection/searchMasterCollection",
+        "deleteByCollectionName":"masterCollection/deleteByCollectionName"
     }
 }
