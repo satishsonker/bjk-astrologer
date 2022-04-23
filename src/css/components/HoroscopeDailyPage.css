@@ -139,3 +139,43 @@
 {
     color: orange;
 }
+
+.planet-header
+{
+    
+    height: 38px;
+    margin-top: -37px;
+    margin-bottom: 20px;
+    background-color: #ffffff !important;
+    z-index: 100000;
+    display: block;
+    position: relative;
+    border-radius: 33px 33px 0 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.planet-rotate
+{
+    height: 320px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../public/Images/planetBanner.png');
+}
+.planet-rotate img
+{
+    width: 200px;    
+    animation: mymove 4s linear infinite;
+}
+
+@keyframes mymove {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+  }
