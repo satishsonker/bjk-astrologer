@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 import { common } from '../../common/common';
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
-import AstSelect from '../Controls/AstSelect';
 import { Link } from "react-router-dom";
 
 export default function PlaneteryRemediesPage() {
@@ -41,7 +40,7 @@ export default function PlaneteryRemediesPage() {
                 </div>
                 <div className='col'>
                     <p>{t("chooseDifferentPlanet")}</p>
-                    <ul>
+                    <ul className='planet-list'>
                     <li><Link to="/planeteryRemedies/sun"><img src="/Images/icons/sun48.png" alt={t("sun")} /> {t("sun")} {t("remedies")}</Link> </li>
                     <li><Link to="/planeteryRemedies/moon"><img src="/Images/icons/moon48.png" alt={t("moon")} /> {t("moon")} {t("remedies")}</Link> </li>
                     <li><Link to="/planeteryRemedies/mercury"><img src="/Images/icons/mercury48.png" alt={t("mercury")} /> {t("mercury")} {t("remedies")}</Link> </li>
