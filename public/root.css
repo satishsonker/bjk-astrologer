@@ -2,10 +2,10 @@
   --font-size: calc(10px + 2vmin);
   --header-height:60px;
   --header-color:#e84949;
+  --header-font-color:rgb(245, 241, 241);
   --heading-color:#ffa500;
   --button-color:#ffa500;
   --button-font-color:#ffffff;
-  --header-font-color:rgb(245, 241, 241);
   --leftmenu-max-width:300px;
   --leftmenu-trans-time:1s;
   --hover-color:rgba(0, 255, 255, 0.288);

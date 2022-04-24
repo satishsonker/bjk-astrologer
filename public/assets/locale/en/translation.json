@@ -290,6 +290,9 @@
    "saturn": "Saturn",
    "rahu": "Rahu",
    "ketu": "Ketu",
-   "mars": "Mars"
+   "mars": "Mars",
+   "planet":"Planet",
+   "listOf": "List of {{word}}"
+   
     
 }

@@ -1,4 +1,8 @@
 :root {
     --font-size: calc(10px + 2vmin);
     --border-color:orange;
+    --header-height:60px;
+    --header-color:#e84949;
+    --header-font-color:rgb(245, 241, 241);
+    --hover-color:rgba(0, 255, 255, 0.288);
   }
