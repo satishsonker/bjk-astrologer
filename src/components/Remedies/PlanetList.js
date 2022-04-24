@@ -2,6 +2,7 @@ import React from 'react'
 import { common } from '../../common/common';
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import '../../css/components/Remedies/Remedies.css';
 
 export default function PlanetList({ option }) {
     const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function PlanetList({ option }) {
     option.class = common.defaultIfEmpty(option.class, ``);
     return (
         <div className={option.class}>
-          { option.displayHeader &&  <p>{option.headerText}</p> }
+          { option.displayHeader &&  <p className='planet-list-header'>{option.headerText}</p> }
             <ul className='planet-list'>
                 <Link to="/planeteryRemedies/sun"><li><img src="/Images/icons/sun48.png" alt={t("sun")} /> {t("sun")} {t("remedies")}</li></Link> 
                 <Link to="/planeteryRemedies/moon"><li><img src="/Images/icons/moon48.png" alt={t("moon")} /> {t("moon")} {t("remedies")}</li></Link> 

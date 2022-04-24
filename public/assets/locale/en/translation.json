@@ -292,7 +292,20 @@
    "ketu": "Ketu",
    "mars": "Mars",
    "planet":"Planet",
-   "listOf": "List of {{word}}"
-   
+   "listOf": "List of {{word}}",
+   "astrological":"Astrological", 
+   "whatIsword":"What is the {{word}}?",
+   "karma":"Karma",
+   "remedy":"Remedy",
+   "aAndB": "{{a}} And {{b}}",
+   "typesOf": "Types of {{word}}",
+   "gemstones":"Gem & stones",
+   "rudraksh":"Rudraksh",
+   "mantra":"Mantra",
+   "yantra":"Yantra",
+   "fastingAndBlessing":"Fasting and blessing",
+   "socialService":"Social Service",
+   "spiritua":"Spiritual",
+   "tantra": "Tantra"
     
 }

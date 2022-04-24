@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
-import { Link } from "react-router-dom";
 import PlanetList from './PlanetList';
 
 export default function PlaneteryRemediesPage() {
@@ -13,6 +12,7 @@ export default function PlaneteryRemediesPage() {
     const urlParam = useParams();
     const breadcrumbOption = [
         { name: t('home'), link: "/Home" },
+        { name: `${t('remedies')}`, link: "/Remedies" },
         { name: `${t('planetery')}  ${t('ka')} ${t('remedies')} - ${t(urlParam.planet)}`, isActive: false }];
     return (
         <>
@@ -38,7 +38,7 @@ export default function PlaneteryRemediesPage() {
                         Go ahead and indulge in your artistic self today. You can reorganise your home or workplace. Expenses are on the cards. If you have been longing for that expensive dressing table or a study table, buy it. Indulgence is okay sometimes.
                     </p>
                 </div>
-                <PlanetList option={{headerText:t("chooseDifferentPlanet"),class:'col'}}></PlanetList>               
+                <PlanetList option={{displayHeader:true, headerText:t("chooseDifferentPlanet"),class:'col planet-border'}}></PlanetList>               
                 <div className='col'>
                     <AskQuestionBanner></AskQuestionBanner>
                     <SubscribeBanner></SubscribeBanner>

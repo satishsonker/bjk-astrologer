@@ -41,6 +41,7 @@ import FooterBottomMenu from './components/Menus/FooterBottomMenu';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import PlaneteryRemediesPage from './components/Remedies/PlaneteryRemediesPage';
+import Remedies from './components/Remedies/Remedies';
 export default function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
@@ -141,6 +142,7 @@ export default function App() {
                   <Route exact path="/ContactUs" element={<div className='pb-80'><ContactUs></ContactUs> </div>}></Route>
                   <Route exact path="/UserProfile" element={<div className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
                   <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
+                  <Route exact path="/Remedies" element={<div className='pb-80'><Remedies></Remedies> </div>}></Route>
                   <Route exact path="/planeteryRemedies/:planet" element={<div className='pb-80'><PlaneteryRemediesPage></PlaneteryRemediesPage> </div>}></Route>
                   <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
                   <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
