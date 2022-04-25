@@ -2,6 +2,8 @@ import React from 'react'
 import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
 import PlanetList from './PlanetList';
+import RemedyList from './RemedyList';
+import GemsAndStoneList from './GemsAndStoneList';
 
 export default function Remedies() {
     const { t } = useTranslation();
@@ -49,17 +51,7 @@ export default function Remedies() {
                         {t('typesOf', { word: t('remedies') })}
                     </div>
 
-                    <ul>
-                        <li> {t('planetery')} {t('remedies')}</li>
-                        <li> {t("gemstones")}</li>
-                        <li> {t("rudraksh")}</li>
-                        <li> {t("mantra")}</li>
-                        <li> {t("yantra")}</li>
-                        <li> {t("fastingAndBlessing")}</li>
-                        <li> {t("socialService")}</li>
-                        <li> {t("spiritua")} {t("remedies")}</li>
-                        <li> {t("tantra")}</li>
-                    </ul>
+                 <RemedyList></RemedyList>
 
 
                     <div className='rem-heading'>
@@ -76,6 +68,7 @@ export default function Remedies() {
                 </div>
                 <div className='col col-md-4'>
                     <PlanetList option={{ displayHeader: true, headerText: `${t("planetery")} ${t('ka')} ${t("remedies")}`, class: 'col planet-border' }}></PlanetList>
+                    <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
                 </div>
             </div>
         </>

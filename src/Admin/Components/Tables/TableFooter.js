@@ -71,7 +71,7 @@ export default function TableFooter({ option, currPageNo, currPageSize, pagingDa
                                 <nav aria-label="Page navigation example">
                                     <ul className="pagination  pagination-sm">
                                         <li onClick={() => handlePagingPre()} className={pageNo == 1 ? "page-item disabled" : "page-item"}>
-                                            <a className="page-link" href="#" tabIndex="-1" aria-disabled="true">Previous</a>
+                                            <a className="page-link" href="" tabIndex="-1" aria-disabled="true">Previous</a>
                                         </li>
                                         {
                                             totalPageCount.map((ele) => {
@@ -79,7 +79,7 @@ export default function TableFooter({ option, currPageNo, currPageSize, pagingDa
                                             })
                                         }
                                         <li onClick={() => handlePagingNext()} className={pageNo == totalPageCount.length || totalPageCount.length == 1 ? "page-item disabled" : "page-item"}>
-                                            <a className="page-link" href="#">Next</a>
+                                            <a className="page-link" href="">Next</a>
                                         </li>
                                     </ul>
                                 </nav>

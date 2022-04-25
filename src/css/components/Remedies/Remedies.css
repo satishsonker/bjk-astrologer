@@ -17,30 +17,36 @@
     padding: 5px 16px;
     margin-bottom: 10px;
 }
+
 .remedy-box a{
     text-decoration:none;
 }
+
 .planet-list
 {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .planet-list li:hover
 {
     background-color: var(--hover-color);
     transition: 1s;
     border-radius: 20px;
 }
+
 .planet-list  a{
     color: black;
     text-decoration: none;
 }
+
 .planet-list li{
     border-bottom: 1px solid #e7e7e7;
     padding: 10px;
     transition: 1s;
 }
+
 .planet-list li img{
     width: 30px !important;
     height: 30px !important;
@@ -51,6 +57,7 @@
     border:1px solid #e7e7e7;
     border-radius: 5px;
 }
+
 .planet-list-header{
     text-align: center;
     padding-top: 1rem;
@@ -65,9 +72,43 @@
     padding: 6px 78px 6px 15px;
     margin-bottom: 20px;
 }
+
 .rem-para
 {
     padding: 0 21px 21px 21px;
     text-align: justify;
     font-size: 14px;
+}
+
+.rem-list
+{
+list-style: none;
+padding: 0;
+margin: 0 0 0 30px;
+width: 75%;
+}
+.rem-list a{
+    text-decoration: none;
+    color: black;
+}
+.rem-list a li,.rem-list li{
+    border: 1px solid #e7e7e7;
+    padding: 5px 20px;
+    border-left: 13px solid orange;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: .6s;
+}
+.rem-list a li:hover,.rem-list li:hover{
+   background-color: var(--hover-color);
+   transition: .6s;
+}
+.rem-page .rem-page-part1
+{
+width: 45vw;
+}
+
+.rem-page .rem-page-part2
+{
+    width: 27vw;
 }

@@ -34,12 +34,12 @@ export default function FooterBottomMenu() {
                         <div className='list-header'>{t("important")} {t("link")}</div>
                         <ul className="list">
                             <li className="list-item active"><Link to='/ContactUs'>{t("contactUs")}</Link></li>
-                            <li className="list-item"><a href="#">{t("feedback")}</a></li>
+                            <li className="list-item">{t("feedback")}</li>
                            <li className="list-item"><Link to='/AboutUs'> {t("aboutUs")}</Link></li>
                             <li className="list-item"><Link to="/privacypolicy">{t("privacy")} {t("policy")}</Link></li>
                             <li className="list-item"><Link to="/tnc">{t("terms")} {t("and")} {t("conditions")}</Link></li>
-                            <li className="list-item"><a href="#">{t("astrologers")} {t("ka")} {t("registration")}</a></li>
-                            <li className="list-item" data-bs-toggle="modal" data-bs-target="#unsubscribeModal"><a href="#">{t("unsubscribe")}</a></li>
+                            <li className="list-item">{t("astrologers")} {t("ka")} {t("registration")}</li>
+                            <li className="list-item" data-bs-toggle="modal" data-bs-target="#unsubscribeModal">{t("unsubscribe")}</li>
                             
                         </ul>
                     </div>

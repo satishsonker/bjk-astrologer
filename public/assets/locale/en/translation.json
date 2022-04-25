@@ -299,13 +299,24 @@
    "remedy":"Remedy",
    "aAndB": "{{a}} And {{b}}",
    "typesOf": "Types of {{word}}",
-   "gemstones":"Gem & stones",
+   "gemstones":"Gem & Stones",
    "rudraksh":"Rudraksh",
    "mantra":"Mantra",
    "yantra":"Yantra",
    "fastingAndBlessing":"Fasting and blessing",
    "socialService":"Social Service",
    "spiritua":"Spiritual",
-   "tantra": "Tantra"
+   "tantra": "Tantra",
+"blueSapphire":"Blue Sapphire",
+"blueTopaz":"Blue Topaz",
+"diamond":"Diamond",
+"emerald":"Emerald",
+"moonstone":"Moonstone",
+"onyx":"Onyx",
+"opal":"Opal",
+"pearl":"Pearl",
+"ruby":"Ruby",
+"sunstone":"Sunstone",
+"turquoise":"Turquoise"
     
 }

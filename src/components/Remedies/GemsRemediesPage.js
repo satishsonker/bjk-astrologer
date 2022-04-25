@@ -8,30 +8,30 @@ import SubscribeBanner from '../Banner/SubscribeBanner';
 import PlanetList from './PlanetList';
 import GemsAndStoneList from './GemsAndStoneList';
 
-export default function PlaneteryRemediesPage() {
+export default function GemsRemediesPage() {
     const { t } = useTranslation();
     const urlParam = useParams();
     const breadcrumbOption = [
         { name: t('home'), link: "/Home" },
         { name: `${t('remedies')}`, link: "/Remedies" },
-        { name: `${t('planetery')}  ${t('ka')} ${t('remedies')} - ${t(urlParam.planet)}`, isActive: false }];
+        { name: `${t('gemstones')}  ${t('ka')} ${t('remedies')} - ${t(urlParam.gems)}`, isActive: false }];
     return (
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-rotate'>
-                <img src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
+                <img src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
             </div>
             <div className='horo-heading planet-header'>
-                {t(urlParam.planet)} {t('planet')} {t('ka')} {t('remedies')}
+                {t(urlParam.gems)} {t('ka')} {t('remedies')}
             </div>
             <div className='row row-cols row-cols-md-3 rem-page'>
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
+                            <img src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
                         </div>
                         <div className='h-zodiac-period'>
-                            <div>{t(urlParam.planet)}</div>
+                            <div>{t(urlParam.gems)}</div>
                             <div></div>
                         </div>
                     </div>
