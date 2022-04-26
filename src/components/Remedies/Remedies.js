@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import PlanetList from './PlanetList';
 import RemedyList from './RemedyList';
 import GemsAndStoneList from './GemsAndStoneList';
+import RudrakshaList from './RudrakshaList';
 
 export default function Remedies() {
     const { t } = useTranslation();
@@ -69,6 +70,7 @@ export default function Remedies() {
                 <div className='col col-md-4'>
                     <PlanetList option={{ displayHeader: true, headerText: `${t("planetery")} ${t('ka')} ${t("remedies")}`, class: 'col planet-border' }}></PlanetList>
                     <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
+                    <RudrakshaList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
                 </div>
             </div>
         </>

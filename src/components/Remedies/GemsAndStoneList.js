@@ -14,7 +14,7 @@ export default function GemsAndStoneList({ option }) {
         <div className={option.class}>
             {option.displayHeader && <p className='planet-list-header'>{option.headerText}</p>}
             <ul className='planet-list'>
-                <Link to="/remedies/gemsRemedies/blueSapphire"><li><img src="/Images/icons/blueSapphire48.png" alt={t("blueSapphire")} /> {t("blueSapphire")}</li></Link>
+                <Link to="/remedies/gemsRemedies/blueSapphire#top"><li><img src="/Images/icons/blueSapphire48.png" alt={t("blueSapphire")} /> {t("blueSapphire")}</li></Link>
                 <Link to="/remedies/gemsRemedies/blueTopaz"><li><img src="/Images/icons/blueTopaz48.png" alt={t("blueTopaz")} /> {t("blueTopaz")}</li></Link>
                 <Link to="/remedies/gemsRemedies/diamond"><li><img src="/Images/icons/diamond48.png" alt={t("diamond")} /> {t("diamond")}</li></Link>
                 <Link to="/remedies/gemsRemedies/emerald"><li><img src="/Images/icons/emerald48.png" alt={t("emerald")} /> {t("emerald")}</li></Link>

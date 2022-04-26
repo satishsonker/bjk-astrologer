@@ -4,7 +4,6 @@ import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
-import SubscribeBanner from '../Banner/SubscribeBanner';
 import PlanetList from './PlanetList';
 import GemsAndStoneList from './GemsAndStoneList';
 

@@ -24,7 +24,7 @@ export default function PlaneteryRemediesPage() {
             <div className='horo-heading planet-header'>
                 {t(urlParam.planet)} {t('planet')} {t('ka')} {t('remedies')}
             </div>
-            <div className='row row-cols row-cols-md-3 rem-page'>
+            <div className='row row-cols-1 row-cols-md-3 rem-page'>
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>

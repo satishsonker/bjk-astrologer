@@ -121,7 +121,7 @@ export default function App() {
               <SharePage></SharePage>
             </>
             }
-            <div className='root-area'>
+            <div className='root-area' id='top'>
               <div className={isAdminPageOpen ? 'content-area-admin' : 'content-area'}>
                 <Routes>
                   <Route exact path="/" element={<div className='pb-5'><Home></Home> </div>}></Route>
