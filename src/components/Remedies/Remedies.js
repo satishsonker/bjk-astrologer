@@ -70,7 +70,7 @@ export default function Remedies() {
                 <div className='col col-md-4'>
                     <PlanetList option={{ displayHeader: true, headerText: `${t("planetery")} ${t('ka')} ${t("remedies")}`, class: 'col planet-border' }}></PlanetList>
                     <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
-                    <RudrakshaList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
+                    <RudrakshaList option={{ displayHeader: true, headerText: `${t("rudraksh")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
                 </div>
             </div>
         </>

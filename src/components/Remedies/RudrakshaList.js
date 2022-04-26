@@ -18,7 +18,7 @@ export default function RudrakshaList({option}) {
             data.push({
                 name:`${i} ${t('mukhi')} ${t('rudraksh')}`,
                 imagePath:`/Images/icons/${i}mukhi48.png`,
-                path:`/remedies/rudrakshaRemedies/${i}mukhiRudraksha`
+                path:`/remedies/rudraksha/${i}mukhi`
             });
         }
         setRudraList(data);

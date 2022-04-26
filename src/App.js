@@ -43,6 +43,7 @@ import { ToastContainer } from 'react-toastify';
 import PlaneteryRemediesPage from './components/Remedies/PlaneteryRemediesPage';
 import Remedies from './components/Remedies/Remedies';
 import GemsRemediesPage from './components/Remedies/GemsRemediesPage';
+import RudrakshaRemediesPage from './components/Remedies/RudrakshaRemediesPage';
 export default function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
@@ -146,6 +147,7 @@ export default function App() {
                   <Route exact path="/Remedies" element={<div className='pb-80'><Remedies></Remedies> </div>}></Route>
                   <Route exact path="/remedies/planeteryRemedies/:planet" element={<div className='pb-80'><PlaneteryRemediesPage></PlaneteryRemediesPage> </div>}></Route>
                   <Route exact path="/remedies/gemsRemedies/:gems" element={<div className='pb-80'><GemsRemediesPage></GemsRemediesPage> </div>}></Route>
+                  <Route exact path="/remedies/rudraksha/:rudraksh" element={<div className='pb-80'><RudrakshaRemediesPage></RudrakshaRemediesPage> </div>}></Route>
                   <Route exact path="*" element={<div className='pb-80'><NoPage></NoPage> </div>}></Route>
                   <Route exact path="/astroRegistration" element={<div className='pb-80'><AstroRegistration></AstroRegistration> </div>}></Route>
                   <Route exact path="Admin" element={<div className='pb-80'><Admin setIsAdminPageOpen={setIsAdminPageOpen}></Admin> </div>}>
