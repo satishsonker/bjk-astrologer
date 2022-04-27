@@ -168,7 +168,7 @@
 .planet-rotate img
 {
     width: 200px;    
-    animation: mymove 4s linear infinite;
+    animation: mymove 30s linear infinite;
 }
 
 @keyframes mymove {

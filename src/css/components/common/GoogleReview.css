@@ -1,7 +1,10 @@
 .review-container {
     display: block;
-    margin-bottom: 120px;
+    margin-bottom: 33px;
     padding: 0 11px;
+}
+.carousel-item .col{
+margin: 10px 0;
 }
 
 .review-item {
@@ -53,7 +56,7 @@
     padding: 10px 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 130px;
+    height: fit-content;
 }
 
 @media screen and (orientation: landscape) and (max-width: 900px) {

@@ -22,7 +22,6 @@ body {
 
 @media screen and (orientation: landscape) and (max-width: 852px) {
   .content-area {
-    height: 100vh;
     padding-bottom: 10px !important;
   }
 }
