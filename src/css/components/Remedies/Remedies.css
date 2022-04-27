@@ -47,7 +47,7 @@
     padding: 3px;
     transition: .7s;
     border-left: 13px solid orange;
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -118,8 +118,7 @@
     width: 30%;
 }
 
-.sadhu
-{
+.sadhu {
     position: absolute;
     top: 98px;
     left: 0;
@@ -129,8 +128,8 @@
     align-items: center;
     justify-content: center;
 }
-.sadhu img
-{
+
+.sadhu img {
     position: relative;
     width: 320px;
     transform: translateX(-5px);
@@ -146,3 +145,33 @@
     }
 }
 
+.fishes {
+    position: relative;
+    width: 250px;  
+    animation: mymove 4s linear infinite;
+}
+
+.fish {
+    position: absolute;
+    width: 250px;
+}
+
+.planet-banner {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-image: url('../../../../public/Images/planetBanner.png');
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    min-height: 320px;
+    padding-bottom: 36px;
+}
+@keyframes mymove {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+  }
