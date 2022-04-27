@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../css/components/HoroscopeDailyPage.css';
 import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
@@ -7,6 +6,7 @@ import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import SubscribeBanner from '../Banner/SubscribeBanner';
 import PlanetList from './PlanetList';
 import GemsAndStoneList from './GemsAndStoneList';
+import '../../css/components/Remedies/Remedies.css';
 
 export default function PlaneteryRemediesPage() {
     const { t } = useTranslation();
@@ -24,7 +24,7 @@ export default function PlaneteryRemediesPage() {
             <div className='horo-heading planet-header'>
                 {t(urlParam.planet)} {t('planet')} {t('ka')} {t('remedies')}
             </div>
-            <div className='row row-cols-1 row-cols-md-3 rem-page'>
+            <div className='row row-cols-1 row-cols-md-2 rem-page'>
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
@@ -40,12 +40,14 @@ export default function PlaneteryRemediesPage() {
                     </p>
                 </div>
                 <div className='col rem-page-part2'>
-                    <PlanetList option={{ displayHeader: true, headerText: t("chooseDifferentPlanet"), class: 'col planet-border' }}></PlanetList>
-
-                </div>
-                <div className='col rem-page-part2'>
-                    <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
-
+                    <div className='row row-cols-1 row-cols-md-1'>
+                        <div className='col'>
+                            <PlanetList option={{ displayHeader: true, headerText: t("chooseDifferentPlanet"), class: 'col planet-border' }}></PlanetList>
+                        </div>
+                        <div className='col'>
+                            <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
+                        </div>
+                    </div>
                 </div>
             </div>
             <AskQuestionBanner></AskQuestionBanner>

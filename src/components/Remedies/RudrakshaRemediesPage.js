@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import PlanetList from './PlanetList';
 import RudrakshaList from './RudrakshaList';
+import GemsAndStoneList from './GemsAndStoneList';
 
 export default function RudrakshaRemediesPage() {
     const { t } = useTranslation();
@@ -18,19 +19,19 @@ export default function RudrakshaRemediesPage() {
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-rotate'>
-                <img src={`/images/icons/${urlParam.rudraksh}.png`} alt={urlParam.rudraksh} />
+                <img src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh} />
             </div>
             <div className='horo-heading planet-header'>
-                {t(urlParam.rudraksh)} {t('ka')} {t('remedies')}
+                {t(urlParam.rudraksh)} {t('mukhi')} {t('rudraksh')} {t('ka')} {t('remedies')}
             </div>
             <div className='row row-cols row-cols-md-3 rem-page'>
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/icons/${urlParam.rudraksh}.png`} alt={urlParam.rudraksh} />
+                            <img src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh+"mukhi"} />
                         </div>
                         <div className='h-zodiac-period'>
-                            <div>{t(urlParam.rudraksh)}</div>
+                            <div>{t(urlParam.rudraksh)} {t('mukhi')} {t('rudraksh')}</div>
                             <div></div>
                         </div>
                     </div>
@@ -39,7 +40,18 @@ export default function RudrakshaRemediesPage() {
                     </p>
                 </div>
                 <div className='col rem-page-part2'>
-                    <RudrakshaList option={{ displayHeader: true, headerText: `${t("rudraksh")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
+                    <div className='row row-cols-1 row-cols-md-1'>
+                        <div className='col'>
+                            <RudrakshaList option={{ displayHeader: true, headerText: `${t("rudraksh")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
+                        </div>
+                        <div className='col'>
+                            <PlanetList option={{ displayHeader: true, headerText: t("chooseDifferentPlanet"), class: 'col planet-border' }}></PlanetList>
+                        </div>
+                        <div className='col'>
+                            <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

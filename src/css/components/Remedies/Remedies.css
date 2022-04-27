@@ -18,81 +18,85 @@
     margin-bottom: 10px;
 }
 
-.remedy-box a{
-    text-decoration:none;
+.remedy-box a {
+    text-decoration: none;
 }
 
-.planet-list
-{
+.planet-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.planet-list li:hover
-{
+.planet-list li:hover {
     background-color: var(--hover-color);
     transition: 1s;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
 }
 
-.planet-list  a{
+.planet-list a {
     color: black;
     text-decoration: none;
 }
 
-.planet-list li{
+.planet-list li {
     border: 1px solid #e7e7e7;
     padding: 3px;
     transition: .7s;
     border-left: 13px solid orange;
-    margin-bottom: 2px;
+    margin-bottom: 2px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 5px 0 0 5px;
 }
 
-.planet-list li img{
+.planet-list li img {
     width: 30px !important;
     height: 30px !important;
     margin-right: 5%;
 }
 
-.planet-border{
+.planet-border {
     border-radius: 5px;
 }
 
-.planet-list-header{
+.planet-list-header {
     text-align: center;
     padding-top: 1rem;
     border-bottom: 1px solid orange;
     padding-bottom: 10px;
 }
 
-.rem-heading
-{
+.rem-heading {
     border-bottom: 1px solid orange;
     width: max-content;
     padding: 6px 78px 6px 15px;
     margin-bottom: 20px;
 }
 
-.rem-para
-{
+.rem-para {
     padding: 0 21px 21px 21px;
     text-align: justify;
     font-size: 14px;
 }
 
-.rem-list
-{
-list-style: none;
-padding: 0;
-margin: 0 0 0 30px;
-width: 75%;
+.rem-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 30px;
+    width: 75%;
 }
-.rem-list a{
+
+.rem-list a {
     text-decoration: none;
     color: black;
 }
-.rem-list a li,.rem-list li{
+
+.rem-list a li, .rem-list li {
     border: 1px solid #e7e7e7;
     padding: 5px 20px;
     border-left: 13px solid orange;
@@ -100,27 +104,30 @@ width: 75%;
     border-radius: 5px;
     transition: .6s;
 }
-.rem-list a li:hover,.rem-list li:hover{
-   background-color: var(--hover-color);
-   transition: .6s;
+
+.rem-list a li:hover, .rem-list li:hover {
+    background-color: var(--hover-color);
+    transition: .6s;
 }
-.rem-page .rem-page-part1
+.rem-page
 {
-width: 58vw;
+
 }
 
-.rem-page .rem-page-part2
-{
-    width: 20vw;
+.rem-page .rem-page-part1 {
+    width: 70%;
 }
+
+.rem-page .rem-page-part2 {
+    width: 30%;
+}
+
 @media only screen and (max-width: 600px) {
-    .rem-page .rem-page-part1
-    {
-    width: auto;
+    .rem-page .rem-page-part1 {
+        width: 100%;
     }
-    
-    .rem-page .rem-page-part2
-    {
-        width: auto;
+
+    .rem-page .rem-page-part2 {
+        width: 100%;
     }
 }
