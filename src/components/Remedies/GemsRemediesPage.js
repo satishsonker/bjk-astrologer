@@ -41,10 +41,10 @@ export default function GemsRemediesPage() {
                 <div className='col rem-page-part2'>
                     <div className='row row-cols-1 row-cols-md-1'>
                         <div className='col'>
-                            <PlanetList option={{ displayHeader: true, headerText: t("chooseDifferentPlanet"), class: 'col planet-border' }}></PlanetList>
+                            <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
                         </div>
                         <div className='col'>
-                            <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
+                            <PlanetList option={{ displayHeader: true, headerText: t("chooseDifferentPlanet"), class: 'col planet-border' }}></PlanetList>
                         </div>
                     </div>
                 </div>

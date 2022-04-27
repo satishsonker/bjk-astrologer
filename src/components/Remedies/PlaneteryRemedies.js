@@ -17,7 +17,7 @@ export default function PlaneteryRemedies() {
                     </div>
                 </div>
             </Link>
-            <PlanetList option={{ displayHeader: false, class: 'horo-yearly' }}></PlanetList>
+            <PlanetList option={{ displayHeader: false, class: 'horo-yearly',showScroll:false,height:'428px' }}></PlanetList>
         </div>
     )
 }

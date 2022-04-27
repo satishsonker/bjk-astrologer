@@ -109,10 +109,6 @@
     background-color: var(--hover-color);
     transition: .6s;
 }
-.rem-page
-{
-
-}
 
 .rem-page .rem-page-part1 {
     width: 70%;
@@ -120,6 +116,24 @@
 
 .rem-page .rem-page-part2 {
     width: 30%;
+}
+
+.sadhu
+{
+    position: absolute;
+    top: 98px;
+    left: 0;
+    height: 320px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sadhu img
+{
+    position: relative;
+    width: 320px;
+    transform: translateX(-5px);
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,3 +145,4 @@
         width: 100%;
     }
 }
+

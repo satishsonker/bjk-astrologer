@@ -14,7 +14,12 @@ export default function Remedies() {
     return (
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
-            <div className='planet-rotate'></div>
+            <div className='planet-rotate'>
+                <img src='/images/404-1.png'></img>
+            </div>
+               <div className='sadhu'>
+               <img src='/images/sadhu.png'></img>
+               </div>
             <div className='horo-heading planet-header'>
                 {t('astrological')} {t('remedies')}
             </div>
