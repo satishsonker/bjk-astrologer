@@ -5,6 +5,7 @@ import Signup from '../Login/Signup';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { GoogleLogout } from 'react-google-login';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function LeftMenu({ option, isActive, googleLoginData, setting, setGoogleLoginData }) {
     option.isAuthenticated = common.defaultIfEmpty(option.isAuthenticated, true);
     option.setIsLeftMenuActive = common.defaultIfEmpty(option.setIsLeftMenuActive, () => { });
@@ -71,11 +72,11 @@ export default function LeftMenu({ option, isActive, googleLoginData, setting, s
                     <ul className='menu'>
                         <li className='menu-item'>
                             <ul className='left-menu-card-list'>
-                                <li className='left-menu-card-list-item'><img alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
+                                <li className='left-menu-card-list-item'><LazyLoadImage alt='Logo' className='logo-name' src='../Images/logo/bjkLogoName.png' /></li>
                                 {option.isAuthenticated &&
                                     <li className='left-menu-card-list-item'>
                                         <div className='user-logo'>
-                                            <img alt='User Profile' src={googleLoginData?.profileObj?.imageUrl !== undefined ? (googleLoginData?.profileObj?.imageUrl) : ('/images/top_header_user_profile.png')}></img>
+                                            <LazyLoadImage alt='User Profile' src={googleLoginData?.profileObj?.imageUrl !== undefined ? (googleLoginData?.profileObj?.imageUrl) : ('/images/top_header_user_profile.png')}></LazyLoadImage>
                                         </div>
                                         <span className='user-name'>{googleLoginData?.profileObj?.name !== undefined ? googleLoginData?.profileObj?.name : t("welcome_guest")}</span></li>
                                 }

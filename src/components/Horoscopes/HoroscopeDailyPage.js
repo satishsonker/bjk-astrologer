@@ -9,6 +9,7 @@ import SubscribeBanner from '../Banner/SubscribeBanner';
 import { useNavigate } from "react-router-dom";
 import HoroscopeDaily from './HoroscopeDaily';
 import { common } from '../../common/common';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function HoroscopeDailyPage() {
     const { t } = useTranslation();
     const urlParam = useParams();
@@ -69,7 +70,7 @@ export default function HoroscopeDailyPage() {
                 <div className='col'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/ZodiacSign/${urlParam.zodiac}.png`} alt={urlParam.zodiac} />
+                            <LazyLoadImage src={`/images/ZodiacSign/${urlParam.zodiac}.png`} alt={urlParam.zodiac} />
                         </div>
                         <div className='h-zodiac-period'>
                             <div>{t(urlParam.zodiac)}</div>

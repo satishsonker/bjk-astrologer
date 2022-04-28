@@ -3,6 +3,7 @@ import { common } from '../../common/common';
 import '../../css/components/Signup.css';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Signup({ showLogin,closeLoginForm, showSignup,setGoogleLoginData }) {
   showLogin = common.defaultIfEmpty(showLogin, false);
@@ -32,7 +33,7 @@ export default function Signup({ showLogin,closeLoginForm, showSignup,setGoogleL
               <div className="btn-close" data-bs-dismiss="modal" aria-label="Close"></div>
               <div className="row row-cols m-0">
                 <div className="col d-none d-sm-none d-lg-block px-0">
-                  <img alt="Signup" className='signup-banner img-fluid' src="../Images/signup.jpg" />
+                  <LazyLoadImage alt="Signup" className='signup-banner img-fluid' src="../Images/signup.jpg" />
                 </div>
                 <div className="col py-3">
                   {haveAccount && <LoginForm setHaveAccount={setHaveAccount} setGoogleLoginData={setGoogleLoginData}></LoginForm>}

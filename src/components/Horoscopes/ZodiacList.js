@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { common } from '../../common/common';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ZodiacList() {
     const { t } = useTranslation();
@@ -82,7 +83,7 @@ export default function ZodiacList() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img src='/images/zodiac-banner.jpg'></img>
+                <LazyLoadImage src='/images/zodiac-banner.jpg'></LazyLoadImage>
                 <div className='ast-tag-line'>
                     {t("knowAboutYourZodiacSign")}
                 </div></div>
@@ -91,7 +92,7 @@ export default function ZodiacList() {
                     {
                         zodiacData.map(ele => {
                             return <li key={common.getElementKey()}>
-                                <div><img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
+                                <div><LazyLoadImage alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
                                 <div className='horo-name'>{t(ele.name)}</div>
                             </li>
                         })

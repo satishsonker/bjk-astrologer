@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import Breadcrumb from '../common/Breadcrumb';
 import { useTranslation } from "react-i18next";
-import PlanetList from './PlanetList';
 import RemedyList from './RemedyList';
-import GemsAndStoneList from './GemsAndStoneList';
-import RudrakshaList from './RudrakshaList';
-
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+const PlanetListLazy = lazy(() => import('./PlanetList'));
+const GemsAndStoneListLazy = lazy(() => import('./GemsAndStoneList'));
+const RudrakshaListLazy = lazy(() => import('./RudrakshaList'));
 export default function Remedies() {
     const { t } = useTranslation();
     const breadcrumbOption = [
@@ -15,8 +17,12 @@ export default function Remedies() {
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-banner'>
-                <img className='fishes' src='/images/404-1.png'></img>                
-               <img className='fish' src='/images/sadhu.png'></img>
+                <LazyLoadImage className='fishes' src='/images/404-1.png' alt='round'
+                    ></LazyLoadImage>
+                <LazyLoadImage className='fish' src='/images/sadhu.png' alt='sadhu'
+                    ></LazyLoadImage>
+                {/* <img className='fishes' src='/images/404-1.png'></img> */}
+                {/* <img className='fish' src='/images/sadhu.png'></img> */}
             </div>
             <div className='horo-heading planet-header'>
                 {t('astrological')} {t('remedies')}
@@ -28,9 +34,9 @@ export default function Remedies() {
                     </div>
                     <p className='rem-para'>
                         As humans, we all yearn for a life without problems, worries, and suffering. Unfortunately, in spite of being careful and disciplined, we end up doing things we are not supposed to. We fail to realize that we are also liable to be exposed to trials, temptations, mistakes, misunderstanding and unknowingly do wrong irrespective of age. It is said that the fault in our stars and the ill-effect of planets on our lives often make us do things, which is opposite to our personality and trait.
-                        </p>
-                        <p className='rem-para'>
-                                At such a state they think they can perform some magic with astrology and get rid of all the problems.People have a lot of misconceptions related to astrology. They think the remedy to problems according to astrology is sitting for hours in the temple, doing tedious poojas or even showering money on idols and temples.There are endless types of problems in each one’s life. Some face continuous hardships, while some have specific problems etc. By now we should understand that problems are a part of our lives. We need to know how to deal with such difficulties rather than give up. Sometimes, even rigorous efforts fail to provide a solution or remedy. It is then when you need a helping hand that can help you sail through such troubled times.
+                    </p>
+                    <p className='rem-para'>
+                        At such a state they think they can perform some magic with astrology and get rid of all the problems.People have a lot of misconceptions related to astrology. They think the remedy to problems according to astrology is sitting for hours in the temple, doing tedious poojas or even showering money on idols and temples.There are endless types of problems in each one’s life. Some face continuous hardships, while some have specific problems etc. By now we should understand that problems are a part of our lives. We need to know how to deal with such difficulties rather than give up. Sometimes, even rigorous efforts fail to provide a solution or remedy. It is then when you need a helping hand that can help you sail through such troubled times.
                     </p>
 
                     <div className='rem-heading'>
@@ -39,9 +45,9 @@ export default function Remedies() {
                     <p className='rem-para'>
                         Astrological remedies are antidotes which nullify the negative impact of planets or any other element in your life. Remember astrological remedies will not fully take away the pain from your life instead, it will provide ease and relief from its impact.
                         Surprisingly, astrology does not only predict aspects of life about destiny, but it can also actually help to revamp life and treat the troubled sections.
-                        </p>
-                        <p className='rem-para'>
-                             In astrology, it is all about time. One has to understand that it is inevitable to do and wear the right thing at the right time. A lot of people expect astrology and astrologers to wipe out the problem from the root completely. Unfortunately, they are humans too and cannot change the destiny of a person. They can only provide guidance, track problems, analyze its effect and help resolve them to ease its effect in your life.
+                    </p>
+                    <p className='rem-para'>
+                        In astrology, it is all about time. One has to understand that it is inevitable to do and wear the right thing at the right time. A lot of people expect astrology and astrologers to wipe out the problem from the root completely. Unfortunately, they are humans too and cannot change the destiny of a person. They can only provide guidance, track problems, analyze its effect and help resolve them to ease its effect in your life.
                         Another myth amongst people is that one remedy can work for all. No! Since each person has a unique birth chart, similarly the frequency of problems, type of problem, planetary position and its effect differs from person to person.
                         Astrology accesses into the deeper layers of your personality, conscious and know about the weak aspects, where you need astrological assistance and remedy.
                     </p>
@@ -55,7 +61,7 @@ export default function Remedies() {
                         {t('typesOf', { word: t('remedies') })}
                     </div>
 
-                 <RemedyList></RemedyList>
+                    <RemedyList></RemedyList>
 
 
                     <div className='rem-heading'>
@@ -71,9 +77,17 @@ export default function Remedies() {
                     </p>
                 </div>
                 <div className='col col-md-4'>
-                    <PlanetList option={{ displayHeader: true, headerText: `${t("planetery")} ${t('ka')} ${t("remedies")}`, class: 'col planet-border' }}></PlanetList>
-                    <GemsAndStoneList option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneList>
-                    <RudrakshaList option={{ displayHeader: true, headerText: `${t("rudraksh")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaList>
+                    <Suspense fallback={<Skeleton count={10}></Skeleton>}>
+                        <PlanetListLazy option={{ displayHeader: true, headerText: `${t("planetery")} ${t('ka')} ${t("remedies")}`, class: 'col planet-border' }}></PlanetListLazy>
+                    </Suspense>
+                    <Suspense fallback={<Skeleton count={10}></Skeleton>}>
+                        <RudrakshaListLazy option={{ displayHeader: true, headerText: `${t("rudraksh")} ${t("remedies")}`, class: 'col planet-border' }}></RudrakshaListLazy>
+                    </Suspense>
+                    <Suspense fallback={<Skeleton count={10}></Skeleton>}>
+                        <GemsAndStoneListLazy option={{ displayHeader: true, headerText: `${t("gemstones")} ${t("remedies")}`, class: 'col planet-border' }}></GemsAndStoneListLazy>
+                    </Suspense>
+
+
                 </div>
             </div>
         </>

@@ -1,13 +1,14 @@
 import React from 'react'
 import '../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function VastuList() {
     const { t } = useTranslation();
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img alt='Vastu Banner' src='/images/vastu-banner.jpg'></img>
+                <LazyLoadImage alt='Vastu Banner' src='/images/vastu-banner.jpg'></LazyLoadImage>
                 <div className='ast-tag-line'>
                     {t("knowAboutYourVastu")}
                 </div></div>

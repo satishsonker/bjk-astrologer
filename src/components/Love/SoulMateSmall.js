@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/components/HoroscopeDaily.css';
 import { Link } from "react-router-dom";
 import AstButton from '../Controls/AstButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function SoulMateSmall() {
     const btnOption = {
@@ -11,7 +12,7 @@ export default function SoulMateSmall() {
         <div className='kun-box'>
             <Link to="/love">
                 <div className='kun-box-header'>
-                    <img alt='Banner' src='/images/love-banner-2.jpg'></img>
+                    <LazyLoadImage alt='Banner' src='/images/love-banner-2.jpg'></LazyLoadImage>
                     <div className='ast-tag-line2'>
                         Soulmate Report
                     </div>

@@ -3,6 +3,7 @@ import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { common } from '../../common/common';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function HoroscopeDaily({interval,horoName,showHeader}) {
   interval=common.defaultIfEmpty(interval,"daily");
   showHeader=common.defaultIfEmpty(showHeader,true);
@@ -95,7 +96,7 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
                     <div className='col'>
                       <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
-                          <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
+                          <LazyLoadImage alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
                           <div className='horo-period'>{common.formatDayMonth(ele.period)[0]}-{t(common.formatDayMonth(ele.period)[1])} {t("to")} {common.formatDayMonth(ele.period)[2]}-{t(common.formatDayMonth(ele.period)[3])}</div>
                         </div>
@@ -118,7 +119,7 @@ export default function HoroscopeDaily({interval,horoName,showHeader}) {
                     <div className='col'>
                       <Link to={`/horoscope/${interval}/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                         <div className={horoName===ele.name?'horo-box horo-active':"horo-box"}>
-                          <img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
+                          <LazyLoadImage alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} />
                           <div className='horo-name'>{t(ele.name)}</div>
                           <div className='horo-period'>{common.formatDayMonth(ele.period)[0]}-{t(common.formatDayMonth(ele.period)[1])} {t("to")} {common.formatDayMonth(ele.period)[2]}-{t(common.formatDayMonth(ele.period)[3])}</div>
                         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../css/components/HoroscopeDaily.css';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function LoveAstrology() {
     const { t } = useTranslation();
@@ -9,7 +10,7 @@ export default function LoveAstrology() {
         <div className='kun-box'>
             <Link to="/love">
                 <div className='kun-box-header'>
-                    <img src='/images/love-banner.png'></img>
+                    <LazyLoadImage src='/images/love-banner.png'></LazyLoadImage>
                     <div className='ast-tag-line'>
                         {t("love")}  {t("related")}  {t("solutions")}
                     </div>

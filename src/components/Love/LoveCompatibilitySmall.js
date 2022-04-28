@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/components/Love/LovePage.css';
 import { Link } from "react-router-dom";
 import AstButton from '../Controls/AstButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function LoveCompatibilitySmall() {
     const btnOption = {
@@ -11,7 +12,7 @@ export default function LoveCompatibilitySmall() {
         <div className='kun-box'>
             <Link to="/love">
                 <div className='kun-box-header'>
-                    <img alt='Banner' src='/images/love-banner-5.jpg'></img>
+                    <LazyLoadImage alt='Banner' src='/images/love-banner-5.jpg'></LazyLoadImage>
                     <div className='ast-tag-line2'>
                         Love Compatibility Report
                     </div>

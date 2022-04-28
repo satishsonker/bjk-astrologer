@@ -3,6 +3,7 @@ import { common } from '../../common/common';
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import '../../css/components/Remedies/Remedies.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function RudrakshaList({option}) {
     const { t } = useTranslation();
@@ -30,7 +31,7 @@ export default function RudrakshaList({option}) {
             <ul className='planet-list'>
                 {
                    rudraList.map(ele=>{
-                        return  <Link key={common.getElementKey()} to={ele.path}><li><img src={ele.imagePath} alt={ele.name} /> {ele.name}</li></Link>
+                        return  <Link key={common.getElementKey()} to={ele.path}><li><LazyLoadImage src={ele.imagePath} alt={ele.name} /> {ele.name}</li></Link>
                    })
                 }
                 </ul>

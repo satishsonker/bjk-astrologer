@@ -5,6 +5,7 @@ import AstButton from '../Controls/AstButton'
 import AstSelect from '../Controls/AstSelect'
 import AstTextbox from '../Controls/AstTextbox';
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function KundaliMatch() {
     const { t } = useTranslation();
     const [kundaliData, setKundaliData] = useState({ boy: {}, girl: {} });
@@ -306,7 +307,7 @@ export default function KundaliMatch() {
         return (
             <div className='kun-box'>
                 <div className='kun-box-header'>
-                    <img alt='Banner' src='/images/MatchBoy.jpg'></img>
+                    <LazyLoadImage alt='Banner' src='/images/MatchBoy.jpg'></LazyLoadImage>
                     <div className='ast-tag-line'>
                         {t('enterBoyDetails')}
                     </div></div>
@@ -341,7 +342,7 @@ export default function KundaliMatch() {
         return (
             <div className='kun-box'>
                 <div className='kun-box-header'>
-                    <img alt='Bannner' src='/images/matchGirl.jpg'></img>
+                    <LazyLoadImage alt='Bannner' src='/images/matchGirl.jpg'></LazyLoadImage>
                     <div className='ast-tag-line'>
                         {t('enterGirlDetails')}
                     </div>

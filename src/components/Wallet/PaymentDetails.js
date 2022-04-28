@@ -6,6 +6,7 @@ import AstButton from '../Controls/AstButton';
 import PaymentBanner from '../Banner/PaymentBanner';
 import FooterBottomMenu from '../Menus/FooterBottomMenu';
 import { useParams } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function PaymentDetails() {
     const { t } = useTranslation();
@@ -68,7 +69,7 @@ export default function PaymentDetails() {
                 </div>
                 <div className='recharge-pack payd'>
                                 <div className='ribbon'>
-                                    <img className='ribbon-img' src='/images/bonus.png' alt='ribbon'></img>
+                                    <LazyLoadImage className='ribbon-img' src='/images/bonus.png' alt='ribbon'></LazyLoadImage>
                                 </div>
                                 <div className='pack-amount'>
                                 {t("bonusText",{amt1:+paymentData.total,amt2:paymentData.totalAfterPayment})}

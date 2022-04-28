@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import PlanetList from './PlanetList';
 import '../../css/components/Remedies/Remedies.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function PlaneteryRemedies() {
     const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function PlaneteryRemedies() {
         <div className='remedy-box'>
             <Link to="/Remedies">
                 <div className='remedy-box-header'>
-                    <img alt='Vastu Banner' src='/images/PlanetRemedies.jpg'></img>
+                    <LazyLoadImage alt='Vastu Banner' src='/images/PlanetRemedies.jpg'></LazyLoadImage>
                     <div className='ast-tag-line'>
                         {t("knowAboutPlaneteryRemedies")}
                     </div>

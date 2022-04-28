@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import '../../css/components/common/ContactUs.css';
 import AstTextbox from '../Controls/AstTextbox';
 import AstTextarea from '../Controls/AstTextarea';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ContactForm() {
     const [contactData, setContactData] = useState({});
@@ -70,7 +71,7 @@ export default function ContactForm() {
     return (
         <div className='kun-box'>
                 <div className='kun-box-header'>
-                    <img alt='Banner' src='/images/love-banner-2.jpg'></img>
+                    <LazyLoadImage alt='Banner' src='/images/love-banner-2.jpg'/>
                 </div>
            <div className='con-form'>
                <div className='con-form-item'>

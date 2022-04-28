@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import PlanetList from './PlanetList';
 import GemsAndStoneList from './GemsAndStoneList';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function GemsRemediesPage() {
     const { t } = useTranslation();
@@ -18,7 +19,7 @@ export default function GemsRemediesPage() {
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-rotate'>
-                <img src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
+                <LazyLoadImage src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
             </div>
             <div className='horo-heading planet-header'>
                 {t(urlParam.gems)} {t('ka')} {t('remedies')}
@@ -27,7 +28,7 @@ export default function GemsRemediesPage() {
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
+                            <LazyLoadImage src={`/images/icons/${urlParam.gems}256.png`} alt={urlParam.gems} />
                         </div>
                         <div className='h-zodiac-period'>
                             <div>{t(urlParam.gems)}</div>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/components/Banner/Banner.css';
 import { useTranslation } from "react-i18next";
 import AstButton from '../Controls/AstButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function AskQuestionBanner() {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ export default function AskQuestionBanner() {
     <>
       <div className='banner-container'>
         <div className='ban-icon'>
-          <img src='/images/ask-astro-questions.jpg' alt='Ask Question'></img>
+          <LazyLoadImage src='/images/ask-astro-questions.jpg' alt='Ask Question'/>
         </div>
         <div className='ban-text'>
           {t("askQuestBannerText")}

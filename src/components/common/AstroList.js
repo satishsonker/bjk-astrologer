@@ -6,6 +6,7 @@ import useWindowDimensions from '../../Hooks/userWindowDimensions';
 import AstButton from '../Controls/AstButton';
 import Rating from './Rating';
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function () {
     const {t}=useTranslation();
@@ -170,7 +171,7 @@ export default function () {
                                 <div className='astro-list-item'>
                                     <div className="d-flex align-items-center">
                                         <div className="flex-shrink-0">
-                                            <img alt="Astrologer Image" className='astro-image' src={ele.path} alt="..." />
+                                            <LazyLoadImage alt="Astrologer Image" className='astro-image' src={ele.path} alt="..." />
                                         </div>
                                         <div className="flex-grow-1 ms-1">
                                             <div className="d-flex flex-column bd-highlight mb-1 p-2">

@@ -163,7 +163,8 @@
     align-content: space-around;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../public/Images/planetBanner.png');
+    background-image: url('../../../public/Images/planetBanner.png');    
+    background-size: cover;
 }
 .planet-rotate img
 {

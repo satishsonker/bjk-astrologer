@@ -5,6 +5,7 @@ import { common } from '../../../common/common';
 import TableHeader from '../Tables/TableHeader';
 import TableFooter from '../Tables/TableFooter';
 import '../../css/Users.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function UsersList({ userRole }) {
     const [userList, setUserList] = useState([]); 
@@ -68,7 +69,7 @@ export default function UsersList({ userRole }) {
                         return <li key={common.getElementKey()}>
                             <div className='sr px-4'>{ind+1}</div>
                             <div className='user-img'>
-                                <img src={ele.imageUrl} alt='User Image'></img>
+                                <LazyLoadImage src={ele.imageUrl} alt='User Image'/>
                             </div>
                             <div className='user-details-box'>
                                 <div className='part'>

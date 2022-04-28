@@ -7,6 +7,7 @@ import AskQuestionBanner from '../Banner/AskQuestionBanner';
 import PlanetList from './PlanetList';
 import RudrakshaList from './RudrakshaList';
 import GemsAndStoneList from './GemsAndStoneList';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function RudrakshaRemediesPage() {
     const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function RudrakshaRemediesPage() {
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-rotate'>
-                <img src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh} />
+                <LazyLoadImage src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh} />
             </div>
             <div className='horo-heading planet-header'>
                 {t(urlParam.rudraksh)} {t('mukhi')} {t('rudraksh')} {t('ka')} {t('remedies')}
@@ -28,7 +29,7 @@ export default function RudrakshaRemediesPage() {
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh+"mukhi"} />
+                            <LazyLoadImage src={`/images/icons/${urlParam.rudraksh}mukhi.png`} alt={urlParam.rudraksh+"mukhi"} />
                         </div>
                         <div className='h-zodiac-period'>
                             <div>{t(urlParam.rudraksh)} {t('mukhi')} {t('rudraksh')}</div>

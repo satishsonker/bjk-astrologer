@@ -3,6 +3,7 @@ import '../../css/components/HoroscopeDaily.css';
 import { useTranslation } from "react-i18next";
 import { common } from '../../common/common';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 ;
 export default function HoroscopeYearly() { 
     const { t } = useTranslation();
@@ -83,7 +84,7 @@ export default function HoroscopeYearly() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img src='/images/janamkundali.jpg' alt='Janam Kundali'/>
+                <LazyLoadImage src='/images/janamkundali.jpg' alt='Janam Kundali'/>
                 <div className='ast-tag-line'>
                     {t("yearly")} {t("horoscope")} - {new Date().getFullYear()}
                 </div></div>
@@ -93,7 +94,7 @@ export default function HoroscopeYearly() {
                         zodiacData.map(ele=>{
                             return <Link  key={common.getElementKey()} to={`/horoscope/yearly/${ele.name}/${ele.period.replace(/\//g, ".")}`}>
                             <li>
-                            <div><img alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
+                            <div><LazyLoadImage alt={ele.name} src={`${ele.logoPath}${ele.name}.png`} /></div>
                             <div className='horo-name'>{t(ele.name)}</div>
                         </li>
                         </Link>

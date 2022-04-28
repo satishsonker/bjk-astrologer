@@ -6,6 +6,7 @@ import '../../css/components/common/Header.css';
 import i18Next from 'i18next';
 import { useTranslation } from "react-i18next";
 import cookies from 'js-cookie';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
     const { t } = useTranslation();
@@ -76,7 +77,7 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                         {/* <span>{t("भास्कर ज्योतिष केंद्र")}</span> */}
                     </div>
                     <div className="bd-highlight">
-                          <Link to='/home'><div className="p-2 bd-highlight"><img alt='Logo' className='logo' src='../Images/logo/bjkLogo64.png' /></div></Link>
+                          <Link to='/home'><div className="p-2 bd-highlight"><LazyLoadImage alt='Logo' className='logo' src='../Images/logo/bjkLogo64.png' /></div></Link>
                 
                     </div>
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import '../../css/AdminHeader.css';
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function AdminHeader({setIsAdminPageOpen}) { 
     return (
         <div className='adm-header'>
             <div className='adm-header-left'>
                 <div className='adm-header-logo'>
-                    <img src='/images/logo/bjkLogo32.png' alt='logo'/>
+                    <LazyLoadImage src='/images/logo/bjkLogo32.png' alt='logo'/>
                 </div>
                 <div className='adm-header-name'>AstroBhashkar - Admin</div>
             </div>

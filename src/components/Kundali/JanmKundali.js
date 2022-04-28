@@ -5,6 +5,7 @@ import AstButton from '../Controls/AstButton'
 import AstSelect from '../Controls/AstSelect'
 import AstTextbox from '../Controls/AstTextbox';
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Janamkundali() {
     const {t}=useTranslation();
     const [kundaliData, setKundaliData] = useState({});
@@ -147,7 +148,7 @@ export default function Janamkundali() {
     return (
         <div className='kun-box'>
             <div className='kun-box-header'>
-                <img alt='Banner' src='/images/janamkundali.jpg'></img>
+                <LazyLoadImage alt='Banner' src='/images/janamkundali.jpg'></LazyLoadImage>
                 <div className='ast-tag-line'>
                    {t("getYourJanamKundali")}
                 </div></div>

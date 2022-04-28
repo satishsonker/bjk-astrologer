@@ -7,6 +7,7 @@ import SubscribeBanner from '../Banner/SubscribeBanner';
 import PlanetList from './PlanetList';
 import GemsAndStoneList from './GemsAndStoneList';
 import '../../css/components/Remedies/Remedies.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function PlaneteryRemediesPage() {
     const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function PlaneteryRemediesPage() {
         <>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='planet-rotate'>
-                <img src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
+                <LazyLoadImage src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
             </div>
             <div className='horo-heading planet-header'>
                 {t(urlParam.planet)} {t('planet')} {t('ka')} {t('remedies')}
@@ -28,7 +29,7 @@ export default function PlaneteryRemediesPage() {
                 <div className='col rem-page-part1'>
                     <div className='hflex'>
                         <div className='h-zodiac'>
-                            <img src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
+                            <LazyLoadImage src={`/images/icons/${urlParam.planet}512.png`} alt={urlParam.planet} />
                         </div>
                         <div className='h-zodiac-period'>
                             <div>{t(urlParam.planet)}</div>

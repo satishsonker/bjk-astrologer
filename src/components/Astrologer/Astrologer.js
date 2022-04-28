@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Rating from '../common/Rating';
 import {common} from '../../common/common'
 import Breadcrumb from '../common/Breadcrumb';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Astrologer() {
   const { t } = useTranslation();
   const [showRatingNumber, setShowRatingNumber] = useState(false);
@@ -128,7 +129,7 @@ export default function Astrologer() {
         <div className='text-center'>
           <div className='ast-profile-image-ctr'>
             <div className='ast-brb px-1'>
-              <img src='/Images/astro/akshayshukla.jpg' alt='Astrologer' />
+              <LazyLoadImage src='/Images/astro/akshayshukla.jpg' alt='Astrologer' />
               <div className="row row-cols-1">
                 <div className="col-12 bd-highlight"><i className="fa-solid fa-circle text-danger"></i> <span className='ast-name'>{t("acharya")} {t("akshay")} {t("shukla")}</span> <i className="fa-solid fa-bookmark"></i></div>
                 <div className="col-12 bd-highlight"></div>
@@ -152,7 +153,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-4'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img alt='education' src="/images/education.png" /> </div>
+            <div className="ast-ic_img shw-2"> <LazyLoadImage alt='education' src="/images/education.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("education")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -172,7 +173,7 @@ export default function Astrologer() {
         </div> */}
         <div className='col py-2 px-4'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img alt='Certificate' src="/images/certificates.png" /> </div>
+            <div className="ast-ic_img shw-2"> <LazyLoadImage alt='Certificate' src="/images/certificates.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("certificates")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -182,7 +183,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-4'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img alt='Astrologer Knowledge' src="/images/astroKnow.png" /> </div>
+            <div className="ast-ic_img shw-2"> <LazyLoadImage alt='Astrologer Knowledge' src="/images/astroKnow.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("astrology")} {t("knowledge")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -197,7 +198,7 @@ export default function Astrologer() {
         </div>
         <div className='col py-2 px-4'>
           <div className="ast-widg-content">
-            <div className="ast-ic_img shw-2"> <img alt='Rating' src="/images/rating.png" /> </div>
+            <div className="ast-ic_img shw-2"> <LazyLoadImage alt='Rating' src="/images/rating.png" /> </div>
             <div className="ast-heading-left br-2"> <h5>{t("rating")} &amp; {t("review")}</h5> </div>
             <div className="clearfix"></div>
             <div className="ast-paragraph clear">
@@ -206,7 +207,7 @@ export default function Astrologer() {
                   return <li key={common.getElementKey()} className='rating'>
                     <div className="brb pdtb12 full-width">
                       <div className="reviews-lefts">
-                        <img alt='User Logo' src={ele.imagePath} className="us-img" />
+                        <LazyLoadImage alt='User Logo' src={ele.imagePath} className="us-img" />
                         <span>
                           <Rating rating={ele.rating} showNumber={showRatingNumber}></Rating>
                         </span>

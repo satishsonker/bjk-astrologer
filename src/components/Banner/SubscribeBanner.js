@@ -6,6 +6,7 @@ import { Api } from '../../apis/Api';
 import { apiUrls } from '../../apis/apiUrl';
 import { common } from '../../common/common';
 import { toast } from 'react-toastify';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function SubscribeBanner() {
     const [subscribeEmail, setSubscribeEmail] = useState("");
@@ -60,7 +61,7 @@ export default function SubscribeBanner() {
         <>
             <div className='banner-container flex-logo'>
                 <div className='ban-icon'>
-                    <img src='/images/subscribe.png'></img>
+                    <LazyLoadImage src='/images/subscribe.png'/>
                 </div>
                 <div className='ban-text'>
                     {t("subscribeBannerText")}

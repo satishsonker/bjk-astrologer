@@ -6,6 +6,7 @@ import PaymentBanner from '../Banner/PaymentBanner';
 import { useEffect } from 'react';
 import { common } from '../../common/common';
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Wallet() {
     const { t } = useTranslation();
@@ -92,7 +93,7 @@ export default function Wallet() {
                         return <Link to={`/PaymentDetails/${ele.amount}/${String(ele?.ribbonText?.match(/\d+%?/g))}`}>  <div className='col' key={common.getElementKey()}>
                             <div className='recharge-pack'>
                                 <div className='ribbon'>
-                                    <img className='ribbon-img' src='/images/red-ribbon.png' alt='ribbon'></img>
+                                    <LazyLoadImage className='ribbon-img' src='/images/red-ribbon.png' alt='ribbon'></LazyLoadImage>
                                     <span className='ribbon-text'>{ele.ribbonText}</span>
                                 </div>
                                 <div className='pack-amount'>

@@ -149,6 +149,8 @@
     justify-content: space-evenly;
     min-height: 320px;
     padding-bottom: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @keyframes mymove {
     from{

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Rating from './Rating';
 import '../../css/components/common/GoogleReview.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function () {
     const [reviewData, setReviewData] = useState([
@@ -128,7 +129,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/satishkumarsonker.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/satishkumarsonker.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -151,7 +152,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/ramatilwani.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/ramatilwani.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -174,7 +175,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/its_me_sumitPandey.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/its_me_sumitPandey.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -201,7 +202,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/AbhinavRoy.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/AbhinavRoy.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -224,7 +225,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/deepasonkar.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/deepasonkar.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -247,7 +248,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/ramroy.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/ramroy.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -274,7 +275,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/rishirisky.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/rishirisky.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -297,7 +298,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/sumit.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/sumit.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -320,7 +321,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/brijmohan.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/brijmohan.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -347,7 +348,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/vikash.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/vikash.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -369,7 +370,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/sandeep.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/sandeep.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -395,7 +396,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/ashishyadav.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/ashishyadav.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -422,7 +423,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/poosam.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/poosam.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -445,7 +446,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/pratima.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/pratima.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>
@@ -468,7 +469,7 @@ export default function () {
                                     <div className='review-item-inner'>
                                         <div className='review-item-inner-1'>
                                             <div className='reviewer-image'>
-                                                <img alt='User Image' src='/images/userreview/alka.png'></img>
+                                                <LazyLoadImage alt='User Image' src='/images/userreview/alka.png'></LazyLoadImage>
                                             </div>
                                         </div>
                                         <div className='review-item-inner-2'>

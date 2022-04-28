@@ -7,6 +7,7 @@ import LoveSutraSmall from './LoveSutraSmall';
 import LoveProfileSmall from './LoveProfileSmall';
 import LoveHoroscopeSmall from './LoveHoroscopeSmall';
 import LoveMarriageSmall from './LoveMarriageSmall';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Love() {
     const breadcrumbOption = [
@@ -17,7 +18,7 @@ export default function Love() {
         <div className='love-container'>
             <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='love-container-item'>
-                <img alt='Banner' className='love-banner' src='/images/loveAndAstro.jpg' />
+                <LazyLoadImage alt='Banner' className='love-banner' src='/images/loveAndAstro.jpg' />
                 <div className='love-page-header'>
                     Astrology in Love
                 </div>
