@@ -319,5 +319,17 @@
     "ruby":"माणिक",
     "sunstone":"सनस्टोन",
     "turquoise":"फ़िरोज़ा",
-    "mukhi":"मुखी"
+    "mukhi":"मुखी",
+    "ganesh":"गणेश",
+    "garbhGauri":"गर्भ गौरी",
+    "gauriShankar":"गौरी शंकर",
+    "importance": "महत्त्व",
+    "benefitsOf":"{{word}} के लाभ",
+    "ruling":"शासक", 
+    "god":"भगवान", 
+    "laxmi":"लक्ष्मी",
+    "beeja":"बीज", 
+    "om":"Om", 
+    "hoom":"हुं", 
+    "namah":"नमः"    
 }

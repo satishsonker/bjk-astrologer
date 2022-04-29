@@ -12,6 +12,7 @@ body {
 
 .content-area {
   margin-top: 60px;
+  scroll-behavior: smooth;
 }
 
 .content-area-admin {

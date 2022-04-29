@@ -17,7 +17,7 @@ export default function RudrakshaList({option}) {
         for(var i=1;i<=21;i++)
         {
             data.push({
-                name:`${i} ${t('mukhi')} ${t('rudraksh')}`,
+                name:`${i}`,
                 imagePath:`/Images/icons/${i}mukhi48.png`,
                 path:`/remedies/rudraksha/${i}`
             });
@@ -31,9 +31,12 @@ export default function RudrakshaList({option}) {
             <ul className='planet-list'>
                 {
                    rudraList.map(ele=>{
-                        return  <Link key={common.getElementKey()} to={ele.path}><li><LazyLoadImage src={ele.imagePath} alt={ele.name} /> {ele.name}</li></Link>
+                        return  <Link key={common.getElementKey()} to={ele.path+'#mukhi'+ele.name}><li><LazyLoadImage src={ele.imagePath} alt={`${ele.name} ${t('mukhi')} ${t('rudraksh')}`} /> {`${ele.name} ${t('mukhi')} ${t('rudraksh')}`}</li></Link>
                    })
                 }
+                <Link to="/remedies/rudraksha/ganesh"><li><LazyLoadImage src="/Images/icons/GaneshaRudraksha48.png" alt={`${t('ganesh')} ${t('rudraksh')}`} /> {`${t('ganesh')} ${t('rudraksh')}`}</li></Link>
+                <Link to="/remedies/rudraksha/garbhGauri"><li><LazyLoadImage src="/Images/icons/garbhGauriRudraksha48.png" alt={`${t('garbhGauri')} ${t('rudraksh')}`} /> {`${t('garbhGauri')} ${t('rudraksh')}`}</li></Link>
+                <Link to="/remedies/rudraksha/gauriShankar"><li><LazyLoadImage src="/Images/icons/gauriShankharRudraksha48.png" alt={`${t('gauriShankar')} ${t('rudraksh')}`} /> {`${t('gauriShankar')} ${t('rudraksh')}`}</li></Link>
                 </ul>
         </div>
     )
