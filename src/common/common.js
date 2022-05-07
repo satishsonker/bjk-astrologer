@@ -36,6 +36,7 @@ const common = {
                 "Delhi",
                 "Lakshadweep",
                 "Puducherry"],
+    dayArray:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
     countryArray:[{id:"ind",value:"India"}],
     defaultIfEmpty: (input, defaultValue) => {
         if (input === undefined || input === null || input === "")

@@ -44,6 +44,7 @@ import PlaneteryRemediesPage from './components/Remedies/PlaneteryRemediesPage';
 import Remedies from './components/Remedies/Remedies';
 import GemsRemediesPage from './components/Remedies/GemsRemediesPage';
 import RudrakshaRemediesPage from './components/Remedies/RudrakshaRemediesPage';
+import NotifyPage from './components/Notify/NotifyPage';
 export default function App() {
   const [isLeftMenuActive, setIsLeftMenuActive] = useState(false);
   const [googleLoginData, setGoogleLoginData] = useState({});
@@ -143,6 +144,7 @@ export default function App() {
                   <Route exact path="/AboutUs" element={<div className='pb-80'><AboutUs></AboutUs> </div>}></Route>
                   <Route exact path="/ContactUs" element={<div className='pb-80'><ContactUs></ContactUs> </div>}></Route>
                   <Route exact path="/UserProfile" element={<div className='pb-80'><UserProfile googleLoginData={googleLoginData}></UserProfile> </div>}></Route>
+                  <Route exact path="/Notifications" element={<div className='pb-80'><NotifyPage></NotifyPage> </div>}></Route>
                   <Route exact path="/horoscope/:interval/:zodiac/:period" element={<div className='pb-80'><HoroscopeDailyPage></HoroscopeDailyPage> </div>}></Route>
                   <Route exact path="/Remedies" element={<div className='pb-80'><Remedies></Remedies> </div>}></Route>
                   <Route exact path="/remedies/planeteryRemedies/:planet" element={<div className='pb-80'><PlaneteryRemediesPage></PlaneteryRemediesPage> </div>}></Route>
