@@ -164,7 +164,7 @@
     border: 1px solid transparent;
     margin-top: 0px;
     margin-bottom: 10px;
-    background-image: url('/public/Images/astroProfile.jpg');
+    background-image: url('/public/Images/planetBanner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -182,7 +182,7 @@
     transition: .5s;
 }
 .ast-brb{
-    background: #e7e7e7de;
+    background: #e7e7e780;
     border-radius: 18px 18px 0 0;
     height: 202px;
     margin-top: 46px;
@@ -201,6 +201,7 @@
     border-right:1px solid #e7e7e7;
 }
 .ast-list-container{
+    width: 100%;
 }
 .btn-filter-container{
     display: none; 

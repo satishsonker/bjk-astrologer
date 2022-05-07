@@ -7,6 +7,7 @@ import i18Next from 'i18next';
 import { useTranslation } from "react-i18next";
 import cookies from 'js-cookie';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Notifications from './Notifications.js';
 
 export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
     const { t } = useTranslation();
@@ -53,8 +54,11 @@ export default function Header({ setIsLeftMenuActive, isLeftMenuActive }) {
                         <div className='panel'>
                         <i onClick={e => handleLeftMenuActiveState()} className={!isLeftMenuActive ? "humberger-bar fa-solid fa-bars" : "humberger-bar fa-solid fa-xmark"}></i>
                         <div className='notify'>
-                            <span className='ast-badge'>1</span>
+                        <a href='#' className='test'>
+                            <span className='ast-badge'>12</span>
                             <BellIcon></BellIcon>
+                        </a>
+                        <Notifications></Notifications>
                         </div>
                         <div className="dropdown">
                             <button className="btn btn-information dropdown-toggle" type="button" id="ddlLang" data-bs-toggle="dropdown" aria-expanded="false">

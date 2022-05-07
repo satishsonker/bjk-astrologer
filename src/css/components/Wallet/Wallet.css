@@ -42,12 +42,14 @@
     text-align: center;
     border-radius: 10px;
     margin: 10px;
+    transition: .7s;
 }
 
 .recharge-pack:hover {
     color: white;
     background-color: orange;
     cursor: pointer;
+    transition: .7s;box-shadow: inset -1px 1px 7px 20px #ffb300;
 }
 .recharge-pack.payd {
     background-color: lightgoldenrodyellow;

@@ -51,8 +51,8 @@ export default function FooterBottomMenu() {
                             <li className="list-item dflex">
                             <i className="fas fa-hand-holding-usd"></i>{t("money")} {t("back")} {t("gaurantee")}
                             </li>
-                            <li className="list-item"><i className="fas fa-user-check"></i>{t("verified")} {t("astrologers")}</li>
-                            <li className="list-item"><i className="fas fa-lock"></i> 100% {t("secure")} {t("payment")}</li>
+                            <li className="list-item dflex"><i className="fas fa-user-check"></i>{t("verified")} {t("astrologers")}</li>
+                            <li className="list-item dflex"><i className="fas fa-lock"></i> 100% {t("secure")} {t("payment")}</li>
                         </ul>
                     </div>
                 </div>

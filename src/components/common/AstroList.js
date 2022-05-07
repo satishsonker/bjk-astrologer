@@ -11,7 +11,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function () {
     const {t}=useTranslation();
     const { width } = useWindowDimensions();
-    const [astroLimit, setAstroLimit] = useState(2);
+    const [astroLimit, setAstroLimit] = useState(4);
 
     const [astroData, setAstroData] = useState([
 
@@ -152,15 +152,15 @@ export default function () {
             }
         ])
         if (width > 768) {
-            setAstroLimit(2)
+            setAstroLimit(4)
         }
         else {
-            setAstroLimit(2)
+            setAstroLimit(4)
         }
     }, [width,t]);
     return (
         <div className='astro-container'>
-            <div className="row row-cols-xl-3 row-cols-lg-3  row-cols-1">
+            <div className="row row-cols-xl-3 row-cols-lg-2  row-cols-1">
                 {
                     astroData.map((ele, ind) => {
                         if (ind > (astroLimit - 1))

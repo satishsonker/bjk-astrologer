@@ -11,7 +11,8 @@ export default function Astrologer() {
   const [reviewData, setReviewData] = useState();
   const breadcrumbOption = [
     { name: t('home'), link: "/Home" },
-    { name: `${t('astrologer')}`, isActive: false }];
+    { name: `${t('astrologer')}`, link: "/Astrologers" },
+    { name: `${t('astrologer')} ${t('profile')}`, isActive: false }];
   useEffect(() => {
     setShowRatingNumber(false);
     setReviewData([

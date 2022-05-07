@@ -4,11 +4,15 @@ import AstroList from '../common/AstroList'
 import '../../css/components/Astrologer.css'
 import useWindowDimensions from '../../Hooks/userWindowDimensions';
 import { useTranslation } from "react-i18next";
+import Breadcrumb from '../common/Breadcrumb';
 
 export default function Astrologers() {    
     const {t}=useTranslation();
     const [_showFilter, setShowFilter] = useState(false);
     const { width } = useWindowDimensions();
+    const breadcrumbOption = [
+        { name: t('home'), link: "/Home" },
+        { name: `${t('astrologer')}`, isActive:false }];
     useEffect(() => {
         if (width >= 768) {
             setShowFilter(true);
@@ -22,7 +26,9 @@ export default function Astrologers() {
     }
     return (
         <>
+         <Breadcrumb option={breadcrumbOption}></Breadcrumb>
             <div className='ast-list'>
+               
                 <div className='ast-filter-container'>
                     <AstroFilter showFilter={_showFilter} onCloseFilter={setShowFilter} ></AstroFilter>
                 </div>
