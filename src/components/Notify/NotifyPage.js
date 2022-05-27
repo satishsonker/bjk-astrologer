@@ -8,11 +8,13 @@ export default function NotifyPage() {
   const { t } = useTranslation();
   const breadcrumbOption = [
     { name: t('home'), link: "/Home" },
-    { name: `${t('notification')}`, isActive:false }];
+    { name: `${t('notification')}`, isActive: false }];
   return (
     <>
-    <Breadcrumb option={breadcrumbOption}></Breadcrumb>
-    <NotifyList></NotifyList>
+      <Breadcrumb option={breadcrumbOption}></Breadcrumb>
+      <div className='noti-page-container'>
+        <NotifyList></NotifyList>
+      </div>
     </>
   )
 }

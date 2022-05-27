@@ -32,7 +32,7 @@ export default function NotifyList() {
             result= `${notifyTime.getDate()}, ${common.monthsArray[notifyTime.getMonth()]}`;
         }
         if (endTime.getFullYear() > notifyTime.getFullYear()){
-            result= `${notifyTime.getDate()}, ${common.monthsArray[notifyTime.getMonth()]} ${notifyTime.getFullYear()}`;
+            result= `${notifyTime.getDate()}, ${common.monthsArray[notifyTime.getMonth()].substring(0,3)} ${notifyTime.getFullYear()}`;
         }
         return result;
     }
@@ -41,51 +41,51 @@ export default function NotifyList() {
             <ul className='noti-list'>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-05-07T17:52:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-05-07T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 2 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-05-07T17:42:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-05-07T17:42:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 3 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-05-07T17:28:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-05-07T17:28:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
-                    <div className='Noti-section-1'>Got New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-05-07T13:52:27.088Z")}</div>
+                    <div className='Noti-section-1'>Got New Message Got New Message Got New Message</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-05-07T13:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 5 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-05-06T17:52:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-05-06T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 3 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-04-07T17:52:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-04-07T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2022-03-07T17:52:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2022-03-07T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
-                    <div className='Noti-section-1'>Got 2 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2021-01-09T17:52:27.088Z")}</div>
+                    <div className='Noti-section-1'>Got 2 New Message Got 2 New Message Got 2 New Message Got 2 New Message</div>
+                    <div className='Noti-section-2'>{elapsedTime("2021-01-09T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 3 New Message</div>
-                    <div className='Noti-section-1'>{elapsedTime("2021-01-10T17:52:27.088Z")}</div>
+                    <div className='Noti-section-2'>{elapsedTime("2021-01-10T17:52:27.088Z")}</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got New Message</div>
-                    <div className='Noti-section-1'>20 min ago</div>
+                    <div className='Noti-section-2'>20 min ago</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 2 New Message</div>
-                    <div className='Noti-section-1'>30 min ago</div>
+                    <div className='Noti-section-2'>30 min ago</div>
                 </li>
                 <li className='noti-list-item'>
                     <div className='Noti-section-1'>Got 3 New Message</div>
-                    <div className='Noti-section-1'>40 min ago</div>
+                    <div className='Noti-section-2'>40 min ago</div>
                 </li>
             </ul>
         </>
